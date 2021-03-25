@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!--<template id="report_amortization_tabla">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <h2>Amortization Table</h2>
+            </t>
+        </t>
+    </template> -->
+    <template id="report_amortization">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <div name="parte1">
+                    <div style="float: left">REGISTRO RECA CONDUSEF: 8578-439-030361/01-04698-0818</div>
+                    <div style="float: right;color:red;">SCR <t t-esc="doc.name"/></div>
+                    <div style="margin: 0 auto; width: 100px;"><br></br> </div>
+                    <div style="float: right">No. Cliente: ___________</div>
+                    <div style="float: left"><img t-attf-src="/web/binary/company_logo?company={{ res_company.id }}" height="75px" width="290px"/></div>
+                    <div style="margin: 0 auto; width: 100px;color:red;">CÁRATULA DE CRÉDITO</div>
+                    <div style="float: right">Fecha: <t t-esc="doc.date_start.strftime('%d-%m-%Y')"/></div>
+                </div>
+                <br></br>
+                <br></br>
+                <table style="border:3px solid black;width:1000px;border-collapse: collapse;">
+                    <tr>
+                        <td colspan="4" style="border:2px solid black;padding: 10px;border-collapse: collapse;">
+                            Nombre comercial del Producto: <t t-esc="doc.product_id.name"/>
+                            <br></br>
+                            Tipo de Crédito: <t t-esc="doc.credit_type.name"/>
+                        </td>
+                    </tr>
+                    <tr> 
+                        <td style="text-align: center;border:2px solid black;padding: 10px;border-collapse: collapse;"> 
+                            CAT 
+                            <br></br>
+                            (Costo Anual Total)
+                        </td>
+                        <td style="text-align: center;border:2px solid black;padding: 10px;border-collapse: collapse;">
+                            TASA DE INTERÉS ANUAL
+                        </td>
+                        <td style="text-align: center;border:2px solid black;padding: 10px;border-collapse: collapse;"> 
+                            MONTO DEL CRÉDITO
+                        </td>
+                        <td style="text-align: center;border:2px solid black;padding: 10px;border-collapse: collapse;">
+                            MONTO TOTAL A PAGAR
+                        </td>
+                    </tr>
+                    <tr> 
+                        <td style="text-align: center;border:2px solid black;padding: 30px;border-collapse: collapse;"> 
+                            _________
+                            <br></br>
+                             sin IVA 
+                            <br></br>
+                            Para fines
+                           informativos
+                         y de comparación
+                        </td>
+                        <td style="text-align: center;border:2px solid black;padding: 30px;border-collapse: collapse;">
+                            Ordinaria:
+                            <t t-esc="doc.interest_rate_value"/>% 
+                                  fijo
+                        </td>
+                        <td style="text-align: center;border:2px solid black;padding: 30px;border-collapse: collapse;"> 
+                            $   <t t-esc="'{0:,.2f}'.format(round(float(doc.amount), 2))"/>
+                                     <br></br>
+                                pesos, M.N.
+                        </td>
+                        <td style="text-align: center;border:2px solid black;padding: 20px;border-collapse: collapse;">
+                            $   <t t-esc="'{0:,.2f}'.format(round(float((doc.total_payment * doc.term)), 2))"/>
+                                    <br></br>
+                                pesos, M.N.
+                                <br></br>
+                            (estimado según el contrato)
+                        </td>
+                    </tr>
+                    <tr> 
+                        <td colspan="2" style="text-align: center;border:2px solid black;padding: 20px;border-collapse: collapse;"> 
+                            PLAZO DEL CRÉDITO:
+                            <br></br>
+                            <t t-esc="doc.term"/> <t t-esc="doc.frequency_id.name"/>
+                        </td>
+                        <td colspan="2"  style="text-align: center;border:2px solid black;padding: 30px;border-collapse: collapse;"> 
+                            Fecha límite de pago: <t t-esc="doc.date_limit_pay"/>
+                            <br></br>
+                            Fecha de corte: ______________________________________
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" style="border:2px solid #149448;text-align: center;background-color:#149448;color:white;border-collapse: collapse;">
+                            COMISIONES RELEVANTES
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" style="text-align: center;border-collapse: collapse;padding: 20px;">
+                            No se generará o cobrará comisión alguna.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" style="border:2px solid #EE1C25;background-color:#EE1C25;color:white;border-collapse: collapse;padding: 20px;text-align: center;">
+                            ADVERTENCIAS
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" style="border:2px solid #EE1C25;background-color:#EE1C25;color:white;border-collapse: collapse;padding: 20px;">
+                            “Incumplir tus obligaciones te puede generar comisiones”.
+                            <br></br>
+                            “Contratar créditos que excedan tu capacidad de pago afecta tu historial crediticio”.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" style="border:2px solid #149448;text-align: center;background-color:#149448;color:white;border-collapse: collapse;">
+                            SEGUROS
+                        </td>
+                    </tr>
+                    <tr>    
+                        <td colspan="2" style="text-align: center;border:2px solid black;padding: 10px;border-collapse: collapse;"> 
+                            Seguro: No aplica (opcional u obligatorio)
+                        </td>
+                        <td style="text-align: center;border:2px solid black;padding: 10px;border-collapse: collapse;"> 
+                            Aseguradora: No aplica.
+                        </td>
+                        <td style="text-align: center;border:2px solid black;padding: 10px;border-collapse: collapse;"> 
+                            Cláusula: No aplica.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" style="border:2px solid black;padding: 10px;border-collapse: collapse;">
+                            ESTADO DE CUENTA:
+                            <br></br>
+                            Enviar a: domicilio ______ Consulta: Vía Internet ______ Envío por correo electrónico ______
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" style="border:2px solid black;padding: 10px;border-collapse: collapse;">
+                            Aclaraciones y reclamaciones:
+                            <br></br>
+                            Unidad Especializada de Atención a Usuarios de TBY
+                            <br></br>
+                            Domicilio: Av. José María Morelos y Pavón número 707, Interior 18, Colonia la Merced, Toluca de Lerdo, Estado de México, Código Postal 50080.
+                            <br></br>
+                            Teléfono: 01800 509 7829 Correo electrónico: une@tby.com.mx
+                            <br></br>
+                            Página de internet: www.lanamovil.net
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" style="border:2px solid black;padding: 10px;border-collapse: collapse;">
+                            Registro Contrato de Adhesión Num: 8578-439-030361/01-04698-0818
+                            <br></br>
+                            Comisión Nacional para la Protección y Defensa de los Usuarios de Servicios Financieros (CONDUSEF):
+                            <br></br>
+                            Teléfono: 01 800 999 8080 y 53400999. Página de internet: www.condusef.gob.mx
+                            <br></br>
+                        </td>
+                    </tr>
+                </table>
+                <br></br>
+                <br></br>
+                <br></br>
+                <table style="border:2px solid black;width:1000px;border-collapse: collapse;">
+                    <tr>
+                        <th style="font-size: 10px;text-align: center;border:1px solid black;border-collapse: collapse;">No. Payment</th>
+                        <th style="font-size: 10px;text-align: center;border:1px solid black;border-collapse: collapse;">End Date</th>
+                        <th style="font-size: 10px;text-align: center;border:1px solid black;border-collapse: collapse;">Initial Balance</th>
+                        <th style="font-size: 10px;text-align: center;border:1px solid black;border-collapse: collapse;">Capital</th>
+                        <th style="font-size: 10px;text-align: center;border:1px solid black;border-collapse: collapse;">Interest</th>
+                        <t t-if="doc.credit_type.shortcut != 'CS'"><th style="font-size: 10px;text-align: center;border:1px solid black;border-collapse: collapse;">Monthly Rent</th></t>
+                        <t t-if="doc.credit_type.shortcut != 'AP'"><th style="font-size: 10px;text-align: center;border:1px solid black;border-collapse: collapse;">Iva Interest</th></t>
+                        <t t-if="doc.credit_type.shortcut == 'AF'"><th style="font-size: 10px;text-align: center;border:1px solid black;border-collapse: collapse;">Iva Capital</th></t>
+                        <t t-if="doc.credit_type.shortcut == 'AP'"><th style="font-size: 10px;text-align: center;border:1px solid black;border-collapse: collapse;">Iva Rent</th></t>
+                        <t t-if="doc.credit_type.shortcut != 'CS'"><th style="font-size: 10px;text-align: center;border:1px solid black;border-collapse: collapse;">Total Rent</th></t>
+                        <t t-if="doc.credit_type.shortcut == 'CS'"><th style="font-size: 10px;text-align: center;border:1px solid black;border-collapse: collapse;">Payment</th></t>
+                    </tr>
+                        <t t-foreach="doc.amortization_ids" t-as="amort">
+                            <tr>
+                                <td style="font-size: 10px;text-align: center;border:1px solid black;border-collapse: collapse;"><t t-esc="amort.no_payment"/></td>
+                                <td style="font-size: 10px;text-align: center;border:1px solid black;border-collapse: collapse;"><t t-esc="amort.date_end.strftime('%d-%m-%Y')"/></td>
+                                <td style="font-size: 10px;text-align: center;border:1px solid black;border-collapse: collapse;"><t t-esc="'{0:,.2f}'.format(round(float(amort.initial_balance), 2))"/></td>
+                                <td style="font-size: 10px;text-align: center;border:1px solid black;border-collapse: collapse;"><t t-esc="'{0:,.2f}'.format(round(float(amort.capital), 2))"/></td>
+                                <td style="font-size: 10px;text-align: center;border:1px solid black;border-collapse: collapse;"><t t-esc="amort.interest"/></td>
+                                <t t-if="doc.credit_type.shortcut != 'CS'"><td style="font-size: 10px;text-align: center;border:1px solid black;border-collapse: collapse;"><t t-esc="amort.payment"/></td></t>
+                                <t t-if="doc.credit_type.shortcut != 'AP'"><td style="font-size: 10px;text-align: center;border:1px solid black;border-collapse: collapse;"><t t-esc="amort.iva_interest"/></td></t>
+                                <t t-if="doc.credit_type.shortcut == 'AF'"><td style="font-size: 10px;text-align: center;border:1px solid black;border-collapse: collapse;"><t t-esc="'{0:,.2f}'.format(round(float(amort.iva_capital), 2))"/></td></t>
+                                <t t-if="doc.credit_type.shortcut == 'AP'"><td style="font-size: 10px;text-align: center;border:1px solid black;border-collapse: collapse;"><t t-esc="'{0:,.2f}'.format(round(float(amort.iva_rent), 2))"/></td></t>
+                                <t t-if="doc.credit_type.shortcut != 'CS'"><td style="font-size: 10px;text-align: center;border:1px solid black;border-collapse: collapse;"><t t-esc="'{0:,.2f}'.format(round(float(amort.total_rent), 2))"/></td></t>
+                                <t t-if="doc.credit_type.shortcut == 'CS'"><td style="font-size: 10px;text-align: center;border:1px solid black;border-collapse: collapse;"><t t-esc="amort.payment"/></td></t>
+                            </tr>
+                        </t>
+                </table>
+            </t>
+        </t>
+    </template>
+</odoo>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="extenss_con_initial_pay_form" model="ir.ui.view">
+        <field name="name">extenss.con.init.pay.wizard</field>
+        <field name="model">extenss.conciliation.initial.pay</field>
+        <field name="arch" type="xml">
+            <form string="Movements">
+                <group class="oe_title">
+                    <field name="name"/>
+                    <field name="lines_ids">
+                        <tree>
+                            <field name="name"/>
+                            <field name="amount"/>
+                        </tree>
+                        <form>
+                            <sheet>
+                                <group>
+                                    <field name="name"/>
+                                    <field name="amount"/>
+                                </group>
+                            </sheet>
+                        </form>
+                    </field>
+                </group>
+                <footer>
+                    <button name="action_create_movement" string="Submit" type="object" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="create_con_init_pay_wizard" model="ir.actions.act_window">
+        <field name="name">Create Movement</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">extenss.conciliation.initial.pay</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="extenss_con_initial_pay_form"/>
+        <field name="target">new</field>
+    </record>
+</odoo>

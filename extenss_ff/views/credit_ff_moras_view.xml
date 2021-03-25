@@ -1,0 +1,235 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="view_tree_extenss_ff_moras" model="ir.ui.view">
+        <field name="name">extenss.ff.moras.tree</field>
+        <field name="model">extenss.credit</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="credit_id"/>
+                <field name="customer_id"/>
+                <field name="request_id"/>
+                <field name="product_id"/>
+                <field name="salesperson_id"/>
+                <field name="office_id"/>
+                <field name="bill_id"/>
+                <field name="customer_type"/>
+                <field name="amount_financed"/>
+                <field name="type_credit"/>
+                <field name="frequency"/>
+                <field name="interest_rate"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_form_extenss_ff_moras" model="ir.ui.view">
+        <field name="name">extenss.ff.moras.form</field>
+        <field name="model">extenss.credit</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <div class="oe_title">
+                            <div class="oe_edit_only">
+                                <label for="credit_id"/>
+                            </div>
+                            <h1><field name="credit_id"/></h1>
+                        </div>
+                    </group>
+                    <group name="group_top">
+                        <group name="group_left">
+                            <field name="customer_id" readonly="1" options="{'no_open': True}"/>
+                            <field name="customer_type" readonly="1"/>
+                            <field name="request_id" readonly="1" options="{'no_open': True}"/>
+                            <field name="bill_id" readonly="1"/>
+                            <field name="reference_number" readonly="1"/>
+                            <field name="credit_status" readonly="1"/>
+                            <field name="account_status_date" readonly="1"/>
+                            <field name="product_id" readonly="1" options="{'no_open': True}"/>
+                            <field name="type_credit" readonly="1" options="{'no_open': True}"/>
+                            <br/>
+                            <field name="amount_financed" readonly="1"/>
+                            <field name="rate_type" readonly="1"/>
+                            <label for="interest_rate"/>
+                            <div id="interest_rate" >
+                                <field name="interest_rate" readonly="1" widget="float" class="oe_inline"/>
+                                <span class="oe_grey"> %%</span>
+                            </div>
+                            <field name="rate_arrears_interest" readonly="1"/>
+                            <field name="days_notice"/>
+                            <field name="hiring_date" readonly="1"/>
+                            <field name="first_payment_date" readonly="1"/>
+                            <field name="dispersion_date" readonly="1"/>
+                            <field name="last_payment_date" readonly="1"/>
+                            <field name="total_paid" readonly="1"/>
+                            <br/>
+                            <field name="salesperson_id" readonly="1" options="{'no_open': True}"/>
+                            <field name="office_id" readonly="1" options="{'no_open': True}"/>
+                        </group>
+                        <group name="group_right">
+                            <field name="outstanding_balance" readonly="1"/>
+                            <field name="past_due_interest" readonly="1"/>
+                            <field name="expired_interest_vat" readonly="1"/>
+                            <field name="overdue_capital" readonly="1"/>
+                            <field name="expired_capital_vat" readonly="1"/>
+                            <field name="overdue_balance" readonly="1"/>
+                            <field name="days_transfer_past_due" readonly="1"/>
+                            <field name="portfolio_type" readonly="1"/>
+                            <field name="number_days_overdue" readonly="1"/>
+                            <label for="percentage_commission"/>
+                            <div id="percentage_commission">
+                                <field name="percentage_commission" readonly="1" widget="float" class="oe_inline"/>
+                                <span class="oe_grey">%%</span>
+                            </div>
+                            <field name="commission_amount" readonly="1"/>
+                            <field name="commission_vat" readonly="1"/>
+                            <field name="total_commission" readonly="1"/>
+                            <br/>
+                            <field name="flag_early_settlement"/>
+                            <field name="notice_date"/>
+                            <field name="payment_date"/>
+                            <field name="cs" invisible="1"/><field name="af" invisible="1"/><field name="ap" invisible="1"/>
+                            <field name="dn" invisible="1"/>
+                            <field name="ff" invisible="1"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page name="moras" string="Moras">
+                            <form>
+                                <header>
+                                    <button name="action_calculate_moras" string="Calculate Moras" type="object" class="oe_highlight"/>
+                                </header>
+                            </form>
+                            <field name="credit_moras_ids">
+                                <tree editable="bottom">
+                                    <field name="expiry_number" readonly="1"/>
+                                    <field name="payment_number" readonly="1"/>
+                                    <field name="due_not_date" readonly="1"/>
+                                    <field name="total_to_pay" invisible="1"/> 
+                                    <field name="start_date_mora" readonly="1"/>
+                                    <field name="date_payment" attrs="{'readonly' : [('total_to_pay', '=', 0)]}"/>
+                                    <field name="outstanding_balance" readonly="1"/>
+                                    <field name="rate_moratorium" readonly="1"/>
+                                    <field name="days_mora" readonly="1"/>
+                                    <field name="interest_moratoriums" readonly="1"/>
+                                    <field name="vat_interest_mora" readonly="1"/>
+                                    <field name="total_interest_mora" readonly="1"/>
+                                    <field name="total_paid_moras" readonly="1"/>
+                                    <field name="to_pay" readonly="1"/>
+                                    <field name="total_rent" readonly="1"/>
+                                    <field name="total_to_pay" readonly="1"/>
+                                </tree>
+                                <form>
+                                    <sheet>
+                                        <group>
+                                            <group>
+                                                <field name="expiry_number"/>
+                                                <field name="payment_number"/>
+                                                <field name="due_not_date"/>
+                                                <field name="payment_date"/>
+                                            </group>
+                                            <group>
+                                                <field name="amount_not"/>
+                                                <field name="total_paid_not"/>
+                                                <field name="total_to_pay"/>
+                                                <field name="total_paid_moras"/>
+                                            </group>
+                                        </group>
+                                        <group>
+                                            <notebook>
+                                                <page name="concepts_expiration" string="Concepts Expiration Notices">
+                                                    <field name="expiry_notice_ids">
+                                                        <tree>
+                                                            <field name="concept"/>
+                                                            <field name="amount_concept"/>
+                                                            <field name="total_paid_concept"/>
+                                                            <field name="full_paid"/>
+                                                        </tree>
+                                                        <form>
+                                                            <group>
+                                                                <group>
+                                                                    <field name="concept" />
+                                                                    <field name="amount_concept"/>
+                                                                </group>
+                                                                <group>
+                                                                    <field name="total_paid_concept"/>
+                                                                    <field name="full_paid"/>
+                                                                </group>
+                                                            </group>
+                                                            <group>
+                                                                <field name="concept_pay_ids" string="Payments" options="{'no_create_edit': False},
+                                                                {'no_quick_create': False},
+                                                                {'no_open': False}">
+                                                                    <tree open="false">
+                                                                        <field name="expiry_number_en"/>
+                                                                        <field name="date_paid"/>
+                                                                        <field name="total_paid_cp"/>
+                                                                    </tree>
+                                                                    <form>
+                                                                        <group>
+                                                                            <group>
+                                                                                <field name="expiry_number_en"/>
+                                                                                <field name="date_paid"/>
+                                                                            </group>
+                                                                            <group>
+                                                                                <field name="total_paid_cp"/>
+                                                                            </group>
+                                                                        </group>
+                                                                    </form>
+                                                                </field>
+                                                            </group>
+                                                        </form>
+                                                    </field>
+                                                </page>
+                                            </notebook>
+                                        </group>
+                                    </sheet>
+                                </form>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_tree_extenss_ff_moras_search" model="ir.ui.view">
+        <field name="name">extenss.ff.moras.search</field>
+        <field name="model">extenss.credit</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="credit_id"/>
+                <field name="customer_id"/>
+                <field name="request_id"/>
+                <field name="product_id"/>
+                <field name="salesperson_id"/>
+                <field name="office_id"/>
+                <field name="bill_id"/>
+                <field name="customer_type"/>
+                <field name="amount_financed"/>
+                <field name="type_credit"/>
+                <field name="frequency"/>
+                <field name="interest_rate"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_moras_ff" model="ir.actions.act_window">
+        <field name="name">Moras</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">extenss.credit</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="view_tree_extenss_ff_moras_search"/>
+        <field name="domain">[('ff', '=', True)]</field>
+        <field name="view_ids"
+                eval="[(5,0,0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('extenss_ff.view_tree_extenss_ff_moras')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('extenss_ff.view_form_extenss_ff_moras')})]"/>
+    </record>
+
+    <menuitem 
+        id="submenu_moras_ff"
+        name="Moras"
+        sequence="80"
+        parent="menu_ff"
+        action="action_moras_ff"/>
+</odoo>

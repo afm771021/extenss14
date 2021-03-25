@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="portal_my_home_menu_credit" name="Portal layout : credit menu entries" inherit_id="portal.portal_breadcrumbs" priority="40">
+        <xpath expr="//ol[hasclass('o_portal_submenu')]" position="inside">
+            <li t-if="page_name == 'credit'" t-attf-class="breadcrumb-item #{'active ' if not credit else ''}">
+                <a t-if="credit" t-attf-href="/my/credit?{{ keep_query() }}">Credit</a>
+                <t t-else="">Credit</t>
+            </li>
+            <li t-if="credit" class="breadcrumb-item active">
+                <t t-esc="credit.credit_id" t-if="credit.credit_id"/>
+                <t t-else=""><em>Credit</em></t>
+            </li>
+        </xpath>
+    </template>
+
+    <template id="portal_my_home_credit" name="Portal My Home : Credit" inherit_id="portal.portal_my_home" priority="40">
+        <xpath expr="//div[hasclass('o_portal_docs')]" position="inside">
+            <t t-if="credit_count" t-call="portal.portal_docs_entry">
+                <t t-set="title">Credit</t>
+                <t t-set="url" t-value="'/my/credit'"/>
+                <t t-set="count" t-value="credit_count"/>
+            </t>
+        </xpath>
+    </template>
+
+    <template id="portal_my_credits" name="Portal: My Credits">
+        <t t-call="portal.portal_layout">
+          <t t-call="portal.portal_searchbar">
+            <t t-set="title">Credits</t>
+          </t>
+          <t t-if="credits" t-call="portal.portal_table">
+            <thead>
+              <tr class="active">
+                <th>Credit</th>
+                <th>Product</th>
+                <th>Date created</th>
+                <th>Term</th>
+                <th class="text-right">Amount</th>
+              </tr>
+            </thead>
+            <tbody>
+              <t t-foreach="credits" t-as="credit">
+                <tr>
+                  <td><a t-attf-href="/my/credit/#{credit.id}"><t t-esc="credit.credit_id"/></a></td>
+                  <td><span t-field="credit.product_id"/></td>
+                  <td><span t-field="credit.create_date" t-options='{"format": "dd/MM/yyyy hh:mm:ss"}'/></td>
+                  <td><span t-field="credit.term"/></td>
+                  <td class="text-right"><span t-field="credit.amount_financed" t-options='{"widget": "monetary", "display_currency": credit.company_currency}'/></td>
+                </tr>
+              </t>
+            </tbody>
+          </t>
+        </t>
+    </template>
+
+    <template id="portal_credit_page" name="Credit Portal Template" inherit_id="portal.portal_sidebar" primary="True">
+        <xpath expr="//div[hasclass('o_portal_sidebar')]" position="inside">
+            <div class="oe_structure container mb128">
+                <h3 class="o_page_header">Credit: <span t-esc="credit.credit_id"/></h3>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="col-md-4" style="float: right;">
+                            <label>Calculation Base:</label>
+                            <span t-field="credit.calculation_base"/>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3 text-right">
+                                <label>Customer:</label>
+                            </div>
+                            <div class="col-md-4">
+                                <span t-field="credit.customer_id"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="col-md-4" style="float: right;">
+                            <label>Amount financed:</label>
+                            <span t-field="credit.amount_financed"/>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3 text-right">
+                                <label>Customer type:</label>
+                            </div>
+                            <div class="col-md-4">
+                                <span t-field="credit.customer_type"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="col-md-4" style="float: right;">
+                            <label>Term:</label>
+                            <span t-field="credit.term"/>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3 text-right">
+                                <label>Bill:</label>
+                            </div>
+                            <div class="col-md-4">
+                                <span t-field="credit.bill_id"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="col-md-4" style="float: right;">
+                            <label>Frequency:</label>
+                            <span t-field="credit.frequency"/>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3 text-right">
+                                <label>Credit status:</label>
+                            </div>
+                            <div class="col-md-4">
+                                <span t-field="credit.credit_status"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="col-md-4" style="float: right;">
+                            <label>Rate type:</label>
+                            <span t-field="credit.rate_type"/>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3 text-right">
+                                <label>Product:</label>
+                            </div>
+                            <div class="col-md-4">
+                                <span t-field="credit.product_id"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="col-md-4" style="float: right;">
+                            <label>Interest rate:</label>
+                            <span t-field="credit.interest_rate"/>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3 text-right">
+                                <label>Credit type:</label>
+                            </div>
+                            <div class="col-md-4">
+                                <span t-field="credit.type_credit"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="col-md-4" style="float: right;">
+                            <label>Paid:</label>
+                            <span t-field="credit.total_paid"/>
+                        </div>
+                        <!-- <div class="row">
+                            <div class="col-md-4 text-right">
+                                <label>Paid</label>
+                            </div>
+                            <div class="col-md-4">
+                                <span t-field="credit.total_paid"/>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="row">
+                    <t t-call="portal.portal_table">
+                        <thead>
+                          <tr class="active">
+                            <th>No pay</th>
+                            <th>Expiration date</th>
+                            <th>Initial balance</th>
+                            <th>Capital</th>
+                            <th>Interest</th>
+                            <t t-if="credit.ap != True"><th>Iva interest</th></t>
+                            <th>Payment</th>
+                            <t t-if="credit.af != True"><th>Iva capital</th></t>
+                            <t t-if="credit.af != True"><th>Iva rent</th></t>
+                            <t t-if="credit.cs != False"><th>Total rent</th></t>
+                            <th>Penalty amount</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <t t-foreach="credit.amortization_ids" t-as="amortization">
+                            <tr>
+                              <td><span t-field="amortization.no_pay"/></td>
+                              <td><span t-field="amortization.expiration_date" t-options='{"format": "dd/MM/yyyy"}'/></td>
+                              <td><span t-field="amortization.initial_balance"/></td>
+                              <td><span t-field="amortization.capital"/></td>
+                              <td><span t-field="amortization.interest"/></td>
+                              <t t-if="credit.ap != True"><td><span t-field="amortization.iva_interest"/></td></t>
+                              <td><span t-field="amortization.payment"/></td>
+                              <t t-if="credit.af != True"><td><span t-field="amortization.iva_capital"/></td></t>
+                              <t t-if="credit.af != True"><td><span t-field="amortization.iva_rent"/></td></t>
+                              <t t-if="credit.cs != False"><td><span t-field="amortization.total_rent"/></td></t>
+                              <td><span t-field="amortization.penalty_amount"/></td>
+                              <!-- <td class="text-right"><span t-field="credit.amount_financed" t-options='{"widget": "monetary", "display_currency": credit.company_currency}'/></td> -->
+                            </tr>
+                          </t>
+                        </tbody>
+                      </t>
+                </div>
+            </div>
+        </xpath>
+        </template>
+</odoo>

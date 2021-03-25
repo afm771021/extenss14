@@ -1,0 +1,129 @@
+<?xml version="1.0" ?>
+<odoo>
+    <!--"view_partner_simple_form"-->
+    <record id="res_partner_form_extend" model="ir.ui.view">
+        <!--<field name="name">Gender</field>-->
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <field name="vat" position="after">
+                <field name="gender" attrs="{'required':[('company_type', '=', 'person')], 'invisible': [('company_type', '=', 'company')]}"/>
+                <field name="birth_date" attrs="{'required':[('company_type', '=', 'person')], 'invisible': [('company_type', '=', 'company')]}"/>
+                <field name="constitution_date" attrs="{'invisible': [('company_type', '=', 'person')]}"/>
+                <field name="identification_type"/>
+                <field name="identification" placeholder="123456789"/>
+                <field name="country_birth" placeholder="e.g. México"/>
+                <field name="state_birth" placeholder="e.g. Ciudad de México" attrs="{'invisible': [('company_type', '=', 'company')]}"/>
+                <field name="marital_status" placeholder="e.g. Married" attrs="{'invisible': [('company_type', '=', 'company')]}"/>
+                <field name="occupation" placeholder="e.g. Programmer"/>
+                
+                <!--><field name="job_title" placeholder="e.g. Web Developer"/><-->
+            </field>
+            <field name="category_id" position="after">
+                <!--><field name='function'/><-->
+                <field name="politically_person" attrs="{'invisible': [('company_type', '=', 'company')]}"/>
+                <field name="housing_type" attrs="{'invisible': [('company_type', '=', 'company')]}"/>
+                <field name="years_residence" attrs="{'invisible': [('company_type', '=', 'company')]}"/>
+                <field name="level_study" attrs="{'invisible': [('company_type', '=', 'company')]}"/>
+                <field name="dependent_number" attrs="{'invisible': [('company_type', '=', 'company')]}"/>
+                <field name="ssn" attrs="{'invisible': [('company_type', '=', 'company')]}"/>
+            </field>
+
+            <field name="industry_id" position="after">
+                <field name="constitution_date" attrs="{'invisible': [('is_company', '=', False)]}"/>
+                <field name="start_operations" attrs="{'invisible': [('is_company', '=', False)]}"/>
+                <field name="number_employees" attrs="{'invisible': [('is_company', '=', False)]}"/>
+            </field>
+
+            <xpath expr="//page[@name='internal_notes']" position="after">
+                <page string="Bank references" name="bank_references" invisible="0">
+                    <field name="bankref_ids">
+                        <tree>
+                            <field name="product_type"/>
+                            <field name="institution"/>
+                            <field name="banking_reference"/>
+                            <field name="number_account"/>
+                            <field name="comments_bank_ref"/>
+                        </tree>
+                        <form>
+                            <group>
+                                <field name="product_type"/>
+                                <field name="institution"/>
+                                <field name="banking_reference"/>
+                                <field name="number_account"/>
+                                <field name="comments_bank_ref"/>
+                            </group>
+                        </form>
+                    </field>
+                </page>
+            </xpath>
+
+            <xpath expr="//page[@name='bank_references']" position="after">
+                <page string="Personal references" name="personal_references" invisible="0">
+                    <field name="persref_ids">
+                        <tree>
+                            <field name="type_reference_personal_ref"/>
+                            <field name="reference_name_personal_ref"/>
+                            <field name="phone_personal_ref"/>
+                            <field name="cell_phone_personal_res"/>
+                            <field name="email_personal_ref"/>
+                        </tree>
+                        <form>
+                            <group>
+                                <field name="type_reference_personal_ref"/>
+                                <field name="reference_name_personal_ref"/>
+                                <field name="phone_personal_ref"/>
+                                <field name="cell_phone_personal_res"/>
+                                <field name="email_personal_ref"/>
+                            </group>
+                        </form>
+                    </field>
+                </page>
+            </xpath>
+
+            <xpath expr="//page[@name='personal_references']" position="after">
+                <page string="Aditional identifications" name="aditional_identifications" invisible="0">
+                    <field name="add_identifi_ids">
+                        <tree>
+                            <field name="type_of_indentification"/>
+                            <field name="identification_ai"/>
+                        </tree>
+                        <form>
+                            <group>
+                                <field name="type_of_indentification"/>
+                                <field name="identification_ai"/>
+                            </group>
+                        </form>
+                    </field>
+                </page>
+            </xpath>
+
+            <xpath expr="//page[@name='aditional_identifications']" position="after">
+                <page string="Work information" name="work_information" invisible="0">
+                    <field name="work_inf_ids">
+                        <tree>
+                            <field name="company"/>
+                            <field name="position"/>
+                            <field name="start_date"/>
+                            <field name="close_date"/>
+                            <field name="email_wi"/>
+                            <field name="principal_phone"/>
+                            <field name="optional_phone"/>
+                        </tree>
+                        <form>
+                            <group>
+                                <field name="company"/>
+                                <field name="position"/>
+                                <field name="start_date"/>
+                                <field name="close_date"/>
+                                <field name="email_wi"/>
+                                <field name="principal_phone"/>
+                                <field name="optional_phone"/>
+                            </group>
+                        </form>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

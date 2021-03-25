@@ -1,0 +1,1074 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!--<template id="report_amortization_tabla">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <h2>Amortization Table</h2>
+            </t>
+        </t>
+    </template> -->
+    <template id="contrato_amortization">
+        <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <!-- <div name="parte1">
+                        <div style="float: left"><img t-attf-src="/web/binary/company_logo?company={{ res_company.id }}" height="75px" width="290px"/></div>
+                        <div style="float: right">No. Cliente: ___________</div>
+                        <div style="margin: 0 auto; width: 400px;font-size: 13px;" align="center">REGISTRO RECA CONDUSEF: 8578-439-030361/01-04698-0818</div>
+                        <div style="float: left"><br></br></div>
+                        <div style="float: right">Fecha: <t t-esc="doc.date_start.strftime('%d-%m-%Y')"/></div>
+                        <div style="margin: 0 auto; width: 300px;color:red;font-size: 13px;" align="right">SCR <t t-esc="doc.name"/></div>
+                    </div>
+                    <br></br>
+                    <br></br> -->
+                    <table style="width:1000px;border-collapse: collapse;">
+                        <tr>
+                            <td>
+                                <!-- <img t-attf-src="/web/binary/company_logo?company={{ res_company.id }}" height="75px" width="290px"/> -->
+                            </td>
+                            <td style="font-size: 13px;" align="center">
+                                REGISTRO RECA CONDUSEF: 8578-439-030361/01-04698-0818
+                                <br></br>
+                                SCR <t t-esc="doc.name"/>
+                            </td>
+                            <td>
+                                No. Cliente: ___________
+                                <br></br>
+                                Fecha: <t t-esc="doc.date_start.strftime('%d-%m-%Y')"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="font-size: 10px;text-align: justify;padding: 10px; ">
+                                CONTRATO DE CRÉDITO SIMPLE QUE CELEBRAN<br></br>
+                                POR UNA PARTE, SOLUCIONES INTEGRALES TBY,<br></br>
+                                S.A. DE C.V., SOFOM, E.N.R., EN SU CARÁCTER DE<br></br>
+                                ACREDITANTE, EN LO SUCESIVO “TBY”, Y, POR<br></br>
+                                OTRA PARTE, EN SU CARÁCTER DE ACREDITADO,<br></br>
+                                ________________________________________<br></br>
+                                _________________________, DENOMINADO EN<br></br>
+                                LO SUCESIVO COMO EL “CLIENTE”, AL TENOR DE<br></br>
+                                LAS SIGUIENTES DECLARACIONES Y CLÁUSULAS:
+                                <br></br>
+                                <br></br>
+                                DECLARACIONES
+                                <br></br>
+                                <br></br>
+                                I. Declara el Cliente, por su propio derecho, que:
+                                <br></br>
+                                <br></br>
+                                a) Es una persona física, con pleno ejercicio y goce de<br></br>
+                                sus facultades para la celebración del presente contrato <br></br>
+                                de crédito simple (en lo sucesivo, el “Contrato”).
+                                <br></br>
+                                <br></br>
+                                b) Sus datos son los asentados en la solicitud de crédito <br></br>
+                                (en lo sucesivo, la “Solicitud”), que forma parte integrante <br></br>
+                                del Contrato, en la que precisa su deseo de obtener <br></br>
+                                un crédito simple, en moneda nacional (en lo sucesivo, <br></br>
+                                el “Crédito”), y que la información y documentación <br></br>
+                                proporcionada por él es verídica.
+                                <br></br>
+                                <br></br>
+                                c) Señala como su domicilio, para los efectos <br></br>
+                                relacionados con el Contrato, el ubicado en el inmueble <br></br>
+                                indicado en la Solicitud.
+                                <br></br>
+                                <br></br>
+                                d) Cuenta con los recursos económicos para dar <br></br>
+                                cumplimiento a las obligaciones que, en términos del <br></br>
+                                Contrato, contrae a su cargo, mismos que provienen y <br></br>
+                                provendrán de fuentes lícitas.
+                                <br></br>
+                                <br></br>
+                                e) Al momento de la firma del Contrato le fue <br></br>
+                                proporcionada la tabla de amortización que incluye <br></br>
+                                el saldo insoluto de principal, así como el número, <br></br>
+                                periodicidad y cuantía de los pagos.
+                                <br></br>
+                                <br></br>
+                                f) Al momento de la celebración del Contrato, TBY le <br></br>
+                                hizo entrega de una copia del presente contrato, de <br></br>
+                                la carátula, la cual forma parte integrante del presente <br></br>
+                                contrato, y de todos sus anexos, incluido el Anexo de <br></br>
+                                Disposiciones Legales.
+                                <br></br>
+                                <br></br>
+                                II. Declara TBY, que:
+                                <br></br>
+                                <br></br>
+                                a) Es una Sociedad Financiera de Objeto Múltiple,<br></br>
+                                Entidad No Regulada que se encuentra legalmente <br></br>
+                                constituida conforme a las normas jurídicas aplicables<br></br>
+                                en los Estados Unidos Mexicanos, obligándose bajo los <br></br>
+                                términos que se establecen en el Contrato.
+                                <br></br>
+                                <br></br>
+                                b) Señala como su domicilio, para los efectos<br></br>
+                                relacionados con el Contrato, el inmueble ubicado en<br></br>
+                                Av. José María Morelos y Pavón número 707, Interior 18,<br></br>
+                                Colonia la Merced, Toluca de Lerdo, Estado de México,<br></br>
+                                Código Postal 50080.
+                                <br></br>
+                                <br></br>
+                                c) “En cumplimiento a lo establecido en la Ley General<br></br>
+                                de Organizaciones y Actividades Auxiliares del Crédito<br></br>
+                                vigente, indica que para su constitución y operación<br></br>
+                                no requiere autorización de la Secretaría de Hacienda<br></br>
+                                y Crédito Público, y que para la realización de sus<br></br>
+                                operaciones está sujeta a la supervisión y vigilancia de<br></br>
+                                la Comisión Nacional Bancaria y de Valores, únicamente <br></br>
+                                para los efectos del artículo 56 de la ley referida.”
+                                <br></br>
+                                <br></br>
+                                d) Su página de Internet se encuentra ubicada en la <br></br>
+                                dirección: www.lanamovil.net (en lo sucesivo, la “Página <br></br>
+                                Web”).
+                                <br></br>
+                                <br></br>
+                                e) Es su intención otorgar el Crédito al Cliente,<br></br>
+                                conforme a las estipulaciones del Contrato.<br></br>
+                            </td>
+                            <td style="font-size: 10px;text-align: justify;padding: 10px; ">
+                                f) El modelo del contrato de adhesión se encuentra <br></br>
+                                registrado en el Registro de Contratos de Adhesión <br></br>
+                                (RECA) de la Comisión Nacional para la Protección y <br></br>
+                                Defensa de los Usuarios de Servicios Financieros, bajo <br></br>
+                                el número señalado al margen superior.
+                                <br></br>
+                                <br></br>
+                                g) Informó al Cliente que todos y cada uno de los <br></br>
+                                artículos y legislación mencionados en el Contrato, se <br></br>
+                                encuentran transcritos en el Anexo de Disposiciones <br></br>
+                                Legales, el cual podrá consultar en las sucursales de <br></br>
+                                TBY y en el Registro de Contratos de Adhesión de <br></br>
+                                CONDUSEF mediante el número que se menciona en <br></br>
+                                el margen superior izquierdo del Contrato.
+                                <br></br>
+                                <br></br>
+                                CLÁUSULAS
+                                <br></br>
+                                <br></br>
+                                1. OBJETO DEL CONTRATO.- TBY otorga un <br></br>
+                                Crédito Simple a favor del Cliente por la cantidad que <br></br>
+                                aparece en la Carátula, (según dicho término se define <br></br>
+                                más adelante) como “MONTO DEL CRÉDITO”. El <br></br>
+                                Cliente está de acuerdo con el MONTO DEL CRÉDITO<br></br>
+                                y se obliga a cumplir en los términos y condiciones<br></br>
+                                convenidos en el Contrato y en la Carátula, obligándose<br></br>
+                                a restituir a TBY el importe del Crédito más los <br></br>
+                                intereses, impuestos, comisiones y demás cantidades <br></br>
+                                pactadas en este contrato que, conforme al mismo, se <br></br>
+                                estipulen o generen, hasta el día de la liquidación total <br></br>
+                                del Crédito.
+                                <br></br>
+                                <br></br>
+                                Para efectos del Contrato, “Carátula” significa el <br></br>
+                                documento que es parte integrante del Contrato, en el <br></br>
+                                que se establece la información de y/o, relacionada con,<br></br>
+                                el Crédito y/o la que indica el Contrato.
+                                <br></br>
+                                <br></br>
+                                2. VIGENCIA.- La vigencia del Contrato iniciará a partir <br></br>
+                                de su fecha de celebración y terminará en la fecha de pago <br></br>
+                                de la última parcialidad (según dicho término se define <br></br>
+                                más adelante) o, en el día en que sean cumplimentadas, <br></br>
+                                en su totalidad, las obligaciones que contraen ambas <br></br>
+                                partes conforme al Contrato, que podrá ser prorrogable <br></br>
+                                a discreción de TBY siempre y cuando el Cliente lo <br></br>
+                                solicite.
+                                <br></br>
+                                <br></br>
+                                3. DISPOSICIÓN Y DESTINO DEL CRÉDITO.- Una <br></br>
+                                vez autorizada la Solicitud, las partes acuerdan que el<br></br>
+                                Crédito se dispondrá en la forma y términos que TBY le <br></br>
+                                indique al Cliente mediante el documento denominado <br></br>
+                                “Instrucción de Disposición”, mismo que contendrá la <br></br>
+                                firma autógrafa o huella digital del Cliente, y que será <br></br>
+                                parte integrante del Contrato, como Anexo 2.
+                                <br></br>
+                                <br></br>
+                                Las partes establecen que el MONTO DEL CRÉDITO <br></br>
+                                será destinado en y/o para aquello que libremente <br></br>
+                                determine el Cliente, quien a su vez expone que el <br></br>
+                                destino del MONTO DEL CRÉDITO es y será lícito.
+                                <br></br>
+                                <br></br>
+                                El Cliente tendrá un plazo de gracia de 10 (diez) días <br></br>
+                                hábiles posteriores a la firma del Contrato, para solicitar <br></br>
+                                la cancelación del mismo, sin responsabilidad alguna para <br></br>
+                                las partes y sin comisión para el Cliente, siempre y cuando <br></br>
+                                este último no haya dispuesto del Crédito.
+                                <br></br>
+                                <br></br>
+                                La ejecución de la Instrucción de Disposición por TBY, se <br></br>
+                                entenderá como: i) la disposición que el Cliente realiza <br></br>
+                                sobre el MONTO DEL CRÉDITO y, consecuentemente, <br></br>
+                                de su recepción por el Cliente; ii) la entrega, a cargo de <br></br>
+                                TBY y a favor del Cliente, del MONTO DEL CRÉDITO. <br></br>
+                                En tal virtud, se tendrá por recibido, a la entera <br></br>
+                                satisfacción del Cliente, el MONTO DEL CRÉDITO;<br></br>
+                                y, iii) el cumplimiento de TBY, en lo conducente, a las<br></br>
+                                obligaciones que, a su cargo y a favor del Cliente, se <br></br>
+                                derivan del Contrato. Por lo tanto, una vez ejecutada la<br></br>
+                                Instrucción de Disposición, se entenderá que el Cliente<br></br>
+                                extiende el recibo más amplio y suficiente que en derecho<br></br>
+                            </td>
+                            <td style="font-size: 10px;text-align: justify;padding: 10px; ">
+                                proceda a favor de TBY respecto de la disposición del <br></br>
+                                Crédito.
+                                <br></br>
+                                <br></br>
+                                Como consecuencia de la disposición que, respecto <br></br>
+                                del MONTO DEL CRÉDITO, realice el Cliente, estará <br></br>
+                                obligado a pagar a TBY, a través de las Parcialidades, el <br></br>
+                                MONTO DE CRÉDITO, más los intereses ordinarios y <br></br>
+                                el Impuesto al Valor Agregado que les corresponda (en<br></br>
+                                lo sucesivo, el “Importe Total del Crédito”).
+                                <br></br>
+                                <br></br>
+                                4. OBLIGACIONES DE PAGO.- El Cliente se obliga <br></br>
+                                a pagar a TBY:
+                                <br></br>
+                                <br></br>
+                                a) El MONTO DEL CRÉDITO;<br></br>
+                                b) Intereses ordinarios, A razón de la tasa fija anual<br></br>
+                                de ___________%, sobre saldos insolutos del MONTO <br></br>
+                                DEL CRÉDITO. El pago de los intereses no podrá ser <br></br>
+                                exigido por adelantado, sino únicamente por periodos <br></br>
+                                vencidos, salvo por lo establecido en el Contrato.<br></br>
+                                La metodología de cálculo de intereses ordinarios <br></br>
+                                del Crédito, es: Los intereses ordinarios del <br></br>
+                                MONTO DEL CRÉDITO se calcularán dividiendo <br></br>
+                                la tasa fija anual entre 360 (trescientos sesenta), <br></br>
+                                cuyo resultado será la tasa diaria, esta última será <br></br>
+                                multiplicada por 15 (quince) para pagos quincenales <br></br>
+                                o, por 30 (treinta) para pagos mensuales, según se <br></br>
+                                indique en la Carátula como “Plazo del Crédito”. <br></br>
+                                El resultado obtenido o sea, la tasa del período, se <br></br>
+                                multiplicará por el saldo insoluto del MONTO DEL <br></br>
+                                CRÉDITO al inicio del período de pago quincenal o <br></br>
+                                mensual, resultando así el importe de los intereses <br></br>
+                                ordinarios a pagar por el período de que se trate (en<br></br>
+                                lo sucesivo, los “Intereses del Período”). La fecha<br></br>
+                                para el cálculo de intereses será la indicada en la <br></br>
+                                Carátula como Fecha de Corte y en los estados de <br></br>
+                                cuenta.<br></br>
+                                Los intereses no podrán ser exigidos por adelantado, <br></br>
+                                sino únicamente por períodos vencidos.<br></br>
+                                c) El Impuesto al Valor Agregado (en lo sucesivo, el<br></br>
+                                “IVA”) o cualquier otro impuesto aplicable que grave <br></br>
+                                los Intereses del Período (en lo sucesivo, el“IVA de los<br></br>
+                                Intereses del Período”) y las comisiones que estipula el<br></br>
+                                Contrato;<br></br>
+                                d) Las comisiones, que sean causadas en términos de la<br></br>
+                                Cláusula 11 del Contrato.<br></br>
+                                <br></br>
+                                El MONTO DEL CRÉDITO será pagado por el <br></br>
+                                Cliente en el número de amortizaciones quincenales <br></br>
+                                o mensuales, según se indique en la carátula, y a cada<br></br>
+                                una de ellas se les adicionarán los correspondientes <br></br>
+                                Intereses del Período y el IVA de los Intereses del<br></br>
+                                Período (en lo sucesivo, en singular, la “Parcialidad”, y en <br></br>
+                                plural, las “Parcialidades”).
+                                <br></br>
+                                <br></br>
+                                El monto de las Parcialidades será igual para cada una <br></br>
+                                de ellas, y las mismas deberán pagarse por el Cliente en <br></br>
+                                forma consecutiva e ininterrumpida, y de conformidad<br></br>
+                                con el monto, número y periodicidad que se indican en<br></br>
+                                el Anexo 1 del Contrato, denominado Mandato Especial <br></br>
+                                de Pago.
+                                <br></br>
+                                <br></br>
+                                Las amortizaciones de las Parcialidades se realizarán en<br></br>
+                                las fechas en las que se efectúen los pagos del salario del <br></br>
+                                trabajador, por lo que en ningún caso podrán ser en un <br></br>
+                                día inhábil y son del conocimiento del Cliente.
+                                <br></br>
+                                <br></br>
+                                Cuando la fecha límite de pago sea en un día inhábil<br></br>
+                                esta se recorrerá al siguiente día hábil, sin que proceda<br></br>
+                                el cobro de Comisiones, penalizaciones o intereses<br></br>
+                                moratorios.
+                                <br></br>
+                                <br></br>
+                                En caso de modificación en impuestos, el monto de las<br></br>
+                                Parcialidades podrá variar, lo que, en su caso, se hará<br></br>
+                                saber al Cliente mediante el estado de cuenta respectivo<br></br>
+                                o por escrito a través de la colocación de anuncios en<br></br>
+                            </td>
+                        </tr>
+                    </table>
+                    <!-- <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br> -->
+                    <!--<div name="parte2">
+                         <div style="float: left"><img t-attf-src="/web/binary/company_logo?company={{ res_company.id }}" height="75px" width="290px"/></div>
+                        <div style="float: right">No. Cliente: ___________</div>
+                        <div style="margin: 0 auto; width: 400px;font-size: 13px;" align="center">REGISTRO RECA CONDUSEF: 8578-439-030361/01-04698-0818</div>
+                        <div style="float: left"><br></br></div>
+                        <div style="float: right">Fecha: <t t-esc="doc.date_start.strftime('%d-%m-%Y')"/></div>
+                        <div style="margin: 0 auto; width: 300px;color:red;font-size: 13px;" align="right">SCR <t t-esc="doc.name"/></div> 
+                    </div>
+                    <br></br>
+                    <br></br>-->
+                    <table style="width:1000px;border-collapse: collapse;">
+                        <tr>
+                            <td>
+                                <!--<img t-attf-src="/web/binary/company_logo?company={{ res_company.id }}" height="75px" width="290px"/>-->
+                            </td>
+                            <td style="font-size: 13px;" align="center">
+                                REGISTRO RECA CONDUSEF: 8578-439-030361/01-04698-0818
+                                <br></br>
+                                SCR <t t-esc="doc.name"/>
+                            </td>
+                            <td>
+                                No. Cliente: ___________
+                                <br></br>
+                                Fecha: <t t-esc="doc.date_start.strftime('%d-%m-%Y')"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="font-size: 10px;text-align: justify;padding: 10px; ">
+                                lugares abiertos al público en las sucursales de TBY.<br></br>
+                                5. LUGAR Y FORMA DE PAGO.- Las partes convienen <br></br>
+                                que, en virtud de que el Cliente labora o recibe su<br></br>
+                                pensión de alguna Dependencia, Secretaría, Instituto, <br></br>
+                                Organismo u Órgano, centralizado o descentralizado, <br></br>
+                                federal, estatal o municipal, del poder ejecutivo, legislativo<br></br>
+                                o judicial (en lo sucesivo, la “Dependencia”), los pagos de<br></br>
+                                las Parcialidades se realizarán con cargo a la nómina o<br></br>
+                                pensión del Cliente, para lo cual el Cliente emitirá un <br></br>
+                                mandato especial de pago (en lo sucesivo, el “Mandato<br></br>
+                                Especial de Pago”), mediante el cual instruirá en forma <br></br>
+                                irrevocable a la Dependencia, para que ésta a cuenta<br></br>
+                                y ruego del Cliente, y del sueldo o pensión que éste<br></br>
+                                percibe, entregue todos y cada uno de los montos de las<br></br>
+                                Parcialidades a TBY, mediante depósito o transferencia<br></br>
+                                electrónica a la cuenta número 143180000003876733<br></br>
+                                a nombre de SOLUCIONES INTEGRALES TBY SA<br></br>
+                                DE CV SOFOM ENR, de la institución de crédito CI<br></br>
+                                BANCO Lo anterior en virtud del acuerdo que tiene <br></br>
+                                celebrado TBY y la Dependencia a ese respecto. Dicho<br></br>
+                                Mandato Especial de Pago se agrega al Contrato como<br></br>
+                                Anexo 1, y forma parte integrante del mismo. El pago<br></br>
+                                de la primera Parcialidad deberá realizarse en cualquier <br></br>
+                                día del plazo de 90 (noventa) días naturales, contado a <br></br>
+                                partir del día natural siguiente al 5° (quinto) día <br></br>
+                                hábil posterior al día en el que sea celebrado el Contrato. La <br></br>
+                                primera fecha de pago será la indicada en la Carátula.<br></br>
+                                <br></br>
+                                En virtud de lo anterior, el Cliente asume las siguientes obligaciones:<br></br>
+                                <br></br>
+                                I) Proporcionar a TBY información verídica en <br></br>
+                                cuanto al monto de sus ingresos y deducciones, a fin<br></br>
+                                de que la Dependencia pueda entregar a TBY los <br></br>
+                                montos correspondientes a las Parcialidades. Si se <br></br>
+                                presentara cualquier diferencia, en virtud de que por<br></br>
+                                la insuficiencia del ingreso del Cliente, la Dependencia<br></br>
+                                no haya entregado a TBY el monto respectivo de alguna<br></br>
+                                Parcialidad, el Cliente se obliga a cubrir dicha diferencia <br></br>
+                                de manera inmediata a TBY conforme a lo dispuesto <br></br>
+                                más adelante en esta misma Cláusula.<br></br>
+                                <br></br>
+                                II) Comprobar a TBY, en el caso de que en su <br></br>
+                                contabilidad o registros de operación no se reflejen,<br></br>
+                                los pagos realizados a través de su nómina o pensión, <br></br>
+                                para lo cual deberá conservar los recibos de nómina <br></br>
+                                o de pensión que registren las retenciones realizadas <br></br>
+                                por la Dependencia, ya que los mismos serán el único <br></br>
+                                medio para demostrar a TBY los pagos realizados por el<br></br>
+                                Cliente.<br></br>
+                                <br></br>
+                                III) Informar de manera inmediata a TBY cuando la<br></br>
+                                relación de trabajo existente con la Dependencia se <br></br>
+                                termine o suspenda (sin goce de sueldo) por cualquier <br></br>
+                                causa, incluyendo sin limitar, despido, renuncia o <br></br>
+                                jubilación, separación por licencia o interinato. En caso <br></br>
+                                de presentarse cualquiera de los supuestos señalados en <br></br>
+                                el presente párrafo, el Cliente se obliga a proporcionar <br></br>
+                                los datos de alguna cuenta de la que sea titular y que <br></br>
+                                tenga aperturada con la correspondiente institución <br></br>
+                                de crédito (en lo sucesivo, el “Banco A”), y a autorizar <br></br>
+                                al Banco A para que cargue en esa cuenta el pago de <br></br>
+                                las Parcialidades (en lo sucesivo, la “Domiciliación de <br></br>
+                                Pagos”).<br></br>
+                                <br></br>
+                                Para el supuesto de que el Cliente concluya su <br></br>
+                                relación de trabajo con la Dependencia en virtud de su <br></br>
+                                incapacidad o jubilación en términos de las disposiciones <br></br>
+                                aplicables, antes de la terminación del Contrato, autoriza <br></br>
+                                expresamente a TBY para que el pago de las Parcialidades <br></br>
+                                se realice a través de su pensión, para lo cual el Cliente <br></br>
+                                se obliga a firmar un nuevo Mandato Especial de Pago, <br></br>
+                                mediante el cual instruirá en forma irrevocable al Instituto al <br></br>
+                                que le corresponda realizar el pago de dicha<br></br>
+                            </td>
+                            <td style="font-size: 10px;text-align: justify;padding: 10px; ">
+                                pensión (en lo sucesivo, el “Instituto”), para que éste a <br></br>
+                                cuenta y ruego del Cliente, y de la pensión que perciba <br></br>
+                                el Cliente, entregue todos y cada uno de los montos de <br></br>
+                                las correspondientes Parcialidades a TBY.<br></br>
+                                <br></br>
+                                Para el caso de que los montos de las Parcialidades <br></br>
+                                no pudieran pagarse en las formas referidas en la <br></br>
+                                presente Cláusula por causa imputable al Cliente este <br></br>
+                                deberá pagar las Parcialidades de que se trate, en las <br></br>
+                                fechas establecidas en el Contrato, directamente en la <br></br>
+                                cuenta número 143180000003876733 a nombre de <br></br>
+                                SOLUCIONES INTEGRALES TBY SA DE CV SOFOM <br></br>
+                                ENR, de la institución de crédito CI BANCO (en lo <br></br>
+                                sucesivo, la “Cuenta”)., o en cualquier otra cuenta que, en <br></br>
+                                su caso, TBY le indique para dichos efectos, o en su caso,<br></br>
+                                el Cliente se obliga a proporcionar los datos de alguna <br></br>
+                                cuenta de la que sea titular y que tenga aperturada con <br></br>
+                                el Banco A, y a autorizar a TBY ante el Banco A para que <br></br>
+                                cargue en esa cuenta el pago de las Parcialidades.<br></br>
+                                <br></br>
+                                6. CRÉDITOS POSTERIORES. Las Partes acuerdan <br></br>
+                                la posibilidad de celebrar nuevos contratos de crédito <br></br>
+                                al amparo del este contrato, en los cuales el Cliente <br></br>
+                                otorgará su Consentimiento por escrito.<br></br>
+                                <br></br>
+                                7. COSTO ANUAL TOTAL.- “CAT: El Costo <br></br>
+                                Anual Total de financiamiento expresado en términos<br></br>
+                                porcentuales anuales que, para fines informativos y <br></br>
+                                de comparación, incorpora la totalidad de los costos <br></br>
+                                y gastos inherentes a los créditos” (en lo sucesivo, el <br></br>
+                                “CAT”), asciende al porcentaje indicado en la Carátula. <br></br>
+                                El Cliente manifiesta que TBY, previo a la celebración del <br></br>
+                                Contrato, hizo de su conocimiento el CAT.<br></br>
+                                <br></br>
+                                8. ESTADOS DE CUENTA.- TBY emitirá un estado <br></br>
+                                de cuenta semestral los días 30 de junio y 30 de <br></br>
+                                diciembre de cada año, durante la vigencia del presente <br></br>
+                                Contrato, mismo que estará a disposición del Cliente <br></br>
+                                en la sucursal de TBY de su preferencia, presentando su <br></br>
+                                identificación vigente; no obstante lo anterior el Cliente <br></br>
+                                en todo momento tendrá acceso a la consulta de saldo, <br></br>
+                                transacciones y a los movimientos del Crédito, en forma <br></br>
+                                gratuita a través de su entrega física, en la sucursal de TBY de <br></br>
+                                su preferencia, presentando su identificación <br></br>
+                                oficial vigente.<br></br>
+                                <br></br>
+                                El Cliente contará con 90 (noventa) días naturales, a <br></br>
+                                partir de la fecha en que tenga conocimiento del acto <br></br>
+                                u omisión que la motive, para formular, por escrito, <br></br>
+                                cualquier aclaración con respecto a la información <br></br>
+                                contenida en el mismo, ante la Unidad Especializada de <br></br>
+                                Atención a Usuarios de TBY, cuyos datos de localización <br></br>
+                                y contacto se establecen en la Cláusula UNIDAD <br></br>
+                                ESPECIALIZADA Y ATENCIÓN A USUARIOS <br></br>
+                                siguiente, en caso contrario, se entenderá que dicha <br></br>
+                                información es aceptada en sus términos.<br></br>
+                                <br></br>
+                                No obstante lo anterior, el Cliente tendrá en todo <br></br>
+                                momento el derecho de solicitar la modificación de la <br></br>
+                                forma de entrega de los estados de cuenta para que le <br></br>
+                                sean entregados en su domicilio.<br></br>
+                                <br></br>
+                                9. APLICACIÓN Y ACREDITACIÓN DE PAGOS.- <br></br>
+                                Los pagos que, con respecto al Crédito, realice el <br></br>
+                                Cliente, se aplicarán en el siguiente orden y hasta donde<br></br>
+                                alcance, a: i) impuestos; ii) cantidades que se generen al <br></br>
+                                amparo de este Contrato; iii) intereses ordinarios; y iv) <br></br>
+                                el principal dispuesto del Crédito.<br></br>
+                                <br></br>
+                                El acreditamiento de los pagos será realizado por TBY, el <br></br>
+                                5º (quinto) día hábil siguiente al del pago de la cantidad <br></br>
+                                de que se trate.<br></br>
+                                <br></br>
+                                10. PAGOS ANTICIPADOS Y PAGOS <br></br>
+                                ADELANTADOS.- TBY está obligada a aceptar pagos<br></br>
+                            </td>
+                            <td style="font-size: 10px;text-align: justify;padding: 10px; ">
+                                anticipados de los créditos menores o equivalente <br></br>
+                                a 900,000 UDIS. El Cliente podrá efectuar pagos <br></br>
+                                anticipados parciales o totales del saldo insoluto del <br></br>
+                                Crédito, siempre y cuando se encuentre al corriente <br></br>
+                                en el cumplimiento de todas sus obligaciones derivadas <br></br>
+                                del Contrato, y así lo solicite previamente a TBY previa <br></br>
+                                validación de la información personal que conste en la <br></br>
+                                base de datos de TBY; el importe del pago anticipado <br></br>
+                                debe ser por una cantidad igual o mayor al pago que <br></br>
+                                deba realizarse en el periodo correspondiente; de <br></br>
+                                conformidad con lo siguiente:<br></br>
+                                <br></br>
+                                A.- Respecto de pagos anticipados parciales y <br></br>
+                                totales: Todo pago que se realice antes de la fecha en <br></br>
+                                que sea exigible, será considerado pago anticipado; i) <br></br>
+                                TBY elaborará y proporcionará al Cliente un formato de <br></br>
+                                pago anticipado, una vez sea acreditada la identidad del <br></br>
+                                Cliente y se tenga por recibida la solicitud, a más tardar <br></br>
+                                el día hábil siguiente al de la recepción de la solicitud, <br></br>
+                                comunicará al Cliente el importe de los adeudos y la <br></br>
+                                vigencia del mismo y dentro de los 5 (cinco) días hábiles <br></br>
+                                siguientes a su solicitud pondrá a su disposición dicho <br></br>
+                                dato, en la sucursal elegida por el Cliente, dentro de los <br></br>
+                                5 (cinco) días hábiles siguientes a su solicitud, asimismo <br></br>
+                                asignará e informará el número de referencia con el que <br></br>
+                                el Cliente deberá pagar las cantidades que correspondan; <br></br>
+                                y, ii) El pago anticipado parcial que realice el Cliente, <br></br>
+                                se aplicará al saldo insoluto del principal cubriendo <br></br>
+                                las últimas Parcialidades por vencer, disminuyendo así <br></br>
+                                el plazo del Crédito y los intereses por devengar se <br></br>
+                                calcularán con base en el nuevo saldo insoluto.<br></br>
+                                <br></br>
+                                En tal caso, TBY entregará al Cliente una tabla de <br></br>
+                                amortización que refleje el pago efectuado. Dicha <br></br>
+                                información se proporcionará por escrito en la sucursal <br></br>
+                                de TBY de su preferencia, presentando su identificación <br></br>
+                                vigente, a más tardar en la fecha de emisión del estado <br></br>
+                                de cuenta correspondiente al periodo en que se realizó <br></br>
+                                el pago anticipado.<br></br>
+                                Cada vez que se realice un pago anticipado se entregará <br></br>
+                                un comprobante al CLIENTE.<br></br>
+                                Tratándose de pagos anticipados por un importe igual <br></br>
+                                al Saldo Insoluto, TBY, además del comprobante del <br></br>
+                                pago, deberá entregar o mantener a disposición de EL <br></br>
+                                CLIENTE, el estado de cuenta o documento en el que <br></br> 
+                                conste el fin de la relación contractual y la inexistencia <br></br>
+                                de adeudos derivados exclusivamente de dicha relación, <br></br>
+                                dentro de 10 (diez) días hábiles a partir de que se hubiera <br></br>
+                                realizado el pago de los adeudos o en la siguiente fecha <br></br>
+                                de corte.<br></br>
+                                TBY debe entregar el saldo que exista a favor del <br></br>
+                                CLIENTE, en su caso, en la fecha en que se dé por <br></br>
+                                terminada la operación o al no haber acudido el <br></br>
+                                CLIENTE a la sucursal u oficina de TBY, e informarle <br></br>
+                                que se encuentra a su disposición y determinarle la <br></br>
+                                forma cómo le puede ser devuelto.<br></br>
+                                <br></br>
+                                B.-Terminación anticipada: El Cliente puede solicitar <br></br>
+                                la terminación anticipada del Contrato, sin penalización <br></br>
+                                alguna, bastando para ello la presentación de una <br></br>
+                                solicitud previa identificación mediante la presentación <br></br>
+                                de cualquiera de las siguientes identificaciones oficiales;<br></br>
+                                i) credencial para votar; ii) pasaporte y/o iii) cédula <br></br>
+                                profesional; y validación de la información personal que <br></br>
+                                conste en la base de datos de TBY. <br></br>
+                                TBY proporcionará al Cliente una clave de confirmación <br></br>
+                                de la solicitud de terminación respectiva y el número de <br></br>
+                                referencia para que efectúe el pago, previa identificación <br></br>
+                                y cancelará, en su caso, el servicio de domiciliación. <br></br>
+                                <br></br>
+                                Para este fin, TBY no realizará cargo adicional alguno a <br></br>
+                                los pactados en el presente Contrato.<br></br>
+                                <br></br>
+                                TBY dará por terminado el Contrato el día hábil <br></br>
+                                siguiente a aquél en que sea acreditada la identidad del<br></br>
+                            </td>
+                        </tr>
+                    </table>
+                    <!--<div name="parte3">
+                        <div style="float: left"></div>
+                        <div style="float: right"></div>
+                        <div style="margin: 0 auto; width: 400px;font-size: 13px;" ></div>
+                        <div style="float: left"><br></br></div>
+                        <div style="float: right">Fecha: <t t-esc="doc.date_start.strftime('%d-%m-%Y')"/></div>
+                        <div style="margin: 0 auto; width: 300px;color:red;font-size: 13px;" align="right">SCR <t t-esc="doc.name"/></div>
+                    </div> 
+                    <br></br>
+                    <br></br>-->
+                    <table style="width:1000px;border-collapse: collapse;">
+                        <tr>
+                            <td>
+                                <!--<img t-attf-src="/web/binary/company_logo?company={{ res_company.id }}" height="75px" width="290px"/>-->
+                            </td>
+                            <td style="font-size: 13px;" align="center">
+                                REGISTRO RECA CONDUSEF: 8578-439-030361/01-04698-0818
+                                <br></br>
+                                SCR <t t-esc="doc.name"/>
+                            </td>
+                            <td>
+                                No. Cliente: ___________
+                                <br></br>
+                                Fecha: <t t-esc="doc.date_start.strftime('%d-%m-%Y')"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="font-size: 10px;text-align: justify;padding: 10px; ">
+                                Cliente y se tenga por recibida la solicitud si no existen <br></br>
+                                adeudos, de lo contrario, a más tardar el día hábil <br></br>
+                                siguiente al de la recepción de la solicitud, comunicará <br></br>
+                                al Cliente el importe de los adeudos y la vigencia del <br></br>
+                                mismo y dentro de los 5 (cinco) días hábiles siguientes <br></br>
+                                a su solicitud pondrá a su disposición dicho dato, en <br></br>
+                                la sucursal elegida por el Cliente y una vez liquidados <br></br>
+                                los adeudos se dará por terminado el Contrato.<br></br>
+                                <br></br>
+                                Dentro de los 10 (diez) días hábiles a partir de que <br></br>
+                                se hubiera realizado el pago de los adeudos, TBY <br></br>
+                                pondrá a su disposición en la sucursal de su preferencia, <br></br>
+                                el documento en el que conste el fin de la relación <br></br>
+                                contractual y la inexistencia de adeudos derivados <br></br>
+                                exclusivamente de dicha relación.<br></br>
+                                <br></br>
+                                En caso de ser aplicable TBY reembolsará el saldo <br></br>
+                                a favor, en la fecha en que se dé por terminado el <br></br>
+                                Contrato, mediante una referencia bancaria (DIE) con <br></br>
+                                la cual, previa identificación, podrá retirar los fondos en <br></br>
+                                cualquier sucursal de la institución bancaria que TBY le <br></br>
+                                indique.<br></br>
+                                <br></br>
+                                TBY reportará a las sociedades de información crediticia <br></br>
+                                que la cuenta está cerrada sin adeudo alguno en los <br></br>
+                                plazos que para tales efectos señala la Ley para Regular <br></br>
+                                las Sociedades de Información Crediticia.<br></br>
+                                <br></br>
+                                En caso de que el Cliente no solicite la terminación <br></br>
+                                anticipada del contrato a TBY y realice la totalidad del <br></br>
+                                pago del MONTO DEL CRÉDITO, así como de las <br></br>
+                                demás cantidades pactadas en este contrato generadas <br></br>
+                                hasta ese momento, TBY, una vez identificado el pago, <br></br>
+                                mantendrá a disposición del Cliente, el documento <br></br>
+                                en el que conste el fin de la relación contractual y la <br></br>
+                                inexistencia de adeudos derivados exclusivamente <br></br>
+                                de dicha relación, dentro de los diez (10) días hábiles <br></br>
+                                a partir de que se hubiera realizado el pago de los <br></br>
+                                adeudos.<br></br>
+                                <br></br>
+                                Una vez liquidado el Crédito, quedará sin efectos el <br></br>
+                                Mandato Especial de Pago, y por tanto TBY hará entrega <br></br>
+                                del Pagaré conforme a la Cláusula 15, y pondrá a <br></br>
+                                disposición del Cliente el documento en que conste el <br></br>
+                                fin de la relación contractual que corresponda.<br></br>
+                                <br></br>
+                                El Cliente podrá solicitar por escrito la terminación de <br></br>
+                                la operación, por conducto de otra Entidad Financiera <br></br>
+                                para lo cual las partes se apegarán a lo establecido en las <br></br>
+                                disposiciones aplicables. Una vez reciba la comunicación <br></br>
+                                de la Entidad Financiera receptora TBY liquidará el <br></br>
+                                adeudo del Cliente y renunciará a los derechos de <br></br>
+                                cobro remanente, que pudieran subsistir después del momento de la <br></br>
+                                cancelación.<br></br>
+                                <br></br>
+                                C.- Pagos adelantados: Serán aquéllos que aún no son <br></br>
+                                exigibles y que se aplicarán a cubrir los pagos periódicos <br></br>
+                                inmediatos siguientes.<br></br>
+                                <br></br>
+                                Cuando el importe del pago sea superior al que deba <br></br>
+                                cubrirse en un periodo, TBY deberá obtener un escrito <br></br>
+                                con firma autógrafa del Cliente que incluya la leyenda <br></br>
+                                siguiente: “El Usuario autoriza que los recursos que se <br></br>
+                                entregan en exceso a sus obligaciones exigibles, no se <br></br>
+                                apliquen para el pagos anticipados del principal, sino <br></br>
+                                que se utilicen para cubrir por adelantado los pagos <br></br>
+                                periódicos del Crédito inmediatos siguientes”.<br></br>
+                                <br></br>   
+                                Las cantidades que el Cliente deba pagar conforme a la <br></br>
+                                presente Cláusula, deberán ser depositadas o transferidas <br></br>
+                                a la cuenta bancaria que TBY le indique, con el número <br></br>
+                                de referencia previamente asignado e informado por <br></br>
+                                TBY al Cliente para tales efectos. El Cliente deberá <br></br>
+                                conservar el comprobante de pago que emita la <br></br>
+                                institución bancaria para cualquier duda o aclaración y <br></br>
+                                en caso de pagos anticipados parciales, además deberá
+                            </td>
+                            <td style="font-size: 10px;text-align: justify;padding: 10px; ">
+                                conservar el formato de pago correspondiente. <br></br>
+                                <br></br>
+                                11. COMISIONES.- TBY no generará o cobrará <br></br>
+                                comisión alguna, derivado del presente Contrato.<br></br>
+                                <br></br>
+                                12. OBLIGACIONES ADICIONALES DEL <br></br>
+                                CLIENTE.- El Cliente se obliga a efectuar cualquier pago <br></br>
+                                relativo al Crédito de conformidad con lo establecido en <br></br>
+                                las Cláusulas 4, 5, 9, 11 y 13 del Contrato, por lo que no <br></br>
+                                deberá entregar y/o pagar al personal de TBY, por algún <br></br>
+                                motivo y/o causa que no se encuentren señalados en el <br></br>
+                                Contrato, dinero en efectivo, cheques, pagarés, bienes, <br></br>
+                                valores o documentos. En caso de incumplimiento a esta <br></br>
+                                Cláusula, el Cliente será el único y absoluto responsable <br></br>
+                                de dicha entrega y/o pago.<br></br>
+                                <br></br>
+                                13. DENUNCIA Y VENCIMIENTO ANTICIPADO.- <br></br>
+                                I) Las partes convienen que TBY estará facultado para <br></br>
+                                denunciar el Contrato en cualquier tiempo, mediante <br></br>
+                                aviso que, por escrito y conforme a lo previsto en el <br></br>
+                                Contrato, realice al Cliente.<br></br>
+                                II) TBY podrá, sin necesidad de declaración judicial <br></br>
+                                previa, dar por vencido anticipadamente el plazo para <br></br>
+                                el pago del Crédito y sus accesorios, en los siguientes <br></br>
+                                casos:<br></br>
+                                a) El Crédito no sea pagado en los términos del <br></br>
+                                Contrato;<br></br>
+                                b) Si el Cliente incumple con cualquiera de las <br></br>
+                                obligaciones a su cargo derivadas del Contrato;<br></br>
+                                c) Si las Declaraciones, información y/o documentación <br></br>
+                                entregada por el Cliente a TBY en el Contrato y/o en la <br></br>
+                                Solicitud; resulte ser falsa;<br></br>
+                                d) El MONTO DEL CRÉDITO se destine a ilícitos; y,<br></br>
+                                e) En los demás casos previstos en el Contrato o por <br></br>
+                                las leyes aplicables.<br></br>
+                                <br></br>
+                                En consecuencia de lo anterior, el Cliente pagará a favor <br></br>
+                                de TBY: i) el saldo insoluto por principal, así como las <br></br>
+                                demás cantidades pactadas en este contrato; y, ii) cualquier <br></br>
+                                otro importe que el Cliente adeude a TBY conforme al <br></br>
+                                Contrato.<br></br>
+                                <br></br>
+                                14. TÍTULO EJECUTIVO.- El Contrato y el estado de <br></br>
+                                cuenta que certifique el contador de TBY, serán título <br></br>
+                                ejecutivo mercantil, sin necesidad de reconocimiento de <br></br>
+                                firma ni de otro requisito alguno.<br></br>
+                                <br></br>
+                                15. PAGARÉ.- El Cliente en este acto suscribe a favor <br></br>
+                                de TBY, un pagaré cuyo importe asciende al Monto del <br></br>
+                                Crédito, más los intereses ordinarios y el Impuesto al Valor <br></br>
+                                Agregado que les corresponda, es decir, el Importe Total <br></br>
+                                del Crédito y, el que a su vez, documenta la disposición <br></br>
+                                que realice el Cliente sobre el monto del Crédito (en lo <br></br>
+                                sucesivo el “Pagaré”). TBY devolverá el Pagaré al Cliente, <br></br>
+                                una vez realizado el pago total del Crédito conforme <br></br>
+                                al Contrato, dentro de los 30 (treinta) días naturales <br></br>
+                                siguientes a que el Cliente se lo solicite a TBY.<br></br>
+                                <br></br>
+                                16. MODIFICACIÓN AL CONTRATO.- TBY, podrá <br></br>
+                                modificar el presente contrato de acuerdo a lo siguiente:<br></br>
+                                a) Con treinta días naturales de anticipación a la entrada en <br></br>
+                                vigor, notificará al Cliente, de las modificaciones propuestas, <br></br>
+                                mediante aviso en su página web y en sucursales.<br></br>
+                                b) En el aviso se señalará claramente la fecha de entrada <br></br>
+                                en vigor de las modificaciones, en caso de no recibir <br></br>
+                                notificación alguna, se entenderán por consentidas.<br></br>
+                                c) En caso de que el Cliente, no esté de acuerdo con éstas, <br></br>
+                                podrá solicitar la terminación del contrato dentro de los <br></br>
+                                treinta días naturales posteriores a la entrada en vigor <br></br>
+                                de dichas modificaciones, sin responsabilidad ni comisión <br></br>
+                                ni penalización alguna a su cargo, bajo las condiciones <br></br>
+                                pactadas originalmente, debiendo cubrir, en su caso, los <br></br>
+                                adeudos que ya se hubieren generado a la fecha que <br></br>
+                                solicite la terminación.
+                            </td>
+                            <td style="font-size: 10px;text-align: justify;padding: 10px; ">
+                                Las tasas de interés del presente contrato no estarán <br></br>
+                                sujetas a modificación alguna durante la vigencia del <br></br>
+                                presente contrato, salvo en caso de reestructura y previa <br></br>
+                                autorización del Cliente.<br></br>
+                                <br></br>
+                                17. CASO FORTUITO O FUERZA MAYOR.- El <br></br>
+                                Cliente se obliga ante TBY al debido cumplimiento de las <br></br>
+                                obligaciones a su cargo derivadas del Contrato, incluso en <br></br>
+                                presencia de hechos o eventos de caso fortuito y/o de fuerza mayor.<br></br>
+                                <br></br>
+                                18. TRANSMISIÓN.- Las partes no podrán transmitir <br></br>
+                                cualquier derecho u obligación que en términos del <br></br>
+                                Contrato, resulte a favor o a cargo de alguna de ellas <br></br>
+                                sin la previa autorización por escrito de la contraparte, a <br></br>
+                                excepción de lo indicado en el párrafo inmediato siguiente, <br></br>
+                                por lo que cualquier transmisión en términos distintos a <br></br>
+                                los aquí previstos, será nula y no será reconocida por la <br></br>
+                                parte de que se trate.<br></br>
+                                <br></br>
+                                El Cliente: i) autoriza expresamente a TBY, para que <br></br>
+                                ésta pueda, sin autorización del Cliente, endosar, ceder, <br></br>
+                                transmitir, descontar, transferir, negociar, afectar y/o <br></br>
+                                gravar, en cualquier tiempo y, respectivamente, cualquier <br></br>
+                                derecho que, en términos del Contrato, resulte a favor <br></br>
+                                de TBY y/o los derechos de crédito contenidos en <br></br>
+                                el Contrato y/o en el Pagaré, ya sea en forma total o <br></br>
+                                parcial; ii) para el supuesto de que TBY no transmita los <br></br>
+                                derechos de crédito contenidos en el Contrato y/o en el <br></br>
+                                Pagaré conforme al inciso i) inmediato anterior, se <br></br>
+                                hace sabedor de que TBY podrá ceder total o parcialmente <br></br>
+                                los derechos de cobranza y/o de administración del <br></br>
+                                Crédito sin necesidad de notificarlo al Cliente, siempre <br></br>
+                                y cuando TBY (o cualquiera de sus afiliadas), realice por <br></br>
+                                cuenta del cesionario, la administración y/o la cobranza <br></br>
+                                del Crédito. En el caso de que TBY deje de llevar la <br></br>
+                                administración y/o la cobranza del Crédito, bastará con <br></br>
+                                la notificación por escrito que se haga al Cliente; y, iii) en <br></br>
+                                este acto libera a TBY de la obligación de abonarle los <br></br>
+                                intereses correspondientes al importe de la disposición <br></br>
+                                del Crédito, para el caso de negociación o cesión del <br></br>
+                                Crédito. Lo establecido en el presente párrafo, aplicará, <br></br>
+                                de igual forma, respecto a cualquier acreedor y/o <br></br>
+                                causahabiente subsecuente.<br></br>
+                                <br></br>
+                                19. UNIDAD ESPECIALIZADA Y ATENCIÓN A <br></br>
+                                USUARIOS.- Cualquier inconformidad, reclamación, <br></br>
+                                queja, solicitud, aclaración o consulta del Cliente, podrá <br></br>
+                                presentarla dentro de los 90 (noventa) días naturales <br></br>
+                                siguientes a la fecha en que tenga conocimiento del <br></br>
+                                acto u omisión que la motive mediante una solicitud <br></br>
+                                por escrito y firmada, dirigida al Titular de la Unidad <br></br>
+                                Especializada de Atención a Usuarios de TBY, en el <br></br>
+                                domicilio señalado en el inciso b) de la Declaración II <br></br>
+                                de TBY, en un horario de atención de 9:30 a 15:00 horas <br></br>
+                                y de 16:00 a 19:00 horas, de lunes a viernes, o a través <br></br>
+                                del correo electrónico une@tby.com.mx y el teléfono <br></br>
+                                018005097829.<br></br>
+                                <br></br>
+                                De igual forma, se hace del conocimiento del Cliente, el <br></br>
+                                número telefónico de atención a usuarios: 53-40-09-99 <br></br>
+                                ó 01800-999-8080 (lada sin costo), dirección en Internet: <br></br>
+                                www.condusef.gob.mx, y correo electrónico: asesoria@<br></br>
+                                condusef.gob.mx, de la COMISIÓN NACIONAL <br></br>
+                                PARA LA PROTECCIÓN Y DEFENSA DE LOS USUARIOS DE <br></br>
+                                SERVICIOS FINANCIEROS.<br></br>
+                                <br></br>
+                                Para una aclaración o reclamación, el “CLIENTE” cuenta <br></br>
+                                con un plazo de 90 (noventa) días naturales contados <br></br>
+                                a partir del hecho que le dio origen o de la fecha de <br></br>
+                                cálculo de intereses, apegándose al procedimiento <br></br>
+                                previsto en el Artículo 23 de la Ley para la Transparencia <br></br>
+                                y Ordenamiento de los Servicios Financieros, el cual se <br></br>
+                                transcribe, y al cual se sujeta “TBY”:<br></br>
+                                “I. Cuando el Cliente no esté de acuerdo con alguno de
+                            </td>
+                        </tr>
+                    </table>
+                    <table style="width:1000px;border-collapse: collapse;">
+                        <tr>
+                            <td>
+                                <img t-attf-src="/web/binary/company_logo?company={{ res_company.id }}" height="75px" width="290px"/>
+                            </td>
+                            <td style="font-size: 13px;" align="center">
+                                REGISTRO RECA CONDUSEF: 8578-439-030361/01-04698-0818
+                                <br></br>
+                                SCR <t t-esc="doc.name"/>
+                            </td>
+                            <td>
+                                No. Cliente: ___________
+                                <br></br>
+                                Fecha: <t t-esc="doc.date_start.strftime('%d-%m-%Y')"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="font-size: 10px;text-align: justify;padding: 10px; ">
+                                los movimientos que aparezcan en el estado de cuenta <br></br>
+                                respectivo o en los medios electrónicos, ópticos o de cualquier <br></br>
+                                otra tecnología que se hubieren pactado, podrá presentar <br></br>
+                                una solicitud de aclaración dentro del plazo de noventa días <br></br>
+                                naturales contados a partir de la fecha de corte o, en su caso, <br></br>
+                                de la realización de la operación o del servicio.<br></br>
+                                La solicitud respectiva podrá presentarse ante la sucursal en <br></br>
+                                la que radica la cuenta, o bien, en la unidad especializada <br></br>
+                                de la institución de que se trate, mediante escrito, correo <br></br>
+                                electrónico o cualquier otro medio por el que se pueda <br></br>
+                                comprobar fehacientemente su recepción. En todos los <br></br>
+                                casos, la institución estará obligada a acusar recibo de dicha <br></br>
+                                solicitud.<br></br>
+                                Tratándose de cantidades a cargo del Cliente dispuestas <br></br>
+                                mediante cualquier mecanismo determinado al efecto por <br></br>
+                                la Comisión Nacional para la Protección y Defensa de los <br></br>
+                                Usuarios de los Servicios Financieros en disposiciones de <br></br>
+                                carácter general, el Cliente tendrá el derecho de no realizar <br></br>
+                                el pago cuya aclaración solicita, así como el de cualquier <br></br>
+                                otra cantidad relacionada con dicho pago, hasta en tanto se <br></br>
+                                resuelva la aclaración conforme al procedimiento a que se <br></br>
+                                refiere este artículo;<br></br>
+                                II. Una vez recibida la solicitud de aclaración, la institución <br></br>
+                                tendrá un plazo máximo de cuarenta y cinco días para <br></br>
+                                entregar al Cliente el dictamen correspondiente, anexando <br></br>
+                                copia simple del documento o evidencia considerada para la <br></br>
+                                emisión de dicho dictamen, con base en la información que, <br></br>
+                                conforme a las disposiciones aplicables, deba obrar en su <br></br>
+                                poder, así como un informe detallado en el que se respondan <br></br>
+                                todos los hechos contenidos en la solicitud presentada por el <br></br>
+                                Cliente. En el caso de reclamaciones relativas a operaciones <br></br>
+                                realizadas en el extranjero, el plazo previsto en este párrafo <br></br>
+                                será hasta de ciento ochenta días naturales.<br></br>
+                                El dictamen e informe antes referidos deberán formularse por <br></br>
+                                escrito y suscribirse por personal de la institución facultado <br></br>
+                                para ello. En el evento de que, conforme al dictamen que <br></br>
+                                emita la institución, resulte procedente el cobro del monto <br></br>
+                                respectivo, el Cliente deberá hacer el pago de la cantidad a <br></br>
+                                su cargo, incluyendo los intereses ordinarios conforme a lo <br></br>
+                                pactado, sin que proceda el cobro de intereses moratorios <br></br>
+                                y otros accesorios generados por la suspensión del pago <br></br>
+                                realizada en términos de esta disposición;<br></br>
+                                III. Dentro del plazo de cuarenta y cinco días naturales <br></br>
+                                contado a partir de la entrega del dictamen a que se <br></br>
+                                refiere la fracción anterior, la institución estará obligada <br></br>
+                                a poner a disposición del Cliente en la sucursal en la que <br></br>
+                                radica la cuenta, o bien, en la unidad especializada de la <br></br>
+                                institución de que se trate, el expediente generado con <br></br>
+                                motivo de la solicitud, así como a integrar en éste, bajo <br></br>
+                                su más estricta responsabilidad, toda la documentación e <br></br>
+                                información que, conforme a las disposiciones aplicables, <br></br>
+                                deba obrar en su poder y que se relacione directamente con <br></br>
+                                la solicitud de aclaración que corresponda y sin incluir datos <br></br>
+                                correspondientes a operaciones relacionadas con terceras <br></br>
+                                personas;<br></br>
+                                IV. En caso de que la institución no diere respuesta oportuna <br></br>
+                                a la solicitud del Cliente o no le entregare el dictamen e <br></br>
+                                informe detallado, así como la documentación o evidencia <br></br>
+                                antes referidos, la Comisión Nacional para la Protección <br></br>
+                                y Defensa de los Usuarios de los Servicios Financieros, <br></br>
+                                impondrá multa en los términos previstos en la fracción <br></br>
+                                XI del artículo 43 de esta Ley por un monto equivalente <br></br>
+                                al reclamado por el Cliente en términos de este artículo, y <br></br>
+                                V. Hasta en tanto la solicitud de aclaración de que se trate <br></br>
+                                no quede resuelta de conformidad con el procedimiento <br></br>
+                                señalado en este artículo, la institución no podrá reportar <br></br>
+                                como vencidas las cantidades sujetas a dicha aclaración a <br></br>
+                                las sociedades de información crediticia.<br></br>
+                                Lo antes dispuesto es sin perjuicio del derecho de los Clientes <br></br>
+                                de acudir ante la Comisión Nacional para la Protección y <br></br>
+                                Defensa de los Usuarios de Servicios Financieros o ante <br></br>
+                                la autoridad jurisdiccional correspondiente conforme a las <br></br>
+                                disposiciones legales aplicables, así como de las sanciones <br></br>
+                                que deban imponerse a la institución por incumplimiento <br></br>
+                                a lo establecido en el presente artículo. Sin embargo, el
+                            </td>
+                            <td style="font-size: 10px;text-align: justify;padding: 10px; ">
+                                procedimiento previsto en este artículo quedará sin efectos a <br></br>
+                                partir de que el Cliente presente su demanda ante autoridad <br></br>
+                                jurisdiccional o conduzca su reclamación en términos y <br></br>
+                                plazos de la Ley de Protección y Defensa al Usuario de <br></br>
+                                Servicios Financieros.”<br></br>
+                                <br></br>
+                                20. DOMICILIOS.- En tanto no se comunique por <br></br>
+                                escrito el cambio de domicilio, cualquier diligencia, <br></br>
+                                actuación, notificación, emplazamiento, requerimiento o <br></br>
+                                comunicación que se relacione con el Contrato, serán <br></br>
+                                por escrito y entregadas con acuse de recibo en los <br></br>
+                                siguientes domicilios:<br></br>
+                                <br></br>
+                                • TBY: el señalado en el inciso b) de la Declaración II de <br></br>
+                                TBY• El Cliente: el que se indica en la Solicitud.<br></br>
+                                <br></br>
+                                Sin perjuicio de lo establecido en el primer párrafo de <br></br>
+                                la presente Cláusula, las notificaciones extrajudiciales <br></br>
+                                que sean relativas al requerimiento del o de los pagos <br></br>
+                                del Crédito al Cliente, podrán realizarse por TBY, en <br></br>
+                                cualquier domicilio del Cliente que sea del conocimiento <br></br>
+                                de TBY, por escrito y, entregadas en forma personal, sin <br></br>
+                                acuse de recibo.<br></br>
+                                <br></br>
+                                21. DECLARACIÓN.- El Cliente en este acto <br></br>
+                                manifiesta expresamente que TBY le hizo saber, previo <br></br>
+                                a la firma de este Contrato, su contenido, alcance y <br></br>
+                                efectos, así como la información del Crédito, mismos <br></br>
+                                que son de la comprensión del Cliente.<br></br>
+                                <br></br>
+                                22. LEYES Y COMPETENCIA.- El Contrato se <br></br>
+                                rige por lo dispuesto en sus Cláusulas, en su defecto <br></br>
+                                o supletoriamente, por las disposiciones contenidas <br></br>
+                                y que resulten aplicables de la Ley General de Títulos <br></br>
+                                y Operaciones de Crédito, de la Ley General de <br></br>
+                                Organizaciones y Actividades Auxiliares del Crédito, de <br></br>
+                                la Ley para la Transparencia y Ordenamiento de los <br></br>
+                                Servicios Financieros, de las Disposiciones de Carácter <br></br>
+                                General en materia de transparencia aplicables a las <br></br>
+                                Sociedades Financieras de Objeto Múltiple, Entidades <br></br>
+                                No Reguladas, del Código de Comercio, así como del <br></br>
+                                Código Civil Federal.<br></br>
+                                <br></br>
+                                Para la interpretación y cumplimiento del Contrato, ambas <br></br>
+                                partes se someten de manera expresa a la jurisdicción <br></br>
+                                de los Tribunales competentes de la Ciudad de México, <br></br>
+                                o en su caso, a elección del actor, a la jurisdicción de los <br></br>
+                                Tribunales competentes del domicilio del Cliente, por <br></br>
+                                consiguiente, renuncian a cualquier otra jurisdicción <br></br>
+                                que por razón de su domicilio o cualquier otra causa <br></br>
+                                les corresponda o pudiere corresponderles, ya sea en lo <br></br>
+                                presente o futuro.<br></br>
+                                <br></br>
+                                El Contrato junto con sus Anexos, el aviso de privacidad, <br></br>
+                                la Carátula y la Solicitud, se encuentran vinculados entre <br></br>
+                                sí por lo que todos forman parte integrante del mismo <br></br>
+                                instrumento legal.<br></br>
+                                <br></br>
+                                Las partes reconocen el alcance y efectos del Contrato, <br></br>
+                                obligándose en todos y cada uno de sus términos, por lo <br></br>
+                                que el Cliente manifiesta su voluntad y conformidad con <br></br>
+                                el Contrato a través de su firma autógrafa, quedando un <br></br>
+                                tanto en poder de cada una de las partes.<br></br>
+                                <br></br>
+                                El Contrato se firma en _México___ el _<t t-esc="doc.date_start.day"/>_ de <br></br>
+                                _<t t-esc="doc.date_start.month"/>_ de <t t-esc="doc.date_start.year"/>_<br></br>
+                                <br></br>
+                                <br></br>
+                                El Cliente<br></br>
+                                <br></br>
+                                <br></br>
+                                <br></br>
+                                <br></br>
+                                __ <t t-esc="doc.partner_id.name"/><br></br>_______
+                                <br></br>
+                            </td>
+                            <td style="font-size: 10px;text-align: justify;padding: 10px; ">
+                                AUTORIZACIONES ADICIONALES.<br></br>
+                                <br></br>
+                                El Cliente, en términos de lo manifestado al suscribir <br></br>
+                                el aviso de privacidad, en su caso, I) autorizó que TBY <br></br>
+                                comparta y/o proporcione la información financiera, <br></br>
+                                comercial, operativa y personal del Cliente, así como la <br></br>
+                                relativa al Crédito y al Contrato; (ii) que su información <br></br>
+                                pueda ser utilizada por TBY, con fines mercadotécnicos <br></br>
+                                y/o publicitarios; (iii) recibir en su domicilio particular y/o <br></br>
+                                laboral, correo electrónico personal y/o laboral, teléfono <br></br>
+                                fijo particular y/o laboral, teléfono móvil particular y/o <br></br>
+                                laboral o, por cualquier otro medio, publicidad de los <br></br>
+                                bienes, productos y/o servicios financieros que ofrezca <br></br>
+                                TBY. El ofrecimiento de los bienes, productos y/o <br></br>
+                                servicios financieros será realizado por TBY, a través de <br></br>
+                                publicidad, promoción o telemarketing.<br></br>
+                                <br></br>
+                                El Cliente
+                                <br></br>
+                                <br></br>
+                                <br></br>
+                                ______ <t t-esc="doc.partner_id.name"/><br></br>________
+                                AUTORIZACIÓN PARA SOLICITAR REPORTES <br></br>
+                                DE CRÉDITO.- Por este conducto autorizo <br></br>
+                                expresamente a Soluciones Integrales TBY, S.A. de <br></br>
+                                C.V., SOFOM, E.N.R. y/o a cualquiera de sus empresas <br></br>
+                                afiliadas, subsidiarias y/o relacionadas, para que por <br></br>
+                                conducto de sus funcionarios facultados lleven a cabo <br></br>
+                                investigaciones, sobre mi comportamiento e historial <br></br>
+                                crediticio, así como de cualquier otra información de <br></br>
+                                naturaleza análoga, en las Sociedades de Información <br></br>
+                                Crediticia que estime conveniente.<br></br>
+                                <br></br>
+                                Asimismo, declaro que conozco la naturaleza y <br></br>
+                                alcance de la información que se solicitará, del uso <br></br>
+                                que Soluciones Integrales TBY, S.A. de C.V., SOFOM, <br></br>
+                                E.N.R.; y/o que cualquiera de sus empresas afiliadas, <br></br>
+                                subsidiarias y/o relacionadas harán de tal información y <br></br>
+                                de que éstas podrán realizar consultas periódicas de mi <br></br>
+                                historial crediticio, consintiendo que esta autorización <br></br>
+                                se encuentre vigente por un período de 3 (tres) años <br></br>
+                                contados a partir de la fecha de su expedición y en <br></br>
+                                todo caso durante el tiempo en que mantengamos una <br></br>
+                                relación jurídica.<br></br>
+                                <br></br>
+                                <br></br>
+                                Nombre:<br></br>
+                                <t t-esc="doc.partner_id.name"/><br></br>
+                                RFC:<br></br>
+                                <t t-esc="doc.partner_id.name"/><br></br>
+                                Dirección:<br></br>
+                                <t t-esc="doc.partner_id.street"/>, <t t-esc="doc.partner_id.city"/>, <t t-esc="doc.partner_id.country_id.name"/><br></br>
+                                Fecha Consulta:<br></br>
+                                <t t-esc="doc.date_order.strftime('%d-%m-%Y')"/><br></br>
+                                Folio de Consulta:<br></br>
+                                <t t-esc="doc.name"/><br></br>
+                                <br></br>
+                                <br></br>
+                                Estoy consciente y acepto que este documento quede <br></br>
+                                bajo propiedad de Soluciones Integrales TBY, S.A. de <br></br>
+                                C.V., SOFOM, E.N.R. y/o de cualquiera de sus empresas <br></br>
+                                afiliadas, subsidiarias y/o relacionadas y/o del Tercero, <br></br>
+                                para efectos de control y cumplimiento del artículo 28 <br></br>
+                                de la Ley para Regular a Las Sociedades de Información <br></br>
+                                Crediticia.<br></br>
+                                <br></br>
+                                Fecha en que se autoriza la consulta: _<t t-esc="doc.date_start.strftime('%d-%m-%Y')"/>__<br></br>
+                                <br></br>
+                                <br></br>
+                                <br></br>
+                                <br></br>
+                                <t t-esc="doc.partner_id.name"/>______________________<br></br>
+                                Nombre y firma del Cliente
+                            </td>
+                        </tr>
+                    </table>
+                </t>
+        </t>
+    </template>
+</odoo>

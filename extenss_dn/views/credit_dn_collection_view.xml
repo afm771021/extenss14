@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="view_tree_extenss_dn_collection" model="ir.ui.view">
+        <field name="name">extenss.credit.conciliation.tree</field>
+        <field name="model">extenss.credit.conciliation</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" readonly="1"/>
+                <field name="initial_balance"/>
+                <field name="final_balance"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_form_extenss_dn_collection" model="ir.ui.view">
+        <field name="name">extenss.credit.conciliation.form</field>
+        <field name="model">extenss.credit.conciliation</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_confirm_conciliation" string="Confirm" type="object" class="oe_highlight" attrs="{'invisible': [('status_bank', '=', 'validated')]}"/>
+                </header>
+                <sheet>
+                    <group>
+                        <field name="name" readonly="1"/>
+                        <field name="initial_balance" readonly="1"/>
+                        <field name="final_balance" readonly="1"/>
+                        <field name="status_bank" readonly="1"/>
+                    </group>
+                    <group>
+                        <notebook>
+                            <page name="name" string="Transactions">
+                                <field name="conciliation_ids">
+                                    <tree editable="bottom" decoration-danger="status=='pending'" decoration-success="status=='applied'">
+                                        <!-- <control>
+                                            <create name="add_line_control" string="Add a line"/>
+                                            <create name="add_section_control" string="Add a section" context="{'default_display_type': 'line_section'}"/>
+                                            <create name="add_note_control" string="Add a note" context="{'default_display_type': 'line_note'}"/>
+                                        </control> -->
+                                        <field name="check" readonly="1"/>
+                                        <field name="date" readonly="1"/>
+                                        <field name="description" readonly="1"/>
+                                        <field name="customer" options="{'no_open': True}" readonly="1"/>
+                                        <field name="reference" readonly="1"/>
+                                        <field name="amount" readonly="1"/>
+                                        <field name="status" invisible="1"/>
+                                        <field name="type_rec" invisible="1"/>
+                                    </tree>
+                                    <form>
+                                        <group>
+                                            <field name="check"/>
+                                            <field name="date"/>
+                                            <field name="description"/>
+                                            <field name="customer" options="{'no_open': True}"/>
+                                            <field name="reference"/>
+                                            <field name="amount"/>
+                                            <field name="type_rec" invisible="1"/>
+                                        </group>
+                                    </form>
+                                </field>
+                            </page>
+                        </notebook>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_collection_dn" model="ir.actions.act_window">
+        <field name="name">Collection</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">extenss.credit.conciliation</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('type_conciliation', '=', 'dn')]</field>
+        <field name="view_ids"
+                eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('extenss_dn.view_tree_extenss_dn_collection')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('extenss_dn.view_form_extenss_dn_collection')})]"/>
+    </record>
+
+    <menuitem 
+        id="submenu_collection_dn"
+        name="Collection"
+        sequence="130"
+        parent="menu_dn"
+        action="action_collection_dn"/>
+</odoo>

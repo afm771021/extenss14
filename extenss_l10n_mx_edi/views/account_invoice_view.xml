@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="view_l10n_mx_edi_invoice_form_inherit_extenss" model="ir.ui.view">
+        <field name="name">l10n_mx_edi.invoice.form.inherit.extenss</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form"/>
+        <field name="arch" type="xml">
+            <!-- <field name="company_id" position="after">
+                <field name="l10n_mx_edi_cfdi_name"/>
+            </field> -->
+            <xpath expr="//sheet/group//group[last()]" position="inside">
+                <label for="l10n_mx_edi_pac_status" attrs="{'invisible': ['|', ('state', 'not in', ['posted', 'cancel']), ('type', 'not in', ('out_invoice', 'out_refund'))]}"/>
+                <div class="o_row" attrs="{'invisible': ['|', ('state', 'not in', ['posted', 'cancel']), ('type', 'not in', ('out_invoice', 'out_refund'))]}">
+                    <field name="l10n_mx_edi_pac_status"/>
+                    <button name="l10n_mx_edi_update_pac_status" string="Retry" class="oe_link" type="object" groups="account.group_account_invoice" attrs="{'invisible':[('l10n_mx_edi_pac_status', 'in', ['signed', 'cancelled', False])]}"/>
+                    <button name="l10n_mx_edi_request_cancellation" string="Request Cancellation" class="oe_link" type="object" groups="account.group_account_invoice" attrs="{'invisible':[('l10n_mx_edi_pac_status', 'not in', ['signed'])]}"/>
+                </div>
+                <label for="l10n_mx_edi_sat_status" attrs="{'invisible': ['|', ('state', 'not in', ['posted', 'cancel']), ('type', 'not in', ('out_invoice', 'out_refund','in_invoice'))]}"/>
+                     <!-- TODO: GRC CONTABILIDAD -->
+                    <div class="o_row" attrs="{'invisible': ['|', ('state', 'not in', ['posted', 'cancel']), ('type', 'not in', ('out_invoice', 'out_refund','in_invoice'))]}">
+                        <field name="l10n_mx_edi_sat_status"/>
+                       <!--  <button name="l10n_mx_edi_update_sat_status" string="Retry" class="oe_link" type="object" groups="account.group_account_invoice" attrs="{'invisible':['|', ('l10n_mx_edi_pac_status', 'in', ['retry', 'to_sign', 'to_cancel', False]), ('state', '=', 'draft')]}"/> -->
+                        <button name="l10n_mx_edi_update_sat_status" string="Retry" class="oe_link" type="object" groups="account.group_account_invoice"
+                                attrs="{'invisible':[('state', '=', 'draft'),'|', ('l10n_mx_edi_pac_status', 'in', ['retry', 'to_sign', 'to_cancel', False]), ('type', 'in', ('out_invoice', 'out_refund'))]}"/>
+                    </div>
+
+<!-- TODO: GRC CONTABILIDAD ook -->
+                    <field name="l10n_mx_edi_cfdi_name" attrs="{'invisible': [('type', 'not in', 'in_invoice')]}"/>
+                <field name="l10n_mx_edi_origin" attrs="{'invisible': [('type', 'not in', ('out_invoice', 'out_refund'))]}"/>
+            </xpath>
+
+        </field>
+    </record>
+</odoo>

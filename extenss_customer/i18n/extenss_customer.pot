@@ -1,0 +1,594 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* extenss_customer
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e-20200316\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-08-20 19:59+0000\n"
+"PO-Revision-Date: 2020-08-20 19:59+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: extenss_customer
+#: model_terms:ir.ui.view,arch_db:extenss_customer.res_partner_form_extend
+msgid "123456789"
+msgstr ""
+
+#. module: extenss_customer
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_housing_type__shortcut
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_identification_type__shortcut
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_job_title__shortcut
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_level_study__shortcut
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_marital_status__shortcut
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_product_type__shortcut
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_type_refbank__shortcut
+msgid "Abbreviation"
+msgstr ""
+
+#. module: extenss_customer
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_add_identifications__add_ident_id
+msgid "Add Ident"
+msgstr ""
+
+#. module: extenss_customer
+#: model:ir.model,name:extenss_customer.model_extenss_customer_add_identifications
+#: model_terms:ir.ui.view,arch_db:extenss_customer.res_partner_form_extend
+msgid "Aditional identifications"
+msgstr ""
+
+#. module: extenss_customer
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_bank_ref__bank_ref_id
+msgid "Bank Ref"
+msgstr ""
+
+#. module: extenss_customer
+#: model:ir.model,name:extenss_customer.model_extenss_customer_bank_ref
+msgid "Bank References"
+msgstr ""
+
+#. module: extenss_customer
+#: model_terms:ir.ui.view,arch_db:extenss_customer.res_partner_form_extend
+msgid "Bank references"
+msgstr ""
+
+#. module: extenss_customer
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_bank_ref__banking_reference
+msgid "Banking reference"
+msgstr ""
+
+#. module: extenss_customer
+#: model:ir.model.fields,field_description:extenss_customer.field_res_partner__birth_date
+#: model:ir.model.fields,field_description:extenss_customer.field_res_users__birth_date
+msgid "Birth Date"
+msgstr ""
+
+#. module: extenss_customer
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_personal_ref__cell_phone_personal_res
+msgid "Cell phone"
+msgstr ""
+
+#. module: extenss_customer
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_work_info__close_date
+msgid "Close date"
+msgstr ""
+
+#. module: extenss_customer
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_bank_ref__comments_bank_ref
+msgid "Comments"
+msgstr ""
+
+#. module: extenss_customer
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_work_info__company
+msgid "Company"
+msgstr ""
+
+#. module: extenss_customer
+#: model:ir.model.fields,field_description:extenss_customer.field_res_partner__constitution_date
+#: model:ir.model.fields,field_description:extenss_customer.field_res_users__constitution_date
+msgid "Constitution date"
+msgstr ""
+
+#. module: extenss_customer
+#: model:ir.model,name:extenss_customer.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: extenss_customer
+#: model:ir.model.fields,field_description:extenss_customer.field_res_partner__country_birth
+#: model:ir.model.fields,field_description:extenss_customer.field_res_users__country_birth
+msgid "Country"
+msgstr ""
+
+#. module: extenss_customer
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_add_identifications__create_uid
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_bank_ref__create_uid
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_housing_type__create_uid
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_identification_type__create_uid
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_job_title__create_uid
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_level_study__create_uid
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_marital_status__create_uid
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_personal_ref__create_uid
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_product_type__create_uid
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_type_refbank__create_uid
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_work_info__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: extenss_customer
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_add_identifications__create_date
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_bank_ref__create_date
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_housing_type__create_date
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_identification_type__create_date
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_job_title__create_date
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_level_study__create_date
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_marital_status__create_date
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_personal_ref__create_date
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_product_type__create_date
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_type_refbank__create_date
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_work_info__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: extenss_customer
+#: model:ir.model.fields,field_description:extenss_customer.field_res_partner__dependent_number
+#: model:ir.model.fields,field_description:extenss_customer.field_res_users__dependent_number
+msgid "Dependent number"
+msgstr ""
+
+#. module: extenss_customer
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_add_identifications__display_name
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_bank_ref__display_name
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_housing_type__display_name
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_identification_type__display_name
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_job_title__display_name
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_level_study__display_name
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_marital_status__display_name
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_personal_ref__display_name
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_product_type__display_name
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_type_refbank__display_name
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_work_info__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: extenss_customer
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_personal_ref__email_personal_ref
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_work_info__email_wi
+msgid "Email"
+msgstr ""
+
+#. module: extenss_customer
+#: code:addons/extenss_customer/models/res_partner.py:0
+#, python-format
+msgid ""
+"Enter a value for Banking reference o Number account in tab Bank References"
+msgstr ""
+
+#. module: extenss_customer
+#: code:addons/extenss_customer/models/res_partner.py:0
+#, python-format
+msgid ""
+"Enter a value in any of the fields Phone, Cell phone or Email in tab "
+"Personal references"
+msgstr ""
+
+#. module: extenss_customer
+#: model:ir.model.fields.selection,name:extenss_customer.selection__res_partner__gender__female
+msgid "Female"
+msgstr ""
+
+#. module: extenss_customer
+#: model:ir.model.fields,field_description:extenss_customer.field_res_partner__gender
+#: model:ir.model.fields,field_description:extenss_customer.field_res_users__gender
+msgid "Gender"
+msgstr ""
+
+#. module: extenss_customer
+#: model:ir.model.fields,field_description:extenss_customer.field_res_partner__housing_type
+#: model:ir.model.fields,field_description:extenss_customer.field_res_users__housing_type
+msgid "Housing Type"
+msgstr ""
+
+#. module: extenss_customer
+#: model:ir.model,name:extenss_customer.model_extenss_customer_housing_type
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_housing_type__name
+msgid "Housing type"
+msgstr ""
+
+#. module: extenss_customer
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_add_identifications__id
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_bank_ref__id
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_housing_type__id
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_identification_type__id
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_job_title__id
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_level_study__id
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_marital_status__id
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_personal_ref__id
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_product_type__id
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_type_refbank__id
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_work_info__id
+msgid "ID"
+msgstr ""
+
+#. module: extenss_customer
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_add_identifications__identification_ai
+#: model:ir.model.fields,field_description:extenss_customer.field_res_partner__identification
+#: model:ir.model.fields,field_description:extenss_customer.field_res_users__identification
+msgid "Identification"
+msgstr ""
+
+#. module: extenss_customer
+#: model:ir.model.fields,field_description:extenss_customer.field_res_partner__identification_type
+#: model:ir.model.fields,field_description:extenss_customer.field_res_users__identification_type
+msgid "Identification Type"
+msgstr ""
+
+#. module: extenss_customer
+#: model:ir.model,name:extenss_customer.model_extenss_customer_identification_type
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_identification_type__name
+#: model:ir.module.category,name:extenss_customer.module_category_extenss_customer_identification_type
+msgid "Identification type"
+msgstr ""
+
+#. module: extenss_customer
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_bank_ref__institution
+msgid "Institution"
+msgstr ""
+
+#. module: extenss_customer
+#: model:ir.module.category,name:extenss_customer.module_category_extenss_customer_job_title
+msgid "Job Title"
+msgstr ""
+
+#. module: extenss_customer
+#: model:ir.model,name:extenss_customer.model_extenss_customer_job_title
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_job_title__name
+#: model:ir.model.fields,field_description:extenss_customer.field_res_partner__function
+#: model:ir.model.fields,field_description:extenss_customer.field_res_users__function
+msgid "Job title"
+msgstr ""
+
+#. module: extenss_customer
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_add_identifications____last_update
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_bank_ref____last_update
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_housing_type____last_update
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_identification_type____last_update
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_job_title____last_update
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_level_study____last_update
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_marital_status____last_update
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_personal_ref____last_update
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_product_type____last_update
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_type_refbank____last_update
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_work_info____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: extenss_customer
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_add_identifications__write_uid
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_bank_ref__write_uid
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_housing_type__write_uid
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_identification_type__write_uid
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_job_title__write_uid
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_level_study__write_uid
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_marital_status__write_uid
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_personal_ref__write_uid
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_product_type__write_uid
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_type_refbank__write_uid
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_work_info__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: extenss_customer
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_add_identifications__write_date
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_bank_ref__write_date
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_housing_type__write_date
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_identification_type__write_date
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_job_title__write_date
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_level_study__write_date
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_marital_status__write_date
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_personal_ref__write_date
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_product_type__write_date
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_type_refbank__write_date
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_work_info__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: extenss_customer
+#: model:ir.model.fields,field_description:extenss_customer.field_res_partner__level_study
+#: model:ir.model.fields,field_description:extenss_customer.field_res_users__level_study
+msgid "Level Study"
+msgstr ""
+
+#. module: extenss_customer
+#: model:ir.model,name:extenss_customer.model_extenss_customer_level_study
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_level_study__name
+msgid "Level study"
+msgstr ""
+
+#. module: extenss_customer
+#: model:ir.model.fields.selection,name:extenss_customer.selection__res_partner__gender__male
+msgid "Male"
+msgstr ""
+
+#. module: extenss_customer
+#: model:res.groups,name:extenss_customer.extenss_customer_identification_type_group_manager
+#: model:res.groups,name:extenss_customer.extenss_customer_job_title_group_manager
+msgid "Manager"
+msgstr ""
+
+#. module: extenss_customer
+#: model:ir.model.fields,field_description:extenss_customer.field_res_partner__marital_status
+#: model:ir.model.fields,field_description:extenss_customer.field_res_users__marital_status
+msgid "Marital Status"
+msgstr ""
+
+#. module: extenss_customer
+#: model:ir.model,name:extenss_customer.model_extenss_customer_marital_status
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_marital_status__name
+msgid "Marital status"
+msgstr ""
+
+#. module: extenss_customer
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_bank_ref__number_account
+msgid "Number account"
+msgstr ""
+
+#. module: extenss_customer
+#: model:ir.model.fields,field_description:extenss_customer.field_res_partner__number_employees
+#: model:ir.model.fields,field_description:extenss_customer.field_res_users__number_employees
+msgid "Number of employees"
+msgstr ""
+
+#. module: extenss_customer
+#: model:ir.model.fields,field_description:extenss_customer.field_res_partner__occupation
+#: model:ir.model.fields,field_description:extenss_customer.field_res_users__occupation
+msgid "Occupation"
+msgstr ""
+
+#. module: extenss_customer
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_work_info__optional_phone
+msgid "Optional phone"
+msgstr ""
+
+#. module: extenss_customer
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_personal_ref__personal_ref_id
+msgid "Personal Ref"
+msgstr ""
+
+#. module: extenss_customer
+#: model:ir.model,name:extenss_customer.model_extenss_customer_personal_ref
+#: model_terms:ir.ui.view,arch_db:extenss_customer.res_partner_form_extend
+msgid "Personal references"
+msgstr ""
+
+#. module: extenss_customer
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_personal_ref__phone_personal_ref
+msgid "Phone"
+msgstr ""
+
+#. module: extenss_customer
+#: code:addons/extenss_customer/models/res_partner.py:0
+#, python-format
+msgid "Please enter valid email address"
+msgstr ""
+
+#. module: extenss_customer
+#: code:addons/extenss_customer/models/res_partner.py:0
+#, python-format
+msgid "Please enter valid email address in tab Personal references"
+msgstr ""
+
+#. module: extenss_customer
+#: code:addons/extenss_customer/models/res_partner.py:0
+#, python-format
+msgid "Please enter valid email address in tab Work information"
+msgstr ""
+
+#. module: extenss_customer
+#: model:ir.model.fields,field_description:extenss_customer.field_res_partner__politically_person
+#: model:ir.model.fields,field_description:extenss_customer.field_res_users__politically_person
+msgid "Politically exposed person"
+msgstr ""
+
+#. module: extenss_customer
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_work_info__position
+msgid "Position"
+msgstr ""
+
+#. module: extenss_customer
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_work_info__principal_phone
+msgid "Principal phone"
+msgstr ""
+
+#. module: extenss_customer
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_bank_ref__product_type
+msgid "Product Type"
+msgstr ""
+
+#. module: extenss_customer
+#: model:ir.model,name:extenss_customer.model_extenss_customer_product_type
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_product_type__name
+msgid "Product type"
+msgstr ""
+
+#. module: extenss_customer
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_personal_ref__reference_name_personal_ref
+msgid "Reference name"
+msgstr ""
+
+#. module: extenss_customer
+#: model:ir.model.fields,field_description:extenss_customer.field_res_partner__ssn
+#: model:ir.model.fields,field_description:extenss_customer.field_res_users__ssn
+msgid "SSN"
+msgstr ""
+
+#. module: extenss_customer
+#: model:ir.model.fields,help:extenss_customer.field_res_partner__gender
+#: model:ir.model.fields,help:extenss_customer.field_res_users__gender
+msgid "Select one option"
+msgstr ""
+
+#. module: extenss_customer
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_work_info__start_date
+msgid "Start date"
+msgstr ""
+
+#. module: extenss_customer
+#: model:ir.model.fields,field_description:extenss_customer.field_res_partner__start_operations
+#: model:ir.model.fields,field_description:extenss_customer.field_res_users__start_operations
+msgid "Start operations"
+msgstr ""
+
+#. module: extenss_customer
+#: model:ir.model.fields,field_description:extenss_customer.field_res_partner__state_birth
+#: model:ir.model.fields,field_description:extenss_customer.field_res_users__state_birth
+msgid "State of birth"
+msgstr ""
+
+#. module: extenss_customer
+#: code:addons/extenss_customer/models/res_partner.py:0
+#, python-format
+msgid "The Dependent number must be a 3 digits"
+msgstr ""
+
+#. module: extenss_customer
+#: code:addons/extenss_customer/models/res_partner.py:0
+#, python-format
+msgid "The Tax ID is not valid for Company"
+msgstr ""
+
+#. module: extenss_customer
+#: code:addons/extenss_customer/models/res_partner.py:0
+#, python-format
+msgid "The Tax ID is not valid for Individual"
+msgstr ""
+
+#. module: extenss_customer
+#: code:addons/extenss_customer/models/res_partner.py:0
+#, python-format
+msgid "The Tax ID must be a 12 digits for Company"
+msgstr ""
+
+#. module: extenss_customer
+#: code:addons/extenss_customer/models/res_partner.py:0
+#, python-format
+msgid "The Tax ID must be a 13 digits for Individual"
+msgstr ""
+
+#. module: extenss_customer
+#: code:addons/extenss_customer/models/res_partner.py:0
+#, python-format
+msgid "The Years residence must be a 3 digits"
+msgstr ""
+
+#. module: extenss_customer
+#: code:addons/extenss_customer/models/res_partner.py:0
+#, python-format
+msgid "The banking reference must be a 18 digits in tab Bank References"
+msgstr ""
+
+#. module: extenss_customer
+#: code:addons/extenss_customer/models/res_partner.py:0
+#, python-format
+msgid "The cell phone must be a 10 digits in tab Personal references"
+msgstr ""
+
+#. module: extenss_customer
+#: code:addons/extenss_customer/models/res_partner.py:0
+#, python-format
+msgid "The mobile must be a 10 digits"
+msgstr ""
+
+#. module: extenss_customer
+#: code:addons/extenss_customer/models/res_partner.py:0
+#, python-format
+msgid "The optional phone must be a 10 digits in tab Work information"
+msgstr ""
+
+#. module: extenss_customer
+#: code:addons/extenss_customer/models/res_partner.py:0
+#, python-format
+msgid "The phone must be a 10 digits"
+msgstr ""
+
+#. module: extenss_customer
+#: code:addons/extenss_customer/models/res_partner.py:0
+#, python-format
+msgid "The phone must be a 10 digits in tab Personal references"
+msgstr ""
+
+#. module: extenss_customer
+#: code:addons/extenss_customer/models/res_partner.py:0
+#, python-format
+msgid "The principal phone must be a 10 digits in tab Work information"
+msgstr ""
+
+#. module: extenss_customer
+#: code:addons/extenss_customer/models/res_partner.py:0
+#, python-format
+msgid "The ssn must be a 11 digits"
+msgstr ""
+
+#. module: extenss_customer
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_add_identifications__type_of_indentification
+msgid "Type of identification"
+msgstr ""
+
+#. module: extenss_customer
+#: model:ir.model,name:extenss_customer.model_extenss_customer_type_refbank
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_type_refbank__name
+msgid "Type of reference"
+msgstr ""
+
+#. module: extenss_customer
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_personal_ref__type_reference_personal_ref
+msgid "Type reference"
+msgstr ""
+
+#. module: extenss_customer
+#: model:res.groups,name:extenss_customer.extenss_customer_identification_type_group_user
+#: model:res.groups,name:extenss_customer.extenss_customer_job_title_group_user
+msgid "User"
+msgstr ""
+
+#. module: extenss_customer
+#: model:ir.model.fields,field_description:extenss_customer.field_extenss_customer_work_info__work_inf_id
+msgid "Work Inf"
+msgstr ""
+
+#. module: extenss_customer
+#: model:ir.model,name:extenss_customer.model_extenss_customer_work_info
+#: model_terms:ir.ui.view,arch_db:extenss_customer.res_partner_form_extend
+msgid "Work information"
+msgstr ""
+
+#. module: extenss_customer
+#: model:ir.model.fields,field_description:extenss_customer.field_res_partner__years_residence
+#: model:ir.model.fields,field_description:extenss_customer.field_res_users__years_residence
+msgid "Years of residence"
+msgstr ""
+
+#. module: extenss_customer
+#: model_terms:ir.ui.view,arch_db:extenss_customer.res_partner_form_extend
+msgid "e.g. Ciudad de México"
+msgstr ""
+
+#. module: extenss_customer
+#: model_terms:ir.ui.view,arch_db:extenss_customer.res_partner_form_extend
+msgid "e.g. Married"
+msgstr ""
+
+#. module: extenss_customer
+#: model_terms:ir.ui.view,arch_db:extenss_customer.res_partner_form_extend
+msgid "e.g. México"
+msgstr ""
+
+#. module: extenss_customer
+#: model_terms:ir.ui.view,arch_db:extenss_customer.res_partner_form_extend
+msgid "e.g. Programmer"
+msgstr ""

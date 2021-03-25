@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!--<template id="report_amortization_tabla">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <h2>Amortization Table</h2>
+            </t>
+        </t>
+    </template> -->
+    <template id="pagare_amortization">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <div id="parte1">
+                    <div style="float: left">REGISTRO RECA CONDUSEF: 8578-439-030361/01-04698-0818</div>
+                    <div style="float: right;color:red;">SCR <t t-esc="doc.name"/></div>
+                    <div style="margin: 0 auto; width: 100px;"><br></br> </div>
+                    <div style="float: right">No. Cliente: <t t-esc="doc.partner_id.id"/></div>
+                    <div style="float: left"><!--<img t-attf-src="/web/binary/company_logo?company={{ res_company.id }}" height="75px" width="290px"/> --><br></br></div>
+                    <div style="margin: 0 auto; width: 100px;color:red;">PAGARÉ</div>
+                    <div style="float: right">Fecha: <t t-esc="doc.date_start.strftime('%d-%m-%Y')"/></div>
+                </div>
+                <br></br>
+                <br></br>
+                <br></br>
+                <div id="parte2" style="font-size: 16px;text-align: justify;" >
+                <p>Por el presente pagaré, __________________<t t-esc="doc.partner_id.name"/>___________________________ (en
+                adelante, el “Deudor”), promete pagar incondicionalmente a la orden de Soluciones Integrales TBY, S.A. DE C.V., SOFOM,
+                E.N.R. (en adelante, el “Acreedor”), el importe de $<t t-esc="doc.amount"/> (___________________________________________
+                __________________________________________ pesos ___/100 M.N.), en cualquier lugar o domicilio en el que se le 
+                requiera de pago. El importe del presente pagaré será liquidado por el Deudor en forma __<t t-esc="doc.frequency_id.name"/>__, mediante _<t t-esc="doc.term"/>_ 
+                pagos parciales consecutivos e ininterrumpidos, cada uno por el importe de $ __<t t-esc="'{0:,.2f}'.format(round(float((doc.total_payment)), 2))"/>__ (_______________________
+                __________________________________________________ pesos _____/100 M.N.), pagaderos los días ___<t t-esc="doc.date_start.day"/>___
+                ____________________________ de cada ____<t t-esc="doc.term"/>_______, comenzando en el mes de __<t t-esc="doc.date_start.month"/>__del año _<t t-esc="doc.date_start.year"/>_ 
+                y finalizando el mes de ___<t t-esc="doc.date_start.month"/>__del año _<t t-esc="doc.date_start.year"/>_.</p>
+                </div>
+                <br></br>
+                <br></br>
+                <br></br>
+                <div id="parte2" style="font-size: 16px;text-align: justify;" >
+                <p>El Deudor, en forma expresa, desde ahora: (i) autoriza al Acreedor y/o a cualquier tenedor subsecuente (en adelante, el 
+                “Tenedor”), para que endose(n) y/o transmita(n) y/o descuente(n) y/o transfiera(n) y/o ceda(n) y/o negocie(n) y/o afecte(n)
+                y/o grave(n) este pagaré y los derechos de crédito que ampara, en cualquier tiempo y lugar, sirviendo el presente como la 
+                más amplia y necesaria autorización del Deudor al respecto; (ii) renuncia expresamente a lo establecido en el segundo párrafo
+                del artículo 299 de la Ley General de Títulos y Operaciones de Crédito; (iii) amplía el plazo de presentación de este pagaré, 
+                para que su pago pueda efectuarse dentro del plazo de 1 (un) año posterior a la fecha del último pago parcial previsto; y, (iv) 
+                autoriza al Acreedor y/o al Tenedor para que, en caso de que el Deudor omita liquidar cualquiera de las parcialidades pactadas, 
+                en la fecha de pago de que se trate, pueda(n) dar válidamente por vencido anticipadamente el plazo establecido en el presente 
+                pagaré y, por lo tanto, el Deudor estará obligado a pagar al Acreedor y/o al Tenedor, el saldo insoluto pendiente de pago.</p>
+                </div>
+                <br></br>
+                <br></br>
+                <br></br>
+                <div id="parte3" style="font-size: 16px;text-align: justify;" >
+                <p>Para toda controversia o litigio de cualquier tipo en relación con el presente pagaré, el Deudor está de acuerdo en someterse
+                expresamente a la jurisdicción y competencia de los Tribunales competentes del domicilio del Acreedor, siendo este el ubicado
+                en Av. José María Morelos y Pavón número 707, Interior 18, Colonia la Merced, Toluca de Lerdo, Estado de México, Código
+                Postal 50080; por lo tanto, el Deudor renuncia al fuero territorial que por cualquier causa pudiere corresponderle, ya sea en
+                lo presente o en lo futuro.</p>
+                </div>
+                <br></br>
+                <br></br>
+                <div id="parte3" style="font-size: 16px;text-align: justify;" >
+                Ciudad de México, a _<t t-esc="doc.date_start.day"/>_ de __<t t-esc="doc.date_start.month"/>___ de _<t t-esc="doc.date_start.year"/>_.
+                </div>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <div id="parte4" style="font-size: 16px;text-align: justify;" >
+                <table style="width:1000px;">
+                    <tr>
+                        <td align="center">
+                            __________<t t-esc="doc.partner_id.name"/>__________
+                            <br></br>
+                            NOMBRE
+                        </td>
+                        <td align="center">
+                            ___________________________
+                            <br></br>
+                            FIRMA DEL (DE LA ) DEUDOR (A)
+                        </td>
+                    </tr>
+                </table>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>

@@ -1,0 +1,662 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="crm_lead_form_extend" model="ir.ui.view">
+        <field name="name">Extenss: add Request Loan Module</field>
+        <field name="model">crm.lead</field>
+        <!--><field name="inherit_id" ref="crm.crm_lead_view_form"/><-->
+        <field name="inherit_id" ref="sale_crm.crm_case_form_view_oppor"/>
+        <field name="arch" type="xml">
+            <!--><form><-->
+                <!-- <sheet><-->
+            <!-- <xpath expr="//field[@name='stage_id']" position="replace">
+                <field name="stage_id" widget="statusbar"
+                options="{'clickable': '1', 'fold_field': 'fold'}"
+                domain="['|', ('team_id', '=', team_id), ('team_id', '=', False)]"
+                attrs="{'readonly': [('sequence_stage', '=', 6)]}"/>, 'invisible': ['|', ('active', '=', False), ('type', '=', 'lead')]}"/>
+            </xpath> -->
+            <xpath expr="//button[@name='action_set_won_rainbowman']" position="attributes">     
+                <attribute name="invisible">1</attribute>
+                <attribute name="autofocus"></attribute>
+            </xpath>
+            <xpath expr="//button[@name='action_sale_quotations_new']" position="replace">
+                <button string="New Quotation" name="action_sale_quotations_new" type="object" class="oe_highlight"
+                attrs="{'invisible': [('stage_id', '!=', 1)]}"/>
+            </xpath>
+            <xpath expr="//button[@name='%(crm.crm_lead_lost_action)d']" position="replace">
+                <button name="%(crm.crm_lead_lost_action)d" string="Mark Lost"
+                            type="action" class="oe_highlight" context="{'default_lead_id': active_id}" attrs="{'invisible': [('stage_id', '!=', 1)]}"/>
+            </xpath>
+            <xpath expr="//button[@name='action_set_won_rainbowman']" position="after">
+                <button name="action_send_sale" string="Send" type="object" class="btn-primary" attrs="{'invisible': [('stage_id', '!=', 1)]}"/><!--'|', ('document_count', '=', 0),-->
+            </xpath>
+            <xpath expr="//button[@name='action_send_sale']" position="after">
+                <button name="action_autorize_sale" string="Authorize" type="object" class="btn-primary" attrs="{'invisible': [('stage_id', '!=', 2)]}"/>
+            </xpath>
+            <xpath expr="//button[@name='action_autorize_sale']" position="after">
+                <button name="action_refuse_sale" string="To refuse" type="object" class="btn-primary" attrs="{'invisible': [('stage_id', '!=', 2)]}"/>
+            </xpath>
+            <xpath expr="//button[@name='action_refuse_sale']" position="after">
+                <button name="download_file_contrato" string="Print Contrato" type="object" class="btn-primary" attrs="{'invisible': ['|','|','|', ('sequence_stage', 'not in', [3,6]),('btn_active', '=', False),('product_name', '=', 'LFF'),('product_name', '=', 'ff')]}"/><!---->
+            </xpath>
+            <xpath expr="//button[@name='action_refuse_sale']" position="after">
+                <button name="download_file_contrato_ff" string="Print Contrato" type="object" class="btn-primary" attrs="{'invisible': ['|','|', ('sequence_stage', 'not in', [3,6]),('btn_active', '=', False),('product_name', '!=', 'ff')]}"/><!--'sequence_stage', 'not in', [3,6]),-->
+            </xpath>
+            <xpath expr="//button[@name='action_refuse_sale']" position="after">
+                <button name="download_file_contrato_ff" string="Print Contrato" type="object" class="btn-primary" attrs="{'invisible': ['|','|', ('sequence_stage', 'not in', [3,5]),('product_name', '!=', 'LFF')]}"/><!--'sequence_stage', 'not in', [3,6]),-->
+            </xpath>
+            <xpath expr="//button[@name='action_refuse_sale']" position="after">
+                <button name="download_file_pagare" string="Print Pagare" type="object" class="btn-primary" attrs="{'invisible': ['|','|','|', ('sequence_stage', 'not in', [3,6]),('btn_active', '=', False),('product_name', '=', 'LFF'),('product_name', '=', 'ff')]}"/>
+            </xpath>
+            <xpath expr="//button[@name='action_refuse_sale']" position="after">
+                <button name="download_file_pagare_ff" string="Print Pagare" type="object" class="btn-primary" attrs="{'invisible': ['|','|', ('sequence_stage', 'not in', [3,6]),('btn_active', '=', False),('product_name', '!=', 'ff')]}"/><!--'|', ('sequence_stage', 'not in', [3,6])-->
+            </xpath>
+            <xpath expr="//button[@name='action_refuse_sale']" position="after">
+                <button name="download_file_pagare_ff" string="Print Pagare" type="object" class="btn-primary" attrs="{'invisible': ['|', ('sequence_stage', 'not in', [3,5]),('product_name', '!=', 'LFF')]}"/><!--'|', ('sequence_stage', 'not in', [3,6])-->
+            </xpath>
+            <xpath expr="//button[@name='action_autorize_sale']" position="after">
+                <button name="action_approved_sale" string="Approved" type="object" class="btn-primary" attrs="{'invisible': ['|', ('sequence_stage', 'not in', [3,4,5])]}"/>                                                     
+            </xpath>
+            <xpath expr="//button[@name='action_approved_sale']" position="after">
+                <button name="action_rejected_sale" string="Rejected" type="object" class="btn-primary" attrs="{'invisible': ['|', ('sequence_stage', 'not in', [3,4,5])]}"/>
+            </xpath>
+            <xpath expr="//button[@name='download_file_contrato']" position="after">
+                <button name="download_file_amortization" string="Print Amortization" type="object" class="btn-primary" attrs="{'invisible': ['|','|','|', ('sequence_stage', 'not in', [3,6]),('btn_active', '=', False),('product_name', '=', 'LFF'),('product_name', '=', 'ff')]}"/>
+            </xpath>
+            <xpath expr="//button[@name='download_file_amortization']" position="after">
+                <button name="validate_docs_rec" string="Release credit" type="object" class="btn-primary" attrs="{'invisible': ['|','|','|', ('sequence_stage', 'not in', [6]),('btn_active', '=', False),('product_name', '=', 'LFF')]}"/>
+            </xpath>
+            <!-- <xpath expr="//widget[@name='web_ribbon']" position="replace">
+                <widget name="web_ribbon" title="Lost" bg_color="bg-danger" attrs="{'invisible': ['|', ('probability', '&gt;', 0), ('active', '=', True)]}"/>
+            </xpath> -->
+            <div name="button_box" position="inside">
+                <button class="oe_stat_button" type="object" name="open_docs_count" icon="fa-file-text-o">
+                    <field name="document_count" string="Documents" widget="statinfo"/>
+                </button>
+            </div>
+            <!--<xpath expr="//field[@name='partner_id']" position="attributes">-->
+                <!-- <attribute name="attrs">{'readonly': [('stage_id', '!=', 1)]}</attribute>-->
+                <!--<attribute name="attrs">{'readonly': [('validate_field','!=', False)]}</attribute>-->
+                <!--<attribute name="readonly">0</attribute>-->
+            <!--</xpath>-->
+            <xpath expr="//field[@name='planned_revenue']" position="attributes">
+                <attribute name="attrs">{'readonly': [('stage_id', '!=', 1)]}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='probability']" position="attributes">
+                <attribute name="attrs">{'readonly': [('stage_id', '!=', 1)]}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='date_deadline']" position="attributes">
+                <attribute name="attrs">{'readonly': [('stage_id', '!=', 1)]}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='priority']" position="attributes">
+                <attribute name="attrs">{'readonly': [('stage_id', '!=', 1)]}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='tag_ids']" position="attributes">
+                <attribute name="attrs">{'readonly': [('stage_id', '!=', 1)]}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='user_id']" position="attributes">
+                <attribute name="attrs">{'readonly': [('stage_id', '!=', 1)]}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='team_id']" position="attributes">
+                <attribute name="attrs">{'readonly': [('stage_id', '!=', 1)]}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='description']" position="attributes">
+                <attribute name="attrs">{'readonly': [('stage_id', '!=', 1)]}</attribute>
+            </xpath>
+            <field name="partner_address_phone" position="after">
+                <field name="product_name"/>
+            </field>
+            <field name="tag_ids" position="after">
+                <field name="destination_id" attrs="{'readonly': [('stage_id', '!=', 1)]}"/>
+                <field name="sales_channel_id" attrs="{'readonly': [('stage_id', '!=', 1)]}"/>
+                <field name="create_date" attrs="{'readonly': [('stage_id', '!=', 1)]}"/>
+                <field name="closed_date" attrs="{'readonly': [('stage_id', '!=', 1)]}"/>
+                <field name="description" attrs="{'readonly': [('stage_id', '!=', 1)]}"/>
+                <field name="sequence_stage" invisible="1"/>
+                <field name="btn_active" invisible="1"/>
+                <field name="flag_documents"/><!--attrs="{'invisible': ['|', ('product_name', '=', 'LFF'),('product_name', '=', 'ff')]}"-->
+                <field name="cs_s" invisible="1"/>
+                <field name="flag_initial_payment" attrs="{'invisible': ['|','|', ('product_name', '=', 'DN'),('product_name', '=', 'ff'),('cs_s', '=', True)]}"/>
+                <field name="flag_dispersion" attrs="{'invisible': [('product_name', '!=', 'DN'),('product_name', '!=', 'ff')]}"/>
+                <field name="ref_number"/>
+                <field name="contract_number" attrs="{'invisible': [('product_name', '!=', 'ff'),('product_name', '!=', 'LFF')]}"/>
+                <!-- <field name="product_id" readonly="1"/> -->
+                <!--><field name="id"/><-->
+                <field name="partner_type" invisible="1"/>
+
+            </field>
+                    <!--><notebook><-->
+            <xpath expr="//page[@name='lead']" position="after">
+                <page string="Financial Situation" name="financial_situation" attrs="{'invisible' : [('partner_type', '=', 'person')]}">
+                    <field name="fin_sit_ids" context="{'default_partner_id':partner_id}" attrs="{'readonly': [('stage_id', '!=', 1)]}">
+                        <tree>
+                            <!--><field name="id"/><-->
+                            <field name="date_fin_sit"/>
+                            <field name="partner_id"/>
+                            <field name="base"/> 
+                            <field name="frequency"/>
+                            <field name="description"/>
+                        </tree>
+                        <form>
+                            <sheet>
+                                <group>
+                                    <field name="date_fin_sit"/>
+                                    <field name="partner_id"/>
+                                    <field name="base"/> 
+                                    <field name="frequency"/>
+                                    <field name="description"/>
+                                </group>
+                            </sheet>
+                            <sheet>
+                                <group>
+                                    <notebook>
+                                        <page name="assets" string="Assets">
+                                            <group>
+                                                <group string="Current assets">
+                                                    <field name="efectivo"/>
+                                                    <field name="cuentas_cobrar"/>
+                                                    <field name="inventario"/>
+                                                    <field name="activo_adicional1_tipo"/>
+                                                    <field name="activo_adicional1_importe"/>
+                                                    <field name="activo_adicional2_tipo"/>
+                                                    <field name="activo_adicional2_importe"/>
+                                                    <field name="activo_otras_cuentas"/>
+                                                    <field name="total_activo_circulante"/>
+                                                </group>
+                                                <group string="Fixed assets">
+                                                    <field name="activos_fijos"/>
+                                                    <field name="depreciacion"/>
+                                                    <field name="activos_intangibles"/>
+                                                    <field name="total_activos_fijos"/>
+                                                </group>
+                                                <group string="Other assets">
+                                                    <field name="otros_activos"/>
+                                                    <field name="otro_activo_adicional"/>
+                                                    <field name="otro_activo_importe"/>
+                                                    <field name="total_otros_activos"/>
+                                                </group>                         
+                                                <group>
+                                                    <field name="activos_totales"/>
+                                                    <field name="verifica_importes"/>
+                                                </group>
+                                            </group>
+                                        </page>
+                                        <page name="liabilities" string="Liabilities">
+                                            <group>
+                                                <group string="Short term">
+                                                    <field name="proveedores"/>
+                                                    <field name="pasivo_tipo"/>
+                                                    <field name="pasivo_importe"/>
+                                                    <field name="parte_corto_plazo"/>
+                                                    <field name="otro_pasivo_circulante"/>
+                                                    <field name="pasivo_total_circulante"/>
+                                                </group>
+                                                <group string="Long term">
+                                                    <field name="deuda_largo_plazo"/>
+                                                    <field name="deuda_adicional_actual_tipo"/>	
+                                                    <field name="deuda_adicional_actual_importe"/> 
+                                                    <field name="otro_pasivo_no_circulante"/>
+                                                    <field name="pasivo_total_no_circulante"/>	
+                                                </group>
+                                                <group string="Stockholders' equity">
+                                                    <field name="capital"/>
+                                                    <field name="capital_desembolso"/> 
+                                                    <field name="utilidades_perdidas_acumuladas"/>
+                                                    <field name="utilidad_ejercicio"/>
+                                                    <field name="total_capital_contable"/> 
+                                                </group>
+                                                <group>
+                                                    <field name="pasivo_total_capital_contable"/>
+                                                </group>
+                                            </group>
+                                        </page>
+                                        <page name="income_statement" string="Income Statement">
+                                            <group>
+                                                <group string="Gross profit">
+                                                    <field name="ventas_netas"/>
+                                                    <field name="costo_ventas"/>
+                                                    <field name="ganancia_bruta"/>
+                                                </group>
+                                                <group string="Net operating income">
+                                                    <field name="otros_ingresos_is"/>
+                                                    <field name="ingresos_adicionales_tipo"/>
+                                                    <field name="ingresos_adicionales_importe"/>
+                                                </group>
+                                            </group>
+                                            <group>
+                                                <group string="Operating expenses">
+                                                    <field name="gastos_ope_ad_1_tipo"/>
+                                                    <field name="gastos_ope_ad_1_importe"/> 
+                                                    <field name="gastos_ope_ad_2_tipo"/>
+                                                    <field name="gastos_ope_ad_2_importe"/>
+                                                    <field name="beneficios_ope_totales"/>
+                                                </group>
+                                                <group string="Expenses">
+                                                    <field name="interes"/>
+                                                    <field name="otros_gastos"/> 
+                                                    <field name="depreciación"/>
+                                                </group>
+                                                <group string="Benefits and earnings">
+                                                    <field name="impuestos"/>
+                                                    <field name="utilidad_neta"/>
+                                                </group>
+                                            </group>
+                                        </page>
+                                    </notebook>
+                                </group>
+                            </sheet>
+                        </form>
+                    </field>
+                </page>
+            </xpath>
+
+            <xpath expr="//page[@name='financial_situation']" position="after">
+                <page string="Financial Position" name="financial_position" attrs="{'invisible' : [('partner_type', '=', 'company')]}"><!-->invisible="0"><-->
+                    <group>
+                        <group string="Assets">
+                            <field name="fin_pos_ids" attrs="{'readonly': [('stage_id', '!=', 1)]}">
+                                <tree>
+                                    <field name="category_act"/>
+                                    <field name="value_act" sum="# regs"/>
+                                    <!-- <field name="total_activos_act" sum="# regs"/> -->
+                                </tree>
+                                <form>
+                                    <group>
+                                        <group string="Assets">
+                                            <field name="category_act"/>
+                                            <field name="value_act" sum="# regs"/>
+                                            <field name="description_act"/>
+                                            <field name="institution_act"/>
+                                            <field name="account_number_act"/>
+                                            <field name="verify_act"/>
+                                        </group>
+                                        <!-- <group>
+                                            <field name="total_activos_act" sum="# regs"/>
+                                        </group> -->
+                                    </group>
+                                </form>
+                            </field>
+                        </group>
+                        <group string="Passives">
+                            <field name="fin_pas_ids" attrs="{'readonly': [('stage_id', '!=', 1)]}">
+                                <tree>
+                                    <field name="category_pas"/>
+                                    <field name="value_pas" sum="# regs"/>
+                                </tree>
+                                <form>
+                                    <group>
+                                        <group string="Passives">
+                                            <field name="category_pas"/>
+                                            <field name="value_pas" sum="# regs"/>
+                                            <field name="pago_mensual_pas" sum="# regs"/>
+                                            <field name="description_pas"/>
+                                            <field name="institution_pas"/>
+                                            <field name="account_number_pas"/>
+                                            <field name="tipo_hipoteca"/>
+                                        </group>
+                                        <!-- <group>
+                                            <field name="total_pasivos" sum="# regs"/>
+                                        </group> -->
+                                    </group>
+                                </form>
+                            </field>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+
+            <xpath expr="//page[@name='financial_position']" position="after">
+                <page string="Source of income" name="surce_income" attrs="{'invisible' : [('partner_type', '=', 'company')]}"><!-->invisible="0"><-->
+                    <group>
+                        <group string="Income">
+                            <field name="surce_ids" attrs="{'readonly': [('stage_id', '!=', 1)]}">
+                                <tree>
+                                    <field name="tipo_ingreso"/>
+                                    <field name="importe_ing" sum="# regs"/>
+                                </tree>
+                                <form>
+                                    <group>
+                                        <group>
+                                            <field name="tipo_ingreso"/>
+                                            <field name="importe_ing"/>
+                                            <field name="persona_ing"/>
+                                            <field name="importe_mensual_ing"/>
+                                            <field name="frecuencia_ing"/>
+                                            <field name="sujeto_impuestos_ing"/>
+                                            <field name="comentarios_ing"/>
+                                        </group>
+                                    </group>
+                                </form>
+                            </field>
+                        </group>
+                        <group string="Expenses">
+                            <field name="exp_ids" attrs="{'readonly': [('stage_id', '!=', 1)]}">
+                                <tree>
+                                    <field name="tipo_gasto"/>
+                                    <field name="importe_gas" sum="# regs"/>
+                                </tree>
+                                <form>
+                                    <group>
+                                        <group>
+                                            <field name="tipo_gasto"/>
+                                            <field name="importe_gas"/>
+                                            <field name="persona_gas"/>
+                                            <field name="importe_mensual_gas"/>
+                                            <field name="frecuencia_gas"/>
+                                            <field name="comentarios_gas"/>
+                                        </group>
+                                    </group>
+                                </form>
+                            </field>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+            <xpath expr="//page[@name='surce_income']" position="after">
+                <page string="Residence Profile" name="residence_profile" attrs="{'invisible' : [('partner_type', '=', 'company')]}"><!-->invisible="0"><-->
+                    <group>
+                        <group string="Residence Profile">
+                            <field name="housing_type_rp" attrs="{'readonly': [('stage_id', '!=', 1)]}"/>
+                            <field name="owners_name" attrs="{'readonly': [('stage_id', '!=', 1)]}"/>
+                            <field name="owners_phone" attrs="{'readonly': [('stage_id', '!=', 1)]}"/>
+                            <field name="montly_rent" attrs="{'readonly': [('stage_id', '!=', 1)]}"/>
+                            <field name="months_residence" attrs="{'readonly': [('stage_id', '!=', 1)]}"/>
+                            <field name="residency_profile" attrs="{'readonly': [('stage_id', '!=', 1)]}"/>
+                        </group>
+                        <group string="Current household expenses">
+                            <field name="rent" attrs="{'readonly': [('stage_id', '!=', 1)]}"/> 
+                            <field name="first_mortage" attrs="{'readonly': [('stage_id', '!=', 1)]}"/>
+                            <field name="another_finantiation" attrs="{'readonly': [('stage_id', '!=', 1)]}"/> 
+                            <field name="risk_insurance" attrs="{'readonly': [('stage_id', '!=', 1)]}"/>
+                            <field name="real_state_taxes" attrs="{'readonly': [('stage_id', '!=', 1)]}"/>
+                            <field name="mortage_insurance" attrs="{'readonly': [('stage_id', '!=', 1)]}"/>
+                            <field name="debts_cowners" attrs="{'readonly': [('stage_id', '!=', 1)]}"/>
+                            <field name="other" attrs="{'readonly': [('stage_id', '!=', 1)]}"/> 
+                            <field name="total_resident"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+            <xpath expr="//page[@name='surce_income']" position="after">
+                <page string="Ownership" name="ownership" attrs="{'invisible' : [('partner_type', '=', 'company')]}"><!-->invisible="0"><-->
+                    <field name="owner_ids" attrs="{'readonly': [('stage_id', '!=', 1)]}">
+                        <tree>
+                            <field name="description_own"/>
+                            <field name="percentage_properties"/>
+                            <field name="purchace_price"/>
+                            <field name="bookvalue"/>
+                        </tree>
+                        <form>
+                            <group>
+                                <group>
+                                    <field name="description_own"/>
+                                    <!--><field name="percentage_properties"/><-->
+                                    <label for="percentage_properties"/>
+                                    <div id="percentage_properties" >
+                                        <field name="percentage_properties" widget="float" class="oe_inline"/>
+                                        <span class="oe_grey"> %%</span>
+                                    </div>
+                                    <field name="purchace_price"/>
+                                    <field name="bookvalue"/>
+                                    <field name="market_value"/>
+                                    <field name="stock_exchange_value"/>
+                                    <field name="mortages_own"/>
+                                </group>
+                            </group>
+                        </form>
+                    </field>
+                </page>
+            </xpath>
+            <xpath expr="//page[@name='surce_income']" position="after">
+                <page string="Personal references" name="personal_references" attrs="{'invisible' : [('partner_type', '=', 'company')]}">
+                    <field name="personal_ref_ids" attrs="{'readonly': [('stage_id', '!=', 1)]}">
+                        <tree>
+                            <field name="type_reference_personal_ref"/>
+                            <field name="reference_name_personal_ref"/>
+                            <field name="phone_personal_ref"/>
+                            <field name="cell_phone_personal_res"/>
+                            <field name="email_personal_ref"/>
+                        </tree>
+                        <form>
+                            <group>
+                                <field name="type_reference_personal_ref"/>
+                                <field name="reference_name_personal_ref"/>
+                                <field name="phone_personal_ref"/>
+                                <field name="cell_phone_personal_res"/>
+                                <field name="email_personal_ref"/>
+                            </group>
+                        </form>
+                    </field>
+                </page>
+            </xpath>
+            <xpath expr="//page[@name='personal_references']" position="after">
+                <page name="payroll" string="Payroll" attrs="{'invisible' : [('product_name', '!=', 'DN')]}">
+                    <form>
+                        <header>
+                            <button string="Calculate" name="action_calculate_pc" type="object" class="oe_highlight"/>
+                            <button string="Offers" name="action_get_offers" type="object" class="oe_highlight"/>
+                        </header>
+                        <group>
+                            <group>
+                                <field name="catlg_product"/>
+                            </group>
+                            <group>
+                                <group>
+                                    <field name="perceptions"/>
+                                    <field name="deductions"/>
+                                </group>
+                                <group>
+                                    <field name="payment_capacity" readonly="1"/>
+                                </group>
+                            </group>
+                        </group>
+                    </form>
+                </page>
+            </xpath>
+            <xpath expr="//page[@name='personal_references']" position="after">
+                <page name="participants" string="List of Participants" attrs="{'invisible' : [('product_name', '!=', 'LFF'),('product_name', '!=', 'ff')]}">
+                    <form>
+                        <group>
+                            <field name="assignor" attrs="{'required' : ['|', ('product_name', '=', 'LFF'), ('product_name', '=', 'ff')]}"/>
+                            <field name="factoring_company" attrs="{'required' : ['|', ('product_name', '=', 'LFF'), ('product_name', '=', 'ff')]}"/>
+                            <field name="assigned" attrs="{'required' : ['|', ('product_name', '=', 'LFF'), ('product_name', '=', 'ff')]}"/>
+                        </group>
+                    </form>
+                </page>
+            </xpath>
+            <xpath expr="//page[@name='payroll']" position="after">
+                <page name="factoring_opening" string="Financial Factoring Opening" attrs="{'invisible': [('product_name', '!=', 'LFF')]}">
+                    <form>
+                        <group>
+                            <group>
+                                <field name="catlg_product"/>
+                                <field name="amount_ff"/>
+                                <field name="amount_out_vat" readonly="1"/>
+                                <field name="purpose"/>
+                                <field name="description_purpose"/>
+                                <field name="init_date" readonly="1"/>
+                                <field name="invoice_date"/>
+                                <field name="payment_method"/>
+                                <label for="capacity"/>
+                                <div id="capacity" >
+                                    <field name="capacity" widget="float" class="oe_inline"/>
+                                    <span class="oe_grey">%%</span>
+                                </div>
+                                <field name="amount_financed" readonly="1"/>
+                                <label for="commission_details"/>
+                                <div id="commission_details" >
+                                    <field name="commission_details" widget="float" class="oe_inline"/>
+                                    <span class="oe_grey">%%</span>
+                                </div>
+                                <field name="commissions"/>
+                                <field name="commission_vat" readonly="1"/>
+                            </group>
+                            <group>
+                                <field name="tax_rate" widget="many2many_tags" readonly="1"/>
+                                <field name="fixed" readonly="1"/>
+                                <label for="fixed_rate"/>
+                                <div id="fixed_rate" >
+                                    <field name="fixed_rate" widget="float" class="oe_inline"/>
+                                    <span class="oe_grey">%%</span>
+                                </div>
+                                <field name="base_rate" readonly="1"/>
+                                <field name="variance" readonly="1"/>
+                                <label for="current_rate"/>
+                                <div id="current_rate" >
+                                    <field name="current_rate" readonly="1" widget="float" class="oe_inline"/>
+                                    <span class="oe_grey">%%</span>
+                                </div>
+                                <field name="days" readonly="1"/>
+                            </group>
+                        </group>
+                    </form>
+                </page>
+            </xpath>
+            <xpath expr="//page[@name='payroll']" position="after">
+                <page name="factoring_provision" string="Financial Factoring Provision" attrs="{'invisible': [('product_name', '!=', 'ff')]}">
+                    <form>
+                        <group>
+                            <group>
+                                <field name="catlg_product"/>
+                                <field name="amount_ff"/>
+                                <field name="amount_out_vat" readonly="1"/>
+                                <field name="purpose"/>
+                                <field name="description_purpose"/>
+                                <field name="init_date" readonly="1"/>
+                                <field name="invoice_date"/>
+                                <field name="payment_method"/>
+                                <label for="capacity"/>
+                                <div id="capacity" >
+                                    <field name="capacity" widget="float" class="oe_inline"/>
+                                    <span class="oe_grey">%%</span>
+                                </div>
+                                <field name="amount_financed" readonly="1"/>
+                                <label for="commission_details"/>
+                                <div id="commission_details" >
+                                    <field name="commission_details" widget="float" class="oe_inline"/>
+                                    <span class="oe_grey">%%</span>
+                                </div>
+                                <field name="commissions" readonly="1"/>
+                                <field name="commission_vat" readonly="1"/>
+                            </group>
+                            <group>
+                                <field name="tax_rate" widget="many2many_tags" readonly="1"/>
+                                <field name="fixed" readonly="1"/>
+                                <label for="fixed_rate"/>
+                                <div id="fixed_rate" >
+                                    <field name="fixed_rate" readonly="1" widget="float" class="oe_inline"/>
+                                    <span class="oe_grey">%%</span>
+                                </div>
+                                <field name="base_rate" readonly="1"/>
+                                <field name="variance" readonly="1"/>
+                                <label for="current_rate"/>
+                                <div id="current_rate" >
+                                    <field name="current_rate" readonly="1" widget="float" class="oe_inline"/>
+                                    <span class="oe_grey">%%</span>
+                                </div>
+                                <field name="days" readonly="1"/>
+
+                                <field name='interest' readonly="1"/>
+                                <field name='interest_vat' readonly="1"/>
+                                <field name='total_payment' readonly="1"/>
+
+                                <field name='amount_delivered'/>
+                            </group>
+
+                        </group>
+                    </form>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_tree_extenss_crm_concilation" model="ir.ui.view">
+        <field name="name">extenss.crm.conciliation.tree</field>
+        <field name="model">extenss.crm.conciliation</field>
+        <field name="arch" type="xml">
+            <tree>
+                <!-- <button name="action_copy_data" string="Upload information" type="object" class="oe_highlight" /> -->
+                <field name="name" readonly="1"/>
+                <field name="initial_balance"/>
+                <field name="final_balance"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- <record model="ir.actions.server" id="action_crm_concilation">
+        <field name="name">Concilation</field>
+        <field name="model_id" ref="model_extenss_crm_conciliation"/>
+        <field name="binding_model_id" ref="model_extenss_crm_conciliation" />
+        <field name="state">code</field>
+        <field name="code">
+        if records:
+            action = records.action_get_data()
+        </field>
+    </record> -->
+
+    <record id="view_form_extenss_crm_concilation" model="ir.ui.view">
+        <field name="name">extenss.crm.conciliation.form</field>
+        <field name="model">extenss.crm.conciliation</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <!-- <button name="search_event_cont" string="Event cont" type="object" class="oe_highlight"/> -->
+                    <button name="action_confirm_conciliation" string="Confirm" type="object" class="oe_highlight"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" readonly="1"/>
+                            <field name="initial_balance" readonly="1"/>
+                            <field name="final_balance" readonly="1"/>
+                            <field name="status_bank" readonly="1"/>
+                        </group>
+                        <group>
+                            <field name="flag_active"/>
+                        </group>
+                    </group>
+                    <group>
+                        <notebook>
+                            <page name="name" string="Transactions">
+                                <field name="conciliation_ids">
+                                    <tree editable="bottom" decoration-danger="status=='pending'" decoration-success="status=='applied'">
+                                        <field name="check" attrs="{'readonly' : [('parent.status_bank', '=', 'validated')]}"/>
+                                        <field name="date" readonly="1"/>
+                                        <field name="description" readonly="1"/>
+                                        <field name="customer" options="{'no_open': True}" readonly="1"/>
+                                        <field name="reference" readonly="1"/>
+                                        <field name="amount" readonly="1"/>
+                                        <field name="status" invisible="1"/>
+                                    </tree>
+                                    <form>
+                                        <group>
+                                            <field name="check"/>
+                                            <field name="date"/>
+                                            <field name="description"/>
+                                            <field name="customer" options="{'no_open': True}"/>
+                                            <field name="reference"/>
+                                            <field name="amount"/>
+                                        </group>
+                                    </form>
+                                </field>
+                            </page>
+                        </notebook>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_menu_conciliation" model="ir.actions.act_window">
+        <field name="name">Conciliation</field>
+        <field name="res_model">extenss.crm.conciliation</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+    action="extenss_request.action_menu_conciliation"
+    id="crm_menu_conciliation"
+    parent="crm.crm_menu_root"
+    name="Conciliation"
+    sequence="21"/>
+</odoo>

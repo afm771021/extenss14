@@ -1,0 +1,1700 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* extenss_credit
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e-20200316\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-08-20 20:37+0000\n"
+"PO-Revision-Date: 2020-08-20 20:37+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: extenss_credit
+#: model_terms:ir.ui.view,arch_db:extenss_credit.account_status
+msgid ""
+"\", se  expide el  presente  Estado de  Cuenta  \n"
+"                                en términos de los artículos  57  y  58  de  la  Ley  de  Uniones  de  Crédito,  CERTIFICA  y  \n"
+"                                hace  constar   que   efectuado el  cálculo  de  los  intereses  ordinarios  y   moratorios   de   \n"
+"                                acuerdo  al   Contrato Marco de Arrendamiento  y _________________   que   celebran   por   una   \n"
+"                                parte   en   su  carácter de arrendador \""
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__percentage_commission
+msgid "% Commission"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__percentage_guarantee_deposit
+msgid "% Guarantee deposit"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__purchase_option
+msgid "% Purchase option"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__residual_value
+msgid "% Residual value"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.actions.report,print_report_name:extenss_credit.report_extenss_credit_account_status
+msgid "'Account Status %s' % (object.credit_id)"
+msgstr ""
+
+#. module: extenss_credit
+#: code:addons/extenss_credit/models/extenss_credit.py:0
+#, python-format
+msgid ""
+"<p>No. Pago %s ,</p><p>Fecha de vencimiento %s ,</p><p>Saldo inicial %s "
+",</p><p>Capital %s ,</p><p>Interes %s ,</p><p> Payment %s ,</p><p> IVA renta"
+" %s ,</p><p> Renta total %s </p>"
+msgstr ""
+
+#. module: extenss_credit
+#: model_terms:ir.ui.view,arch_db:extenss_credit.account_status
+msgid "AL"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.actions.act_window,name:extenss_credit.action_menu_account
+#: model:ir.model,name:extenss_credit.model_extenss_credit_account
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_account__name
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_accounting_payments__accnt_mov_id
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_movements__accnt_mov_id
+#: model:ir.ui.menu,name:extenss_credit.menu_account
+msgid "Account"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model,name:extenss_credit.model_extenss_credit_accounting_payments
+#: model:ir.model,name:extenss_credit.model_extenss_credit_movements
+msgid "Account Movements"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.actions.report,name:extenss_credit.report_extenss_credit_account_status
+msgid "Account Status"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__account_status_date
+msgid "Account Status Date"
+msgstr ""
+
+#. module: extenss_credit
+#: model_terms:ir.ui.view,arch_db:extenss_credit.view_form_extenss_credit_account
+msgid "Account movements"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_account__date_opening
+msgid "Account opening date"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields.selection,name:extenss_credit.selection__extenss_credit__credit_status__active
+#: model:ir.model.fields.selection,name:extenss_credit.selection__extenss_credit_account__status__active
+msgid "Active"
+msgstr ""
+
+#. module: extenss_credit
+#: model_terms:ir.ui.view,arch_db:extenss_credit.view_form_extenss_credit_concilation
+msgid "Add a line"
+msgstr ""
+
+#. module: extenss_credit
+#: model_terms:ir.ui.view,arch_db:extenss_credit.view_form_extenss_credit_concilation
+msgid "Add a note"
+msgstr ""
+
+#. module: extenss_credit
+#: model_terms:ir.ui.view,arch_db:extenss_credit.view_form_extenss_credit_concilation
+msgid "Add a section"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_request__advance_date
+msgid "Advance date"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields.selection,name:extenss_credit.selection__extenss_credit_request__type_request__atc
+msgid "Advanced to capital"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_request__advan_type_af
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_request__advan_type_ap
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_request__advan_type_cs
+msgid "Advancement type"
+msgstr ""
+
+#. module: extenss_credit
+#: model_terms:ir.ui.view,arch_db:extenss_credit.account_status
+msgid ""
+"Advertencias: 1.-Interés Moratorio.- Los Intereses Moratorios se calcularán "
+"sobre saldos insolutos del crédito de acuerdo al Contrato Específico de "
+"Arrendamiento Financiero desde que incurra el incumplimiento hasta su pago "
+"total.  2.- Contratar créditos por arriba de su capacidad de pago, puede "
+"afectar su historial crediticio. 3.- El Avalista, Obligado Solidario o "
+"Coacreditado, responderá como Obligado Prncipal frente a la \"Entidad "
+"Financiera\""
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__af
+msgid "Af"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_moras__end_date
+msgid "Al"
+msgstr ""
+
+#. module: extenss_credit
+#: model_terms:ir.ui.view,arch_db:extenss_credit.view_form_extenss_credit
+msgid "Amortization"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__amortization_ids
+msgid "Amortization Table"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_accounting_payments__amount
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_concepts_expiration__amount_concept
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_conciliation_lines__amount
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_expiry_notices__amount_not
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_movements__amount
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_request__amount_req
+msgid "Amount"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__amount_financed
+msgid "Amount Financed"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__amount_residual_value
+msgid "Amount of Residual Value"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__amount_si
+msgid "Amount s/iva"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__ap
+msgid "Ap"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields.selection,name:extenss_credit.selection__extenss_credit_conciliation_lines__status__applied
+#: model:ir.model.fields.selection,name:extenss_credit.selection__extenss_credit_request__state__applied
+msgid "Applied"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_account__balance
+msgid "Balance"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_request__balance_income_deposit
+msgid "Balance Income on Deposit"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__balance_income_deposit
+msgid "Balance of Income on deposit"
+msgstr ""
+
+#. module: extenss_credit
+#: code:addons/extenss_credit/models/extenss_credit.py:0
+#: code:addons/extenss_credit/models/extenss_credit.py:0
+#: code:addons/extenss_credit/models/extenss_credit.py:0
+#: code:addons/extenss_credit/models/extenss_credit.py:0
+#, python-format
+msgid "Bank Statement %s.pdf"
+msgstr ""
+
+#. module: extenss_credit
+#: code:addons/extenss_credit/models/extenss_credit.py:0
+#: code:addons/extenss_credit/models/extenss_credit.py:0
+#: code:addons/extenss_credit/models/extenss_credit.py:0
+#, python-format
+msgid "Bank Statement.pdf"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__base_rate_type
+msgid "Base rate type"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__base_rate_value
+msgid "Base rate value"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__bill_id
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_conciliation_lines__bill_id
+msgid "Bill"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__office_id
+msgid "Branch office Id"
+msgstr ""
+
+#. module: extenss_credit
+#: model_terms:ir.ui.view,arch_db:extenss_credit.account_status
+msgid "CEDULA PROFESIONAL ________________"
+msgstr ""
+
+#. module: extenss_credit
+#: model_terms:ir.ui.view,arch_db:extenss_credit.account_status
+msgid "COMISION POR APERTURA"
+msgstr ""
+
+#. module: extenss_credit
+#: model_terms:ir.ui.view,arch_db:extenss_credit.account_status
+msgid "COMISION:"
+msgstr ""
+
+#. module: extenss_credit
+#: model_terms:ir.ui.view,arch_db:extenss_credit.view_form_extenss_credit_request
+msgid "Calculate"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__calculation_base
+msgid "Calculation Base"
+msgstr ""
+
+#. module: extenss_credit
+#: model_terms:ir.ui.view,arch_db:extenss_credit.create_movement_form
+msgid "Cancel"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields.selection,name:extenss_credit.selection__extenss_credit__credit_status__cancelled
+#: model:ir.model.fields.selection,name:extenss_credit.selection__extenss_credit_request__state__cancelled
+msgid "Cancelled"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_amortization__capital
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_restructuring_table__capital
+#: model:ir.model.fields.selection,name:extenss_credit.selection__extenss_credit_concepts_expiration__concept__capital
+#: model_terms:ir.ui.view,arch_db:extenss_credit.account_status
+msgid "Capital"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_request__capital_vat
+#: model:ir.model.fields.selection,name:extenss_credit.selection__extenss_credit_concepts_expiration__concept__capvat
+msgid "Capital VAT"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields.selection,name:extenss_credit.selection__extenss_credit_accounting_payments__movement_type__cargo
+#: model:ir.model.fields.selection,name:extenss_credit.selection__extenss_credit_movements__movement_type__cargo
+msgid "Charge"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_movements__comments
+msgid "Comments"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__commission_vat
+msgid "Commission VAT"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__commission_amount
+msgid "Commission amount"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__company_id
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_account__company_id
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_accounting_payments__company_id
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_amortization__company_id
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_concept_payments__company_id
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_concepts_expiration__company_id
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_conciliation__company_id
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_conciliation_lines__company_id
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_expiry_notices__company_id
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_moras__company_id
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_movements__company_id
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_request__company_id
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_restructuring_table__company_id
+#: model:ir.model.fields.selection,name:extenss_credit.selection__extenss_credit__customer_type__company
+msgid "Company"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_concepts_expiration__concept
+msgid "Concept"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_concept_payments__concept_pay_id
+msgid "Concept Pay"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model,name:extenss_credit.model_extenss_credit_concept_payments
+msgid "Concept Payments"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model,name:extenss_credit.model_extenss_credit_concepts_expiration
+#: model_terms:ir.ui.view,arch_db:extenss_credit.view_form_extenss_credit
+msgid "Concepts Expiration Notices"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.actions.act_window,name:extenss_credit.action_menu_conciliation
+#: model:ir.model,name:extenss_credit.model_extenss_credit_conciliation
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_conciliation_lines__conciliation_id
+#: model:ir.model.fields.selection,name:extenss_credit.selection__extenss_credit_conciliation_lines__type_rec__conciliation
+#: model:ir.ui.menu,name:extenss_credit.menu_conciliation
+msgid "Conciliation"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model,name:extenss_credit.model_extenss_credit_conciliation_lines
+msgid "Conciliation Lines"
+msgstr ""
+
+#. module: extenss_credit
+#: model_terms:ir.ui.view,arch_db:extenss_credit.view_form_extenss_credit_concilation
+#: model_terms:ir.ui.view,arch_db:extenss_credit.view_form_extenss_credit_request
+msgid "Confirm"
+msgstr ""
+
+#. module: extenss_credit
+#: model_terms:ir.ui.view,arch_db:extenss_credit.view_form_extenss_credit
+msgid "Copy"
+msgstr ""
+
+#. module: extenss_credit
+#: model_terms:ir.ui.view,arch_db:extenss_credit.view_form_extenss_credit_account
+msgid "Create Credit/Charge"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.actions.act_window,name:extenss_credit.create_movement_wizard
+msgid "Create Movement"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__create_uid
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_account__create_uid
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_accounting_payments__create_uid
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_amortization__create_uid
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_concept_payments__create_uid
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_concepts_expiration__create_uid
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_conciliation__create_uid
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_conciliation_lines__create_uid
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_expiry_notices__create_uid
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_moras__create_uid
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_movements__create_uid
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_request__create_uid
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_restructuring_table__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__create_date
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_account__create_date
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_accounting_payments__create_date
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_amortization__create_date
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_concept_payments__create_date
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_concepts_expiration__create_date
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_conciliation__create_date
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_conciliation_lines__create_date
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_expiry_notices__create_date
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_moras__create_date
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_movements__create_date
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_request__create_date
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_restructuring_table__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.actions.act_window,name:extenss_credit.action_extenss_credit
+#: model:ir.model,name:extenss_credit.model_extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__credit_id
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__name
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_amortization__credit_id
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_moras__credit_id
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_request__credit_request_id
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_request__name
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_restructuring_table__credit_id
+#: model:ir.model.fields.selection,name:extenss_credit.selection__extenss_credit_accounting_payments__movement_type__abono
+#: model:ir.model.fields.selection,name:extenss_credit.selection__extenss_credit_movements__movement_type__abono
+#: model:ir.module.category,name:extenss_credit.module_extenss_credit_category
+#: model:ir.ui.menu,name:extenss_credit.menu_credit
+#: model:ir.ui.menu,name:extenss_credit.menu_extenss_credit
+#: model_terms:ir.ui.view,arch_db:extenss_credit.extenss_credit_pivot
+msgid "Credit"
+msgstr ""
+
+#. module: extenss_credit
+#: model_terms:ir.ui.view,arch_db:extenss_credit.extenss_credit_calendar
+msgid "Credit Calendar"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_expiry_notices__credit_expiry_id
+msgid "Credit Expiry"
+msgstr ""
+
+#. module: extenss_credit
+#: model_terms:ir.ui.view,arch_db:extenss_credit.extenss_credit_graph
+msgid "Credit Graph"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model,name:extenss_credit.model_extenss_credit_request
+msgid "Credit Request"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model,name:extenss_credit.model_extenss_credit_restructuring_table
+msgid "Credit Restructuring Table"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__credit_status
+msgid "Credit status"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.actions.server,name:extenss_credit.ir_cron_generating_account_status_ir_actions_server
+#: model:ir.cron,cron_name:extenss_credit.ir_cron_generating_account_status
+#: model:ir.cron,name:extenss_credit.ir_cron_generating_account_status
+msgid "Credit: create account status"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.actions.server,name:extenss_credit.ir_cron_create_expiry_notices_ir_actions_server
+#: model:ir.cron,cron_name:extenss_credit.ir_cron_create_expiry_notices
+#: model:ir.cron,name:extenss_credit.ir_cron_create_expiry_notices
+msgid "Credit: create expiry notices"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.actions.server,name:extenss_credit.ir_cron_register_payment_notices_ir_actions_server
+#: model:ir.cron,cron_name:extenss_credit.ir_cron_register_payment_notices
+#: model:ir.cron,name:extenss_credit.ir_cron_register_payment_notices
+msgid "Credit: create register payment"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.actions.server,name:extenss_credit.ir_cron_create_send_expiry_notices_ir_actions_server
+#: model:ir.cron,cron_name:extenss_credit.ir_cron_create_send_expiry_notices
+#: model:ir.cron,name:extenss_credit.ir_cron_create_send_expiry_notices
+msgid "Credit: send expiry notices"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__cs
+msgid "Cs"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__company_currency
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_account__company_currency
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_accounting_payments__company_currency
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_amortization__company_currency
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_concept_payments__company_currency
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_concepts_expiration__company_currency
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_conciliation__company_currency
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_conciliation_lines__company_currency
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_expiry_notices__company_currency
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_moras__company_currency
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_movements__company_currency
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_request__company_currency
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_restructuring_table__company_currency
+msgid "Currency"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__customer_id
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_account__customer_id
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_conciliation_lines__customer
+msgid "Customer"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__customer_type
+msgid "Customer type"
+msgstr ""
+
+#. module: extenss_credit
+#: model_terms:ir.ui.view,arch_db:extenss_credit.account_status
+msgid "DATOS DEL ARRENDAMIENTO"
+msgstr ""
+
+#. module: extenss_credit
+#: model_terms:ir.ui.view,arch_db:extenss_credit.account_status
+msgid "DATOS DEL CREDITO"
+msgstr ""
+
+#. module: extenss_credit
+#: model_terms:ir.ui.view,arch_db:extenss_credit.account_status
+msgid "DEL"
+msgstr ""
+
+#. module: extenss_credit
+#: model_terms:ir.ui.view,arch_db:extenss_credit.account_status
+msgid "DEPOSITO EN GARANTIA:"
+msgstr ""
+
+#. module: extenss_credit
+#: model_terms:ir.ui.view,arch_db:extenss_credit.account_status
+msgid "DETALLE DE OPERACIONES"
+msgstr ""
+
+#. module: extenss_credit
+#: model_terms:ir.ui.view,arch_db:extenss_credit.account_status
+msgid "DIAS"
+msgstr ""
+
+#. module: extenss_credit
+#: model_terms:ir.ui.view,arch_db:extenss_credit.account_status
+msgid "DIRECCION DEL ARRENDATARIO:"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_conciliation_lines__date
+msgid "Date"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_moras__days
+msgid "Days"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_request__days_interest
+msgid "Days of interest"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__days_notice
+msgid "Days to notice"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__days_transfer_past_due
+msgid "Days to transfer to past due portfolio"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_moras__init_date
+msgid "Del"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__dep_income_application
+msgid "Deposit Income Application"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__deposit_income
+msgid "Deposit income"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_conciliation_lines__description
+msgid "Description"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__differential
+msgid "Differential"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__dispersion_date
+msgid "Dispersion date"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__display_name
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_account__display_name
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_accounting_payments__display_name
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_amortization__display_name
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_concept_payments__display_name
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_concepts_expiration__display_name
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_conciliation__display_name
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_conciliation_lines__display_name
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_expiry_notices__display_name
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_moras__display_name
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_movements__display_name
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_request__display_name
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_restructuring_table__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_conciliation_lines__display_type
+msgid "Display Type"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields.selection,name:extenss_credit.selection__extenss_credit_conciliation__status_bank__draft
+#: model:ir.model.fields.selection,name:extenss_credit.selection__extenss_credit_request__state__draft
+msgid "Draft"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_expiry_notices__due_not_date
+msgid "Due notice date"
+msgstr ""
+
+#. module: extenss_credit
+#: model_terms:ir.ui.view,arch_db:extenss_credit.account_status
+msgid "EQUIPO ARRENDADO:"
+msgstr ""
+
+#. module: extenss_credit
+#: model_terms:ir.ui.view,arch_db:extenss_credit.account_status
+msgid "ESTADO DE CUENTA ARRENDAMIENTO FINANCIERO"
+msgstr ""
+
+#. module: extenss_credit
+#: model_terms:ir.ui.view,arch_db:extenss_credit.account_status
+msgid "ESTADO DE CUENTA ARRENDAMIENTO PURO"
+msgstr ""
+
+#. module: extenss_credit
+#: model_terms:ir.ui.view,arch_db:extenss_credit.account_status
+msgid "ESTADO DE CUENTA CREDITO SIMPLE"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__flag_early_settlement
+#: model:ir.model.fields.selection,name:extenss_credit.selection__extenss_credit_request__type_request__early_settlement
+msgid "Early settlement"
+msgstr ""
+
+#. module: extenss_credit
+#: model_terms:ir.ui.view,arch_db:extenss_credit.account_status
+msgid ""
+"El ____________________________, de  profesión Contador Público Titulado, lo  cual  acredita con  \n"
+"                                Cédula Profesional  No. ________, expedida  en  la  Ciudad  de  México,  por  la  Dirección de \n"
+"                                Profesiones, dependiente de la Secretaría de Educación Pública, como Contador Autorizado por la \n"
+"                                \""
+msgstr ""
+
+#. module: extenss_credit
+#: model_terms:ir.ui.view,arch_db:extenss_credit.account_status
+msgid "End Date"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_movements__ending_balance
+msgid "Ending balance"
+msgstr ""
+
+#. module: extenss_credit
+#: code:addons/extenss_credit/models/extenss_credit.py:0
+#, python-format
+msgid "Enter the penalty percentage, is required for the type of credit"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_amortization__expiration_date
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_restructuring_table__expiration_date
+msgid "Expiration Date"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields.selection,name:extenss_credit.selection__extenss_credit__portfolio_type__vencida
+msgid "Expired"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__expired_capital_vat
+msgid "Expired capital VAT"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__expired_interest_vat
+msgid "Expired interest VAT"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__notice_date
+msgid "Expiri Notices"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields.selection,name:extenss_credit.selection__extenss_credit_conciliation_lines__type_rec__expiry
+msgid "Expiry"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_concept_payments__concept_id
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_concepts_expiration__expiry_notice_id
+msgid "Expiry Notice"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model,name:extenss_credit.model_extenss_credit_expiry_notices
+msgid "Expiry Notices"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_concept_payments__expiry_number_en
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_expiry_notices__expiry_number
+msgid "Expiry notice number"
+msgstr ""
+
+#. module: extenss_credit
+#: model_terms:ir.ui.view,arch_db:extenss_credit.view_form_extenss_credit
+msgid "Expiry notices"
+msgstr ""
+
+#. module: extenss_credit
+#: model_terms:ir.ui.view,arch_db:extenss_credit.account_status
+msgid "FECHA EDO CUENTA:"
+msgstr ""
+
+#. module: extenss_credit
+#: model_terms:ir.ui.view,arch_db:extenss_credit.account_status
+msgid "FECHA:"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__rate_arrears_interest
+msgid "Factor"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_conciliation__final_balance
+msgid "Final balance"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__anchor_id
+msgid "Financial funding"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields.selection,name:extenss_credit.selection__extenss_credit__credit_status__finished
+msgid "Finished"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__first_payment_date
+msgid "First payment date"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__frequency
+msgid "Frequency"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__frequency_days
+msgid "Frequency Days"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_concepts_expiration__full_paid
+msgid "Full payment"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__guarantee_dep_application
+msgid "Guarantee Deposit Application"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__guarantee_dep_balance
+msgid "Guarantee Deposit Balance"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__guarantee_deposit
+msgid "Guarantee deposit"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__hiring_date
+msgid "Hiring date"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__id
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_account__id
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_accounting_payments__id
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_amortization__id
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_concept_payments__id
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_concepts_expiration__id
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_conciliation__id
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_conciliation_lines__id
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_expiry_notices__id
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_moras__id
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_movements__id
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_request__id
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_restructuring_table__id
+msgid "ID"
+msgstr ""
+
+#. module: extenss_credit
+#: model_terms:ir.ui.view,arch_db:extenss_credit.account_status
+msgid "INTERESES"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__iva
+msgid "IVA"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_amortization__iva_capital
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_restructuring_table__iva_capital
+msgid "IVA Capital"
+msgstr ""
+
+#. module: extenss_credit
+#: model_terms:ir.ui.view,arch_db:extenss_credit.account_status
+msgid "IVA INICIAL"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_amortization__iva_interest
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_moras__interest
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_restructuring_table__iva_interest
+msgid "IVA Interest"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__iva_purchase_rcal
+msgid "IVA Purchase"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_amortization__iva_rent
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_restructuring_table__iva_rent
+msgid "IVA Rent"
+msgstr ""
+
+#. module: extenss_credit
+#: model_terms:ir.ui.view,arch_db:extenss_credit.account_status
+msgid "IVA:"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_expiry_notices__req_credit_id
+msgid "Id Request"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields.selection,name:extenss_credit.selection__extenss_credit_account__status__inactive
+msgid "Inactive"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__include_taxes
+msgid "Include Taxes"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__income_tax_deposit
+msgid "Income Tax on deposit"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields.selection,name:extenss_credit.selection__extenss_credit__customer_type__person
+msgid "Individual"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_amortization__initial_balance
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_restructuring_table__initial_balance
+#: model_terms:ir.ui.view,arch_db:extenss_credit.account_status
+msgid "Initial Balance"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_conciliation__initial_balance
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_movements__initial_balance
+msgid "Initial balance"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__initial_total_payment
+msgid "Initial total payment"
+msgstr ""
+
+#. module: extenss_credit
+#: model_terms:ir.ui.view,arch_db:extenss_credit.account_status
+msgid "Intereses Moratorios"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_amortization__interest
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_restructuring_table__interest
+#: model:ir.model.fields.selection,name:extenss_credit.selection__extenss_credit_concepts_expiration__concept__interest
+#: model_terms:ir.ui.view,arch_db:extenss_credit.account_status
+msgid "Interest"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields.selection,name:extenss_credit.selection__extenss_credit_concepts_expiration__concept__intvat
+msgid "Interest VAT"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_request__vat_interest_mora
+msgid "Interest moratoriums VAT"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__interest_rate
+msgid "Interest rate"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_request__interests
+msgid "Interests"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_request__interests_vat
+msgid "Interests VAT"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_request__interests_moratoriums
+msgid "Interests moratoriums"
+msgstr ""
+
+#. module: extenss_credit
+#: model_terms:ir.ui.view,arch_db:extenss_credit.account_status
+msgid "Iva Capital"
+msgstr ""
+
+#. module: extenss_credit
+#: model_terms:ir.ui.view,arch_db:extenss_credit.account_status
+msgid "Iva Interest"
+msgstr ""
+
+#. module: extenss_credit
+#: model_terms:ir.ui.view,arch_db:extenss_credit.account_status
+msgid "Iva Rent"
+msgstr ""
+
+#. module: extenss_credit
+#: model_terms:ir.ui.view,arch_db:extenss_credit.account_status
+msgid "L .C.  _______________________"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit____last_update
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_account____last_update
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_accounting_payments____last_update
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_amortization____last_update
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_concept_payments____last_update
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_concepts_expiration____last_update
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_conciliation____last_update
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_conciliation_lines____last_update
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_expiry_notices____last_update
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_moras____last_update
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_movements____last_update
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_request____last_update
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_restructuring_table____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__write_uid
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_account__write_uid
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_accounting_payments__write_uid
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_amortization__write_uid
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_concept_payments__write_uid
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_concepts_expiration__write_uid
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_conciliation__write_uid
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_conciliation_lines__write_uid
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_expiry_notices__write_uid
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_moras__write_uid
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_movements__write_uid
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_request__write_uid
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_restructuring_table__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__write_date
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_account__write_date
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_accounting_payments__write_date
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_amortization__write_date
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_concept_payments__write_date
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_concepts_expiration__write_date
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_conciliation__write_date
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_conciliation_lines__write_date
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_expiry_notices__write_date
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_moras__write_date
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_movements__write_date
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_request__write_date
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_restructuring_table__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__last_payment_date
+msgid "Last payment date"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__leased_team
+msgid "Leased Team"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__date_limit_pay
+msgid "Limit Date"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields.selection,name:extenss_credit.selection__extenss_credit__credit_status__liquidated
+msgid "Liquidated"
+msgstr ""
+
+#. module: extenss_credit
+#: model_terms:ir.ui.view,arch_db:extenss_credit.account_status
+msgid "MONTO DEL CREDITO:"
+msgstr ""
+
+#. module: extenss_credit
+#: model_terms:ir.ui.view,arch_db:extenss_credit.account_status
+msgid "MONTO POR"
+msgstr ""
+
+#. module: extenss_credit
+#: model:res.groups,name:extenss_credit.extenss_credit_group_manager
+msgid "Manager"
+msgstr ""
+
+#. module: extenss_credit
+#: model_terms:ir.ui.view,arch_db:extenss_credit.account_status
+msgid "Monthly Rent"
+msgstr ""
+
+#. module: extenss_credit
+#: model_terms:ir.ui.view,arch_db:extenss_credit.view_form_extenss_credit
+msgid "Moras"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__moras_ids
+msgid "Moras Table"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields.selection,name:extenss_credit.selection__extenss_credit_concepts_expiration__concept__morint
+msgid "Moratorium Interest"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields.selection,name:extenss_credit.selection__extenss_credit_concepts_expiration__concept__morintvat
+msgid "Moratorium Interest VAT"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_movements__date_time_move
+msgid "Movement date"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_accounting_payments__movement_type
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_movements__movement_type
+msgid "Movement type"
+msgstr ""
+
+#. module: extenss_credit
+#: model_terms:ir.ui.view,arch_db:extenss_credit.create_movement_form
+msgid "Movements"
+msgstr ""
+
+#. module: extenss_credit
+#: model_terms:ir.ui.view,arch_db:extenss_credit.account_status
+msgid "NOMBRE DEL ARRENDATARIO:"
+msgstr ""
+
+#. module: extenss_credit
+#: model_terms:ir.ui.view,arch_db:extenss_credit.account_status
+msgid "NOMBRE DEL CLIENTE:"
+msgstr ""
+
+#. module: extenss_credit
+#: model_terms:ir.ui.view,arch_db:extenss_credit.account_status
+msgid "NUMERO DE PAGOS:"
+msgstr ""
+
+#. module: extenss_credit
+#: model_terms:ir.ui.view,arch_db:extenss_credit.account_status
+msgid "NUMERO DE RENTAS:"
+msgstr ""
+
+#. module: extenss_credit
+#: code:addons/extenss_credit/models/extenss_credit.py:0
+#: code:addons/extenss_credit/models/extenss_credit.py:0
+#: code:addons/extenss_credit/models/extenss_credit.py:0
+#: code:addons/extenss_credit/models/extenss_credit.py:0
+#: code:addons/extenss_credit/models/extenss_credit.py:0
+#: code:addons/extenss_credit/models/extenss_credit.py:0
+#: code:addons/extenss_credit/models/extenss_credit.py:0
+#: code:addons/extenss_credit/models/extenss_credit.py:0
+#: code:addons/extenss_credit/models/extenss_credit.py:0
+#, python-format
+msgid "New"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_amortization__no_pay
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_restructuring_table__no_pay
+msgid "No Pay"
+msgstr ""
+
+#. module: extenss_credit
+#: model_terms:ir.ui.view,arch_db:extenss_credit.account_status
+msgid "No. Payment"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields.selection,name:extenss_credit.selection__extenss_credit_conciliation_lines__display_type__line_note
+msgid "Note"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__number_days_overdue
+msgid "Number of days overdue"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__number_pay_rest
+msgid "Number of payments for restructuring"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__order_id
+msgid "Order"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__outstanding_balance
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_request__outstanding_balance
+msgid "Outstanding balance"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_request__overdue_balance
+msgid "Overdue Balance"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__overdue_balance
+msgid "Overdue balance"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__overdue_capital
+msgid "Overdue capital"
+msgstr ""
+
+#. module: extenss_credit
+#: model_terms:ir.ui.view,arch_db:extenss_credit.account_status
+msgid "PORCENTAJE:"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_moras__past_due_balance
+msgid "Past due balance"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__past_due_interest
+msgid "Past due interest"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_amortization__payment
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_moras__amount_to_payment
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_restructuring_table__payment
+#: model:ir.model.fields.selection,name:extenss_credit.selection__extenss_credit_concepts_expiration__concept__payment
+#: model_terms:ir.ui.view,arch_db:extenss_credit.account_status
+msgid "Payment"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_concept_payments__date_paid
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_expiry_notices__payment_date
+msgid "Payment date"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_expiry_notices__payment_number
+msgid "Payment number"
+msgstr ""
+
+#. module: extenss_credit
+#: model_terms:ir.ui.view,arch_db:extenss_credit.view_form_extenss_credit
+msgid "Payments"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_request__penalty
+msgid "Penalty"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_request__penalty_amount
+#: model:ir.model.fields.selection,name:extenss_credit.selection__extenss_credit_concepts_expiration__concept__penalty_amount
+msgid "Penalty Amount"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_amortization__penalty_amount
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_restructuring_table__penalty_amount
+msgid "Penalty amount"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields.selection,name:extenss_credit.selection__extenss_credit__credit_status__pending
+#: model:ir.model.fields.selection,name:extenss_credit.selection__extenss_credit_conciliation__status_bank__pending
+#: model:ir.model.fields.selection,name:extenss_credit.selection__extenss_credit_conciliation_lines__status__pending
+#: model:ir.model.fields.selection,name:extenss_credit.selection__extenss_credit_request__state__pending
+msgid "Pending"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__portfolio_type
+msgid "Portfolio Type"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_conciliation__processing_id
+msgid "Processing id"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__product_id
+msgid "Product"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields.selection,name:extenss_credit.selection__extenss_credit_concepts_expiration__concept__purchase_option
+msgid "Purchase Option"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields.selection,name:extenss_credit.selection__extenss_credit_concepts_expiration__concept__vat_option
+msgid "Purchase Option VAT"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_request__purchase_option
+msgid "Purchase option"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__purchase_option_amount
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__purchase_option_amount_rcal
+msgid "Purchase option amount"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_moras__rate
+msgid "Rate"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__factor_rate
+msgid "Rate interest moratorium"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__rate_type
+msgid "Rate type"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__ratification
+msgid "Ratification"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__ratification_vat
+msgid "Ratification VAT"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_conciliation__name
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_conciliation_lines__reference
+msgid "Reference"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__reference_number
+msgid "Reference number"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__payment_date
+msgid "Register Payment"
+msgstr ""
+
+#. module: extenss_credit
+#: code:addons/extenss_credit/models/extenss_credit.py:0
+#: model:ir.actions.act_window,name:extenss_credit.action_menu_request
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__request_count
+#: model_terms:ir.ui.view,arch_db:extenss_credit.view_form_extenss_credit
+#, python-format
+msgid "Request"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__request_id
+msgid "Request Id"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__residual_value_rcal
+msgid "Residual Value"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields.selection,name:extenss_credit.selection__extenss_credit__portfolio_type__restructuring
+#: model_terms:ir.ui.view,arch_db:extenss_credit.view_form_extenss_credit
+msgid "Restructuring"
+msgstr ""
+
+#. module: extenss_credit
+#: model_terms:ir.ui.view,arch_db:extenss_credit.account_status
+msgid ""
+"Río  Lerma No.  333, P. 2, Col. Cuauhtémoc,  Del.  Cuauhtémoc, México D.F., C.P. 06500  \n"
+"                                Tel. 3685 3920 Ext. 576   Horario de Atención: Lunes a Viernes 9:00 a 18:00 hrs.\n"
+"                                Responsable REUNE: Fridna Villarreal Murillo   Email: fridna.villarreal@credipyme.com.mx\n"
+"                                Página de Internet. www.condusef.gob.mx\n"
+"                                LUC. Art. 2 \"El Gobierno Federal y las entidades de la administración pública praestatal no podrán responsabilizarse ni garantizar el resultado de las operaciones que realicen las uniones, así como tampoco asumir responsabilidad alguna de las obligaciones contraídas con sus socios o terceros\"\n"
+"                                Quejas o reclamaciones validas dentro de los 30 días habiles  siguientes  a la expedición del  presente estado de cuenta. \n"
+"                                Los intereses pueden variar conforme a la movilidad del índice referido consultado."
+msgstr ""
+
+#. module: extenss_credit
+#: model_terms:ir.ui.view,arch_db:extenss_credit.account_status
+msgid "SALDO VENCIDO"
+msgstr ""
+
+#. module: extenss_credit
+#: model_terms:ir.ui.view,arch_db:extenss_credit.account_status
+msgid ""
+"SE EXTIENDE LA PRESENTE CERTIFICACION EN LOS TÉRMINOS DE LOS DOCUMENTOS BASE"
+"  DE LA ACCIÓN RELATIVA AL CÁLCULO DE  LOS  INTERESES ORDINARIOSY MORATORIOS"
+" SUSCRITO  POR  UNA  PARTE __"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__salesperson_id
+msgid "Salesperson Id"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields.selection,name:extenss_credit.selection__extenss_credit_conciliation_lines__display_type__line_section
+msgid "Section"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_request__security_deposit_balance
+msgid "Security Deposit Balance"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_request__date_settlement
+msgid "Settlement date"
+msgstr ""
+
+#. module: extenss_credit
+#: code:addons/extenss_credit/models/extenss_credit.py:0
+#, python-format
+msgid "Settlement date must be greater or equal than Today"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_request__state
+msgid "State"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_account__status
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_conciliation__status_bank
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_conciliation_lines__status
+msgid "Status"
+msgstr ""
+
+#. module: extenss_credit
+#: model_terms:ir.ui.view,arch_db:extenss_credit.create_movement_form
+msgid "Submit"
+msgstr ""
+
+#. module: extenss_credit
+#: model_terms:ir.ui.view,arch_db:extenss_credit.account_status
+msgid "TASA"
+msgstr ""
+
+#. module: extenss_credit
+#: model_terms:ir.ui.view,arch_db:extenss_credit.account_status
+msgid "TASA DE INTERES"
+msgstr ""
+
+#. module: extenss_credit
+#: model_terms:ir.ui.view,arch_db:extenss_credit.account_status
+msgid "TOTAL:"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__tax_amount
+msgid "Tax Amount"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__term
+msgid "Term"
+msgstr ""
+
+#. module: extenss_credit
+#: code:addons/extenss_credit/models/extenss_credit.py:0
+#, python-format
+msgid "The credit must be current"
+msgstr ""
+
+#. module: extenss_credit
+#: code:addons/extenss_credit/wizards/create_accounting_payment.py:0
+#, python-format
+msgid "The final balance cannot be negative"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__total_moras
+msgid "Total Amount Moras"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__count_moras
+msgid "Total Moras"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__total_paid
+msgid "Total Paid"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__total_purchase_rcal
+msgid "Total Purchase"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__total_ratification
+msgid "Total Ratification"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_amortization__total_rent
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_restructuring_table__total_rent
+#: model_terms:ir.ui.view,arch_db:extenss_credit.account_status
+msgid "Total Rent"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__total_commission
+msgid "Total commission"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__total_deposit_income
+msgid "Total deposit income"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__total_guarantee_deposit
+msgid "Total guarantee deposit"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_concept_payments__total_paid_cp
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_concepts_expiration__total_paid_concept
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_expiry_notices__total_paid_not
+msgid "Total paid"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__total_payment
+msgid "Total payment"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_request__total_settle
+msgid "Total to Settle"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_request__total_advance
+msgid "Total to advance"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_expiry_notices__total_to_pay
+msgid "Total to pay"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_conciliation__type
+msgid "Type"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_conciliation_lines__type_rec
+msgid "Type Rec"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__type_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_request__type_credit_af
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_request__type_credit_ap
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_request__type_credit_cs
+msgid "Type of Credit"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_request__type_request
+msgid "Type request"
+msgstr ""
+
+#. module: extenss_credit
+#: model_terms:ir.ui.view,arch_db:extenss_credit.view_form_extenss_credit_concilation
+msgid "Upload information"
+msgstr ""
+
+#. module: extenss_credit
+#: model:res.groups,name:extenss_credit.extenss_credit_group_user
+msgid "User"
+msgstr ""
+
+#. module: extenss_credit
+#: model_terms:ir.ui.view,arch_db:extenss_credit.account_status
+msgid "VALOR ACTUAL DEL BIEN:"
+msgstr ""
+
+#. module: extenss_credit
+#: model_terms:ir.ui.view,arch_db:extenss_credit.account_status
+msgid "VALOR RESIDUAL"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields.selection,name:extenss_credit.selection__extenss_credit_concepts_expiration__concept__paymentvat
+msgid "VAT Payment"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_request__vat_purchase_option
+msgid "VAT Purchase option"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__vat_factor
+msgid "VAT factor"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit__vat_guarantee_deposit
+msgid "VAT guarantee deposit"
+msgstr ""
+
+#. module: extenss_credit
+#: model_terms:ir.ui.view,arch_db:extenss_credit.account_status
+msgid "VENCIMIENTO"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields.selection,name:extenss_credit.selection__extenss_credit__portfolio_type__vigente
+msgid "Valid"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields.selection,name:extenss_credit.selection__extenss_credit_conciliation__status_bank__validated
+msgid "Validated"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model.fields,field_description:extenss_credit.field_extenss_credit_conciliation_lines__check
+msgid "Validating"
+msgstr ""
+
+#. module: extenss_credit
+#: model_terms:ir.ui.view,arch_db:extenss_credit.account_status
+msgid ""
+"_     ( _____________________  00/100  M.N.  )  conforme  al  siguiente:"
+msgstr ""
+
+#. module: extenss_credit
+#: model_terms:ir.ui.view,arch_db:extenss_credit.account_status
+msgid ""
+"_  representada  por  el ______________________________, y  por  \n"
+"                                una  tercera  parte  los___________ en  su  carácter  de  _________________________________, suscrito  con  \n"
+"                                fecha  ________________________ ratificado ante la fe del Notario Público N° ______ del _________________, \n"
+"                                el Lic. _____________________, contenido en la escritura numero ______  de fecha _______ por  la  cantidad  de  \n"
+"                                $  _"
+msgstr ""
+
+#. module: extenss_credit
+#: model_terms:ir.ui.view,arch_db:extenss_credit.account_status
+msgid "__  Y  POR  OTRA  PARTE \""
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model,name:extenss_credit.model_extenss_credit_amortization
+msgid "extenss.credit.amortization"
+msgstr ""
+
+#. module: extenss_credit
+#: model:ir.model,name:extenss_credit.model_extenss_credit_moras
+msgid "extenss.credit.moras"
+msgstr ""
+
+#. module: extenss_credit
+#: model_terms:ir.ui.view,arch_db:extenss_credit.account_status
+msgid ""
+"representada  \n"
+"                                por  el ______________________________,  y  por  la  otra parte  en  su  carácter  de  arrendatario \n"
+"                                _"
+msgstr ""
+
+#. module: extenss_credit
+#: model_terms:ir.ui.view,arch_db:extenss_credit.view_form_extenss_credit_concilation
+msgid "string"
+msgstr ""

@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="view_tree_extenss_credit_account_ap" model="ir.ui.view">
+        <field name="name">extenss.ap.acct.tree</field>
+        <field name="model">extenss.credit.account</field>
+        <field name="arch" type="xml">
+            <tree create="false" edit="false">
+                <field name="name"/>
+                <field name="customer_id"/>
+                <field name="date_opening"/>
+                <field name="status"/>
+                <field name="balance"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_form_extenss_credit_account_ap" model="ir.ui.view">
+        <field name="name">extenss.ap.acct.form</field>
+        <field name="model">extenss.credit.account</field>
+        <field name="arch" type="xml">
+            <form create="false" edit="false">
+                <header>
+                    <button name="%(extenss_credit.create_movement_wizard)d" string="Create Credit/Charge" type="action" class="oe_highlight"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="customer_id" options="{'no_open': True}"/>
+                            <field name="date_opening"/>
+                        </group>
+                        <group>
+                            <field name="status"/>
+                            <field name="balance"/>
+                        </group>
+                    </group>
+                    <group>
+                        <notebook>
+                            <page name="movements" string="Account movements">
+                                <field name="accnt_mov_ids">
+                                    <tree>
+                                        <field name="date_time_move"/>
+                                        <field name="movement_type"/>
+                                        <field name="comments"/>
+                                        <field name="amount"/>
+                                        <field name="initial_balance"/>
+                                        <field name="ending_balance"/>
+                                    </tree>
+                                    <form>
+                                        <group>
+                                            <group>
+                                                <field name="date_time_move"/>
+                                                <field name="movement_type"/>
+                                                <field name="comments"/>
+                                            </group>
+                                            <group>
+                                                <field name="amount"/>
+                                                <field name="initial_balance"/>
+                                                <field name="ending_balance"/>
+                                            </group>
+                                        </group>
+                                    </form>
+                                </field>
+                            </page>
+                        </notebook>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_account_ap" model="ir.actions.act_window">
+        <field name="name">Account</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">extenss.credit.account</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_ids"
+                eval="[(5,0,0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('extenss_ap.view_tree_extenss_credit_account_ap')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('extenss_ap.view_form_extenss_credit_account_ap')})]"/>
+    </record>
+
+    <menuitem 
+        id="submenu_account_ap"
+        name="Account"
+        sequence="120"
+        parent="menu_ap"
+        action="action_account_ap"/>
+</odoo>
