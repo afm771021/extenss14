@@ -1688,7 +1688,6 @@ class Credits(models.Model):
                         dfq=credit.first_payment_date#hiring_date
 
                         if credit.calculation_base=='360/360':
-                            print("entra a 360")
                             if credit.af == True or credit.ap == True:
                                 if credit.include_taxes:
                                     dr=(credit.interest_rate / 360 )/(1+(credit.vat_factor/100))
