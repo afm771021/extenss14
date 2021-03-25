@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Sequences for lead mining requests -->
+        <record id="credit_id_sequence" model="ir.sequence">
+            <field name="name">Credit_id</field>
+            <field name="code">extenss.credit</field>
+            <field name="prefix">0</field>
+            <field name="padding">12</field>
+            <!--<field name="company_id" eval="False"/>-->
+        </record>
+        <record id="account_id_sequence" model="ir.sequence">
+            <field name="name">Name</field>
+            <field name="code">extenss.credit.account</field>
+            <field name="prefix">0</field>
+            <field name="padding">16</field>
+            <!--<field name="company_id" eval="False"/>-->
+        </record>
+        <record id="expiry_id_sequence" model="ir.sequence">
+            <field name="name">Expiry_number</field>
+            <field name="code">extenss.credit.expiry_notices</field>
+            <field name="prefix">0</field>
+            <field name="padding">12</field>
+            <!--<field name="company_id" eval="False"/>-->
+        </record>
+        <!-- <record id="expiry_num_id_sequence" model="ir.sequence">
+            <field name="name">Expiry_num</field>
+            <field name="code">extenss.credit.concepts_expiration</field>
+            <field name="prefix">0</field>
+            <field name="padding">12</field>
+        </record> -->
+        
+    </data>
+</odoo>

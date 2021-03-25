@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="menu_financial_factoring_form" model="website.menu">
+        <field name="name">Simulator</field>
+        <field name="url">/ff</field>
+        <field name="parent_id" ref="website.main_menu"/>
+        <field name="sequence">100</field>
+    </record>
+
+    <template id="ff_template_page" name="Financial Factoring">
+        <t t-call="website.layout">
+            <div id="wrap">
+                <div class="oe_structure">
+                    <div class="container">
+                        <form role="form" action="/ff_cal" data-model_name="crm.lead" method="post">
+                            <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                            <div class="form-group">
+                                <label for="partner_id" class="control-label">Customer</label>
+                                <input type="text" name="partner_id" t-att-value="partner_id" id="partner_id" 
+                                    class="form-control" required="1"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="email_from" class="control-label">Email</label>
+                                <input type="email" name="email_from" t-att-value="email_from" id="email_from" 
+                                    class="form-control" required="1"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="birth_date" class="control-label">Birth date</label>
+                                <input type="date" name="birth_date" t-att-value="birth_date" id="birth_date" 
+                                    class="form-control"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone" class="control-label">Phone</label>
+                                <input type="phone" name="phone" t-att-value="phone" id="phone" 
+                                    class="form-control"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="vat" class="control-label">RFC</label>
+                                <input type="text" name="vat" t-att-value="vat" id="vat" 
+                                    class="form-control"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="curp" class="control-label">CURP</label>
+                                <input type="text" name="curp" t-att-value="curp" id="curp" 
+                                    class="form-control"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="street" class="control-label">Street</label>
+                                <input type="text" name="street" t-att-value="street" id="street" 
+                                    class="form-control"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="city" class="control-label">City</label>
+                                <input type="text" name="city" t-att-value="city" id="city" 
+                                    class="form-control"/>
+                            </div>
+                            <div class="form-group"> 
+                                <label for="amount_ff" class="control-label">Amount</label>
+                                <input type="text" name="amount_ff" t-att-value="amount_ff" id="amount_ff" 
+                                    class="form-control" required="1"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="init_date" class="control-label">Init Date</label>
+                                <input type="date" name="init_date" t-att-value="init_date" id="init_date" 
+                                    class="form-control" required="1"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="invoice_date" class="control-label">Invoice Date</label>
+                                <input type="date" name="invoice_date" t-att-value="invoice_date" id="invoice_date"
+                                    class="form-control" required="1"/>
+                            </div>
+                            <div class="clearfix oe_login_buttons">
+                                <button type="submit" class="btn btn-primary pull-left">Calculate</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <template id="ff_calculate_ok" name="Calculate">
+        <t t-call="website.layout">
+            <div id="wrap">
+                <div class="oe_structure">
+                    <div class="container">
+                        <t t-call="portal.portal_searchbar">
+                            <t t-set="title">Calculate</t>
+                        </t>
+                        <form role="form" data-model_name="crm.lead" method="post">
+                            <div class="form-group">
+                                <label for="amount_ff" class="control-label">Amount</label>
+                                <input type="text" name="amount_ff" t-att-value="amount_ff" id="amount_ff" 
+                                    class="form-control" readonly=""/>
+                            </div>
+                            <div class="form-group">
+                                <label for="amount_out_vat" class="control-label">Amount out vat</label>
+                                <input type="text" name="amount_out_vat" t-att-value="amount_out_vat" id="amount_out_vat" 
+                                    class="form-control" readonly=""/>
+                            </div>
+                            <div class="form-group">
+                                <label for="days" class="control-label">Days</label>
+                                <input type="text" name="days" t-att-value="days" id="days"
+                                    class="form-control" readonly=""/>
+                            </div>
+                            <div class="form-group">
+                                <label for="capacity" class="control-label">Capacity</label>
+                                <input type="text" name="capacity" t-att-value="capacity" id="capacity"
+                                    class="form-control" readonly=""/>
+                            </div>
+                            <div class="form-group">
+                                <label for="commission_details" class="control-label">Commission Details</label>
+                                <input type="number" name="commission_details" t-att-value="commission_details" id="commission_details"
+                                    class="form-control" readonly="1"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="commissions" class="control-label">Commissions</label>
+                                <input type="number" name="commissions" t-att-value="commissions" id="commissions" 
+                                    class="form-control" readonly="1"/>
+                            </div>
+                            <div class="form-group">
+                                <label for=" commission_vat" class="control-label">Commission VAT</label>
+                                <input type="number" name="commission_vat" t-att-value="commission_vat" id="commission_vat"
+                                    class="form-control" readonly="1"/>
+                            </div>
+                            <div class="form-group">
+                                <label for=" interest" class="control-label">Interest</label>
+                                <input type="number" name="interest" t-att-value="interest" id="interest"
+                                    class="form-control" readonly="1"/>
+                            </div>
+                            <div class="form-group">
+                                <label for=" interest_vat" class="control-label">Interest VAT</label>
+                                <input type="number" name="interest_vat" t-att-value="interest_vat" id="interest_vat"
+                                    class="form-control" readonly="1"/>
+                            </div>
+                            <div class="form-group">
+                                <label for=" total_payment" class="control-label">Total Payment</label>
+                                <input type="number" name="total_payment" t-att-value="total_payment" id="total_payment"
+                                    class="form-control" readonly="1"/>
+                            </div>
+                            <div class="form-group">
+                                <label for=" amount_delivered" class="control-label">Amount Delivered</label>
+                                <input type="number" name="amount_delivered" t-att-value="amount_delivered" id="amount_delivered"
+                                    class="form-control" readonly="1"/>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+</odoo>

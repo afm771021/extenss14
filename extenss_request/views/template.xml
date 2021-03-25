@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="crm_ff_template_page" name="crm_ff">
+        <t t-call="website.layout">
+            <div class="container">
+                <!-- Prueba CRM Website -->
+                <form action="/crm/ff/" method="post" data-model_name="crm.lead" data-success_page="/contactus-thank-you" class="s_website_form container-fluid mt32" enctype="multipart/form-data" data-editable-form="false">
+                    <div class="form-group row form-field o_website_form_required_custom">
+                        <label class="col-lg-3 col-md-4 col-form-label" for="amount_ff">Amount</label>
+                        <div class="col-lg-7 col-md-8">
+                            <input type="text" class="form-control o_website_form_input" name="amount_ff" t-att-value="request.params.get('amount_ff', '')" required=""/>
+                        </div>
+                    </div>
+                    <div class="form-group row form-field o_website_form_required_custom">
+                        <label class="col-lg-3 col-md-4 col-form-label" for="init_date">Init Date</label>
+                        <div class="col-lg-7 col-md-8">
+                            <input type="date" class="form-control o_website_form_input" name="init_date" t-att-value="request.params.get('init_date', '')" required=""/>
+                        </div>
+                    </div>
+                    <div class="form-group row form-field o_website_form_required_custom">
+                        <label class="col-lg-3 col-md-4 col-form-label" for="invoice_date">Invoice Date</label>
+                        <div class="col-lg-7 col-md-8">
+                            <input type="date" class="form-control o_website_form_input" name="invoice_date" t-att-value="request.params.get('invoice_date', '')" required=""/>
+                        </div>
+                    </div>
+                    <div class="form-group row form-field o_website_form_required_custom">
+                        <label class="col-lg-3 col-md-4 col-form-label" for="days">Days</label>
+                        <div class="col-lg-7 col-md-8">
+                            <input type="" class="form-control o_website_form_input" name="days" t-att-value="request.params.get('days', '')" readonly="1"/>
+                        </div>
+                    </div>
+                    <div class="form-group row form-field o_website_form_required_custom">
+                        <label class="col-lg-3 col-md-4 col-form-label" for="capacity">Capacity</label>
+                        <div class="col-lg-7 col-md-8">
+                            <input type="number" class="form-control o_website_form_input" name="capacity" t-att-value="request.params.get('capacity', '')" required=""/>
+                        </div>
+                    </div>
+                    <div class="form-group row form-field o_website_form_required_custom">
+                        <label class="col-lg-3 col-md-4 col-form-label" for="commission_details">Commission Details</label>
+                        <div class="col-lg-7 col-md-8">
+                            <input type="number" class="form-control o_website_form_input" name="commission_details" t-att-value="request.params.get('commission_details', '')" required=""/>
+                        </div>
+                    </div>
+                    <div class="form-group row form-field o_website_form_required_custom">
+                        <label class="col-lg-3 col-md-4 col-form-label" for="commissions">Commissions</label>
+                        <div class="col-lg-7 col-md-8">
+                            <input type="number" class="form-control o_website_form_input" name="commissions" t-att-value="request.params.get('commissions', '')" readonly="1"/>
+                        </div>
+                    </div>
+                    <div class="form-group row form-field o_website_form_required_custom">
+                        <label class="col-lg-3 col-md-4 col-form-label" for=" commission_vat">Commission VAT</label>
+                        <div class="col-lg-7 col-md-8">
+                            <input type="number" class="form-control o_website_form_input" name="commission_vat" t-att-value="request.params.get('commission_vat', '')" readonly="1"/>
+                        </div>
+                    </div>
+
+                    <div class="form-group row form-field o_website_form_required_custom">
+                        <label class="col-lg-3 col-md-4 col-form-label" for=" interest">Interest</label>
+                        <div class="col-lg-7 col-md-8">
+                            <input type="number" class="form-control o_website_form_input" name="interest" t-att-value="request.params.get('interest', '')" readonly="1"/>
+                        </div>
+                    </div>
+                     
+                    <div class="form-group row form-field o_website_form_required_custom">
+                        <label class="col-lg-3 col-md-4 col-form-label" for=" interest_vat">Interest VAT</label>
+                        <div class="col-lg-7 col-md-8">
+                            <input type="number" class="form-control o_website_form_input" name="interest_vat" t-att-value="request.params.get('interest_vat', '')" readonly="1"/>
+                        </div>
+                    </div>
+                     
+                    <div class="form-group row form-field o_website_form_required_custom">
+                        <label class="col-lg-3 col-md-4 col-form-label" for=" total_payment">Total Payment</label>
+                        <div class="col-lg-7 col-md-8">
+                            <input type="number" class="form-control o_website_form_input" name="total_payment" t-att-value="request.params.get('total_payment', '')" readonly="1"/>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="offset-lg-3 offset-md-4 col-md-8 col-lg-7">
+                            <a href="#" role="button" class="btn btn-primary btn-lg o_website_form_send">Calculate</a>
+                            <span id="o_website_form_result"></span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </t>
+    </template>
+</odoo>

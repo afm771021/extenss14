@@ -1,0 +1,1297 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* extenss_financial_product
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e-20200316\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-01-11 07:05+0000\n"
+"PO-Revision-Date: 2021-01-11 01:35-0600\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es_MX\n"
+"X-Generator: Poedit 2.4.2\n"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,help:extenss_financial_product.field_extenss_product_attribute__create_variant
+msgid ""
+"- Instantly: All possible variants are created as soon as the attribute and its values are added to a "
+"product.\n"
+"       - Dynamically: Each variant is created only when its corresponding attributes and values are added to "
+"a sales order.\n"
+"       - Never: Variants are never created for the attribute.\n"
+"       Note: the variants creation mode cannot be changed once the attribute is used on at least one product."
+msgstr ""
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,help:extenss_financial_product.field_extenss_product_product__description_sale
+#: model:ir.model.fields,help:extenss_financial_product.field_extenss_product_template__description_sale
+msgid ""
+"A description of the Product that you want to communicate to your customers. This description will be copied "
+"to every Sales Order, Delivery Order and Customer Invoice/Credit Note"
+msgstr ""
+"Una descripción del producto que quiera comunicar a sus clientes. Esta descripción se copiará a cada pedido "
+"de venta, albarán de salida y factura de cliente"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,help:extenss_financial_product.field_extenss_product_product__type
+#: model:ir.model.fields,help:extenss_financial_product.field_extenss_product_template__type
+msgid ""
+"A storable product is a product for which you manage stock. The Inventory app has to be installed.\n"
+"A consumable product is a product for which stock is not managed.\n"
+"A service is a non-material product you provide."
+msgstr ""
+"Un producto almacenable es un producto para el que gestiona stock. La aplicación de inventario debe estar "
+"instalada.\n"
+"Un producto consumible es un producto para el que no se gestionan las existencias.\n"
+"Un servicio es un producto no material."
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_base_interest_rate__shortcut
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_calculation_base__shortcut
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_credit_type__shortcut
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_rec_docs__shortcut
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_type_docs__shortcut
+msgid "Abbreviation"
+msgstr "Abreviatura"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__message_needaction
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template__message_needaction
+msgid "Action Needed"
+msgstr "Acción requerida"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__active
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template__active
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template_attribute_line__active
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template_attribute_value__ptav_active
+msgid "Active"
+msgstr "Activo"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__activity_ids
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template__activity_ids
+msgid "Activities"
+msgstr "Actividades"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__activity_exception_decoration
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Decoración de Actividad  de Excepción"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__activity_state
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template__activity_state
+msgid "Activity State"
+msgstr "Estado de la actividad"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__apply_company
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template__apply_company
+msgid "Apply Company"
+msgstr "Aplica compañía"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__apply_person
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template__apply_person
+msgid "Apply Person"
+msgstr "Aplica cliente"
+
+#. module: extenss_financial_product
+#: model_terms:ir.ui.view,arch_db:extenss_financial_product.extenss_product_template_search_view
+msgid "Archived"
+msgstr "Archivado"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__message_attachment_count
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template__message_attachment_count
+msgid "Attachment Count"
+msgstr "Conteo de archivos adjuntos"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_attribute__name
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_attribute_value__attribute_id
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template_attribute_line__attribute_id
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template_attribute_value__attribute_id
+msgid "Attribute"
+msgstr "Atributo"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template_attribute_value__attribute_line_id
+msgid "Attribute Line"
+msgstr "Línea de Atributo"
+
+#. module: extenss_financial_product
+#: model:ir.model,name:extenss_financial_product.model_extenss_product_attribute_value
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template_attribute_value__product_attribute_value_id
+msgid "Attribute Value"
+msgstr "Valor del Atributo"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__product_template_attribute_value_ids
+msgid "Attribute Values"
+msgstr "Valores de atributo"
+
+#. module: extenss_financial_product
+#: model:ir.actions.act_window,name:extenss_financial_product.extenss_product_attribute_value_action
+msgid "Attribute Variant Values"
+msgstr "Varios valores de atributo"
+
+#. module: extenss_financial_product
+#: model_terms:ir.ui.view,arch_db:extenss_financial_product.extenss_product_template_attribute_value_view_tree
+#: model_terms:ir.ui.view,arch_db:extenss_financial_product.extenss_product_template_search_view
+msgid "Attributes"
+msgstr "Atributos"
+
+#. module: extenss_financial_product
+#: model:ir.model,name:extenss_financial_product.model_extenss_product_base_interest_rate
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_base_interest_rate__name
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_interest_rate_date__base_interest_rate_id
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__base_interest_rate
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template__base_interest_rate
+msgid "Base Interest Rate"
+msgstr "Tasa de interés base"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__beneficiaries
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template__beneficiaries
+msgid "Beneficiaries"
+msgstr "Beneficiarios"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__financial_situation
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template__financial_situation
+msgid "Business information"
+msgstr "Información de negocios"
+
+#. module: extenss_financial_product
+#: model:ir.model,name:extenss_financial_product.model_extenss_product_calculation_base
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_calculation_base__name
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__calculation_base
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template__calculation_base
+msgid "Calculation Base"
+msgstr "Base de cálculo"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__calculation_type
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template__calculation_type
+msgid "Calculation Type"
+msgstr "Tipo de cálculo"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__can_image_variant_1024_be_zoomed
+msgid "Can Variant Image 1024 be zoomed"
+msgstr "Se puede ampliar la imagen variante 1024"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template_attribute_value__cat_extra
+#: model_terms:ir.ui.view,arch_db:extenss_financial_product.extenss_product_template_attribute_value_view_form
+msgid "Cat"
+msgstr "CAT"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__color
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template__color
+msgid "Color Index"
+msgstr "Índice de Colores"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__combination_indices
+msgid "Combination Indices"
+msgstr "Índices de combinación"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__company_id
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template__company_id
+msgid "Company"
+msgstr "Compañía"
+
+#. module: extenss_financial_product
+#: model_terms:ir.ui.view,arch_db:extenss_financial_product.extenss_product_template_form_view
+msgid "Configure Variants"
+msgstr "Configurar variantes"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields.selection,name:extenss_financial_product.selection__extenss_product_template__type__consu
+msgid "Consumable"
+msgstr "Consumible"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields.selection,name:extenss_financial_product.selection__extenss_product_type_docs__related_to__contact
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_attribute__create_uid
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_attribute_value__create_uid
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_base_interest_rate__create_uid
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_calculation_base__create_uid
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_cat_docs__create_uid
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_credit_type__create_uid
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_frequencies__create_uid
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_interest_rate_date__create_uid
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__create_uid
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_rec_docs__create_uid
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_recruitment_documents__create_uid
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template__create_uid
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template_attribute_line__create_uid
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template_attribute_value__create_uid
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_type_docs__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_attribute__create_date
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_attribute_value__create_date
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_base_interest_rate__create_date
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_calculation_base__create_date
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_cat_docs__create_date
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_credit_type__create_date
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_frequencies__create_date
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_interest_rate_date__create_date
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__create_date
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_rec_docs__create_date
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_recruitment_documents__create_date
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template__create_date
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template_attribute_line__create_date
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template_attribute_value__create_date
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_type_docs__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: extenss_financial_product
+#: model:ir.model,name:extenss_financial_product.model_extenss_product_credit_type
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_credit_type__name
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__credit_type
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template__credit_type
+msgid "Credit Type"
+msgstr "Tipo de crédito"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__company_currency
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__currency_id
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template__company_currency
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template__currency_id
+msgid "Currency"
+msgstr "Moneda"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__taxes_id
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template__taxes_id
+msgid "Customer Taxes"
+msgstr "Impuestos cliente"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_interest_rate_date__date
+msgid "Date"
+msgstr "Fecha"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_frequencies__days
+msgid "Days"
+msgstr "Días"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__days_past_due
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template__days_past_due
+msgid "Days past due"
+msgstr "Días de vencimiento"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__days_pre_notice
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template__days_pre_notice
+msgid "Days pre-notice"
+msgstr "Días de pre-aviso"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,help:extenss_financial_product.field_extenss_product_product__taxes_id
+#: model:ir.model.fields,help:extenss_financial_product.field_extenss_product_template__taxes_id
+msgid "Default taxes used when selling the product"
+msgstr "Impuestos por defecto usados cuando se vende el producto"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__description
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template__description
+msgid "Description"
+msgstr "Descripción"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,help:extenss_financial_product.field_extenss_product_attribute__sequence
+#: model:ir.model.fields,help:extenss_financial_product.field_extenss_product_attribute_value__sequence
+msgid "Determine the display order"
+msgstr "Determina el orden de visualización"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_attribute__display_name
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_attribute_value__display_name
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_base_interest_rate__display_name
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_calculation_base__display_name
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_cat_docs__display_name
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_credit_type__display_name
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_frequencies__display_name
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_interest_rate_date__display_name
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__display_name
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_rec_docs__display_name
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_recruitment_documents__display_name
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template__display_name
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template_attribute_line__display_name
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template_attribute_value__display_name
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_type_docs__display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_cat_docs__doc_id
+msgid "Doc"
+msgstr ""
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_recruitment_documents__catalog_recru_docs
+msgid "Document"
+msgstr "Documento"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_rec_docs__name
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_type_docs__name
+msgid "Document Name"
+msgstr "Nombre del documento"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_cat_docs__catalogo_docs
+msgid "Document name"
+msgstr "Nombre del documento"
+
+#. module: extenss_financial_product
+#: model:ir.model,name:extenss_financial_product.model_extenss_product_cat_docs
+msgid "Documentos requeridos"
+msgstr "Documentos requeridos"
+
+#. module: extenss_financial_product
+#: model_terms:ir.ui.view,arch_db:extenss_financial_product.extenss_product_template_form_view
+msgid "Documents"
+msgstr "Documentos"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields.selection,name:extenss_financial_product.selection__extenss_product_attribute__create_variant__dynamic
+msgid "Dynamically"
+msgstr "Dinámicamente"
+
+#. module: extenss_financial_product
+#: model:ir.model.constraint,message:extenss_financial_product.constraint_extenss_product_template_attribute_value_attribute_value_unique
+msgid "Each value should be defined only once per attribute per product."
+msgstr "Cada valor debe definirse una sola vez por atributo y por producto."
+
+#. module: extenss_financial_product
+#: model:ir.model,name:extenss_financial_product.model_extenss_product_template
+msgid "Extenss Product Template"
+msgstr ""
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__rate_arrears_interest
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template__rate_arrears_interest
+msgid "Factor"
+msgstr "Factor"
+
+#. module: extenss_financial_product
+#: model:ir.module.category,name:extenss_financial_product.module_extenss_fin_product_category
+msgid "Financial Product"
+msgstr "Producto financiero"
+
+#. module: extenss_financial_product
+#: model:ir.actions.act_window,name:extenss_financial_product.action_extenss_product_template
+#: model:ir.ui.menu,name:extenss_financial_product.menu_fin_product
+msgid "Financial Products"
+msgstr "Productos financieros"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__message_follower_ids
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template__message_follower_ids
+msgid "Followers"
+msgstr "Seguidores"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__message_channel_ids
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Seguidores (Canales)"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__message_partner_ids
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Seguidores (Empresas)"
+
+#. module: extenss_financial_product
+#: model:ir.model,name:extenss_financial_product.model_extenss_product_frequencies
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template_attribute_value__frequencies_extra
+msgid "Frequencies"
+msgstr "Frecuencias"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_frequencies__name
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template_attribute_value__frequency_extra
+msgid "Frequency"
+msgstr "Frecuencia"
+
+#. module: extenss_financial_product
+#: model_terms:ir.ui.view,arch_db:extenss_financial_product.extenss_product_template_search_view
+msgid "Future Activities"
+msgstr "Actividades futuras"
+
+#. module: extenss_financial_product
+#: model_terms:ir.ui.view,arch_db:extenss_financial_product.extenss_product_template_form_view
+msgid "General Information"
+msgstr "Información General"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,help:extenss_financial_product.field_extenss_product_product__sequence
+#: model:ir.model.fields,help:extenss_financial_product.field_extenss_product_template__sequence
+msgid "Gives the sequence order when displaying a product list"
+msgstr "Proporciona el orden de secuencia al mostrar una lista de productos"
+
+#. module: extenss_financial_product
+#: model_terms:ir.ui.view,arch_db:extenss_financial_product.extenss_product_template_search_view
+msgid "Group By"
+msgstr "Agrupar por"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__hide
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template__hide
+msgid "Hide"
+msgstr "Ocultar"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_attribute__id
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_attribute_value__id
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_base_interest_rate__id
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_calculation_base__id
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_cat_docs__id
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_credit_type__id
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_frequencies__id
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_interest_rate_date__id
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__id
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_rec_docs__id
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_recruitment_documents__id
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template__id
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template_attribute_line__id
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template_attribute_value__id
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_type_docs__id
+msgid "ID"
+msgstr ""
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__activity_exception_icon
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template__activity_exception_icon
+msgid "Icon"
+msgstr "Icono"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,help:extenss_financial_product.field_extenss_product_product__activity_exception_icon
+#: model:ir.model.fields,help:extenss_financial_product.field_extenss_product_template__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Icono para indicar una actividad de excepción."
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,help:extenss_financial_product.field_extenss_product_product__message_needaction
+#: model:ir.model.fields,help:extenss_financial_product.field_extenss_product_product__message_unread
+#: model:ir.model.fields,help:extenss_financial_product.field_extenss_product_template__message_needaction
+#: model:ir.model.fields,help:extenss_financial_product.field_extenss_product_template__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "Si está marcado hay nuevos mensajes que requieren su atención."
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,help:extenss_financial_product.field_extenss_product_product__message_has_error
+#: model:ir.model.fields,help:extenss_financial_product.field_extenss_product_product__message_has_sms_error
+#: model:ir.model.fields,help:extenss_financial_product.field_extenss_product_template__message_has_error
+#: model:ir.model.fields,help:extenss_financial_product.field_extenss_product_template__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Si se encuentra marcado, algunos mensajes tienen error de envío."
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,help:extenss_financial_product.field_extenss_product_product__active
+#: model:ir.model.fields,help:extenss_financial_product.field_extenss_product_template__active
+msgid "If unchecked, it will allow you to hide the product without removing it."
+msgstr "Si no está marcado, permitirá ocultar el producto sin eliminarlo."
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__image_1920
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template__image_1920
+msgid "Image"
+msgstr "Imagen"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__image_1024
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template__image_1024
+msgid "Image 1024"
+msgstr "Imagen 1024"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__image_128
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template__image_128
+msgid "Image 128"
+msgstr "Imagen 128"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__image_256
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template__image_256
+msgid "Image 256"
+msgstr "Imagen 256"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__image_512
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template__image_512
+msgid "Image 512"
+msgstr "Imagen 512"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__include_taxes
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template__include_taxes
+msgid "Include Taxes"
+msgstr "Incluir impuestos"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields.selection,name:extenss_financial_product.selection__extenss_product_attribute__create_variant__always
+msgid "Instantly"
+msgstr "Instantáneamente"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_interest_rate_date__interest_rate
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template_attribute_value__interest_rate_extra
+#: model_terms:ir.ui.view,arch_db:extenss_financial_product.extenss_product_template_attribute_value_view_form
+msgid "Interest Rate"
+msgstr "Tasa de interés"
+
+#. module: extenss_financial_product
+#: model:ir.model,name:extenss_financial_product.model_extenss_product_interest_rate_date
+msgid "Interest Rate Date"
+msgstr "Fecha de la tasa de interés"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__default_code
+msgid "Internal Reference"
+msgstr "Referencia interna"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__message_is_follower
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template__message_is_follower
+msgid "Is Follower"
+msgstr "Es un seguidor"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__is_product_variant
+msgid "Is Product Variant"
+msgstr "Es una variante del producto"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_attribute____last_update
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_attribute_value____last_update
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_base_interest_rate____last_update
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_calculation_base____last_update
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_cat_docs____last_update
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_credit_type____last_update
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_frequencies____last_update
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_interest_rate_date____last_update
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product____last_update
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_rec_docs____last_update
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_recruitment_documents____last_update
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template____last_update
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template_attribute_line____last_update
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template_attribute_value____last_update
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_type_docs____last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_attribute__write_uid
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_attribute_value__write_uid
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_base_interest_rate__write_uid
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_calculation_base__write_uid
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_cat_docs__write_uid
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_credit_type__write_uid
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_frequencies__write_uid
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_interest_rate_date__write_uid
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__write_uid
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_rec_docs__write_uid
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_recruitment_documents__write_uid
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template__write_uid
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template_attribute_line__write_uid
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template_attribute_value__write_uid
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_type_docs__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_attribute__write_date
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_attribute_value__write_date
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_base_interest_rate__write_date
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_calculation_base__write_date
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_cat_docs__write_date
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_credit_type__write_date
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_frequencies__write_date
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_interest_rate_date__write_date
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__write_date
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_rec_docs__write_date
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_recruitment_documents__write_date
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template__write_date
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template_attribute_line__write_date
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template_attribute_value__write_date
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_type_docs__write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: extenss_financial_product
+#: model_terms:ir.ui.view,arch_db:extenss_financial_product.extenss_product_template_search_view
+msgid "Late Activities"
+msgstr "Actividades tardías"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__message_main_attachment_id
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Adjuntos principales"
+
+#. module: extenss_financial_product
+#: model:res.groups,name:extenss_financial_product.extenss_fin_product_group_manager
+msgid "Manager"
+msgstr "Responsable"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__max_age
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template__max_age
+msgid "Max. Age"
+msgstr "Edad max"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__max_amount
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template__max_amount
+msgid "Max. Amount"
+msgstr "Monto max"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__message_has_error
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template__message_has_error
+msgid "Message Delivery error"
+msgstr "Error de Envío de Mensaje"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__message_ids
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template__message_ids
+msgid "Messages"
+msgstr "Mensajes"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__min_age
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template__min_age
+msgid "Min. Age"
+msgstr "Edad min"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__min_amount
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template__min_amount
+msgid "Min. Amount"
+msgstr "Monto min"
+
+#. module: extenss_financial_product
+#: code:addons/extenss_financial_product/models/product_template.py:0
+#, python-format
+msgid "Must add Recruitment Documents"
+msgstr "Debe agregar documentos de contratación"
+
+#. module: extenss_financial_product
+#: code:addons/extenss_financial_product/models/product_template.py:0
+#, python-format
+msgid "Must add official documents in tab Documents"
+msgstr "Debe agregar documentos oficiales en la pestaña Documentos"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields.selection,name:extenss_financial_product.selection__extenss_product_attribute__create_variant__no_variant
+msgid "Never"
+msgstr "Nunca"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__activity_date_deadline
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Siguiente plazo de actividad"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__activity_summary
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template__activity_summary
+msgid "Next Activity Summary"
+msgstr "Resumen de la siguiente actividad"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__activity_type_id
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template__activity_type_id
+msgid "Next Activity Type"
+msgstr "Siguiente tipo de actividad"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__message_needaction_counter
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Número de acciones"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__message_has_error_counter
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template__message_has_error_counter
+msgid "Number of errors"
+msgstr "Numero de errores"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,help:extenss_financial_product.field_extenss_product_product__message_needaction_counter
+#: model:ir.model.fields,help:extenss_financial_product.field_extenss_product_template__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Número de mensajes que requieren una acción"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,help:extenss_financial_product.field_extenss_product_product__message_has_error_counter
+#: model:ir.model.fields,help:extenss_financial_product.field_extenss_product_template__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Número de mensajes con error de envío"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__number_pay_rest
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template__number_pay_rest
+msgid "Number of payments for restructuring"
+msgstr "Número de pagos para reestructura"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,help:extenss_financial_product.field_extenss_product_product__message_unread_counter
+#: model:ir.model.fields,help:extenss_financial_product.field_extenss_product_template__message_unread_counter
+msgid "Number of unread messages"
+msgstr "Número de mensajes no leidos"
+
+#. module: extenss_financial_product
+#: code:addons/extenss_financial_product/models/product_template.py:0
+#, python-format
+msgid "On the product %s you cannot associate the value %s with the attribute %s because they do not match"
+msgstr "En el producto %s no puede asociar el valor %s con el atributo %s porque no coinciden"
+
+#. module: extenss_financial_product
+#: code:addons/extenss_financial_product/models/product_template.py:0
+#, python-format
+msgid "On the product %s you cannot transform the attribute %s into the attribute %s"
+msgstr "On the product %s you cannot transform the attribute %s into the attribute %s"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__point_base_interest_rate
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template__point_base_interest_rate
+msgid "P. of Base Interest Rate"
+msgstr "P. de tasa de interés base"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__patrimonial_relationship
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template__patrimonial_relationship
+msgid "Patrimonial Declaration"
+msgstr "Declaración Patrimonial"
+
+#. module: extenss_financial_product
+#: model:ir.model,name:extenss_financial_product.model_extenss_product_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_recruitment_documents__product_id
+#: model_terms:ir.ui.view,arch_db:extenss_financial_product.extenss_product_template_kanban_view
+#: model_terms:ir.ui.view,arch_db:extenss_financial_product.extenss_product_template_search_view
+#: model_terms:ir.ui.view,arch_db:extenss_financial_product.extenss_product_template_tree_view
+msgid "Product"
+msgstr "Producto"
+
+#. module: extenss_financial_product
+#: model:ir.model,name:extenss_financial_product.model_extenss_product_attribute
+#: model_terms:ir.ui.view,arch_db:extenss_financial_product.extenss_product_template_attribute_value_view_form
+msgid "Product Attribute"
+msgstr "Atributo de producto"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template_attribute_line__product_template_value_ids
+msgid "Product Attribute Values"
+msgstr "Valores del Atributos del Producto"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__attribute_line_ids
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template__attribute_line_ids
+msgid "Product Attributes"
+msgstr "Atributos del producto"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template__default_code
+msgid "Product Code"
+msgstr "Código de producto"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__name
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template__name
+#: model_terms:ir.ui.view,arch_db:extenss_financial_product.extenss_product_template_form_view
+msgid "Product Name"
+msgstr "Nombre del producto"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__product_tmpl_id
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template_attribute_line__product_tmpl_id
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template_attribute_value__product_tmpl_id
+msgid "Product Template"
+msgstr "Plantilla de producto"
+
+#. module: extenss_financial_product
+#: model:ir.model,name:extenss_financial_product.model_extenss_product_template_attribute_line
+msgid "Product Template Attribute Line"
+msgstr "Linea de atributo de la plantilla de producto"
+
+#. module: extenss_financial_product
+#: model:ir.model,name:extenss_financial_product.model_extenss_product_template_attribute_value
+msgid "Product Template Attribute Value"
+msgstr "Valor de Atributo del Modelo de Producto"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__type
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template__type
+#: model_terms:ir.ui.view,arch_db:extenss_financial_product.extenss_product_template_search_view
+msgid "Product Type"
+msgstr "Tipo de producto"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__product_variant_count
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template__product_variant_count
+#: model_terms:ir.ui.view,arch_db:extenss_financial_product.extenss_product_product_tree_view
+msgid "Product Variants"
+msgstr "Variantes de producto"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__product_variant_ids
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template__product_variant_ids
+#: model:ir.ui.menu,name:extenss_financial_product.menu_product
+#: model_terms:ir.ui.view,arch_db:extenss_financial_product.extenss_product_template_search_view
+msgid "Products"
+msgstr "Productos"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__description_purchase
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template__description_purchase
+msgid "Purchase Description"
+msgstr "Descripción de compra"
+
+#. module: extenss_financial_product
+#: model:ir.model,name:extenss_financial_product.model_extenss_product_recruitment_documents
+msgid "Recruitmen Documents"
+msgstr "Documentos de contratación"
+
+#. module: extenss_financial_product
+#: model:ir.model,name:extenss_financial_product.model_extenss_product_rec_docs
+msgid "Recruitment Documents"
+msgstr "Documentos de contratación"
+
+#. module: extenss_financial_product
+#: model_terms:ir.ui.view,arch_db:extenss_financial_product.extenss_product_template_form_view
+msgid "Recruitments Documents"
+msgstr "Documentos de contratación"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__code
+msgid "Reference"
+msgstr "Referencia"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template_attribute_value__ptav_product_variant_ids
+msgid "Related Variants"
+msgstr "Variantes Relacionadas"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_type_docs__related_to
+msgid "Related to"
+msgstr "Relacionado con"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields.selection,name:extenss_financial_product.selection__extenss_product_type_docs__related_to__request
+msgid "Request"
+msgstr "Solicitud"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_cat_docs__flag_activo
+msgid "Required"
+msgstr "Requerido"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__endorsement
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template__endorsement
+msgid "Requires Endorsement"
+msgstr "Requiere endoso"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__obligated_solidary
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template__obligated_solidary
+msgid "Requires Obligated solidary"
+msgstr "Requiere obligado solidario"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__guarantee
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template__guarantee
+msgid "Requires Warranty"
+msgstr "Requiere Garantía"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__activity_user_id
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template__activity_user_id
+msgid "Responsible User"
+msgstr "Usuario responsable"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__sic_consult
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template__sic_consult
+msgid "SIC Query"
+msgstr "Consulta SIC"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__message_has_sms_error
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "Error de entrega del SMS"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields.selection,name:extenss_financial_product.selection__extenss_product_template__calculation_type__0
+msgid "Saldos Insolutos"
+msgstr "Saldos Insolutos"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__description_sale
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template__description_sale
+msgid "Sales Description"
+msgstr "Descripción de Ventas"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_attribute__sequence
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_attribute_value__sequence
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__sequence
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template__sequence
+msgid "Sequence"
+msgstr "Secuencia"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields.selection,name:extenss_financial_product.selection__extenss_product_template__type__service
+msgid "Service"
+msgstr "Servicio"
+
+#. module: extenss_financial_product
+#: model_terms:ir.ui.view,arch_db:extenss_financial_product.extenss_product_template_search_view
+msgid "Services"
+msgstr "Servicios"
+
+#. module: extenss_financial_product
+#: model_terms:ir.ui.view,arch_db:extenss_financial_product.extenss_product_template_search_view
+msgid "Show all records which has next action date is before today"
+msgstr "Mostrar todos los registros que tienen la próxima fecha de acción antes de hoy"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__socioeconomic_study
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template__socioeconomic_study
+msgid "Socio-economic study"
+msgstr "Estudio socioeconómico"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,help:extenss_financial_product.field_extenss_product_product__activity_state
+#: model:ir.model.fields,help:extenss_financial_product.field_extenss_product_template__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Estado basado en actividades\n"
+"Vencida: la fecha tope ya ha pasado\n"
+"Hoy: La fecha tope es hoy\n"
+"Planificada: futuras actividades."
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,help:extenss_financial_product.field_extenss_product_product__valid_product_template_attribute_line_ids
+#: model:ir.model.fields,help:extenss_financial_product.field_extenss_product_template__valid_product_template_attribute_line_ids
+msgid "Technical compute"
+msgstr "Cálculo Técnico"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template_attribute_value__term_extra
+msgid "Term"
+msgstr "Plazo"
+
+#. module: extenss_financial_product
+#: code:addons/extenss_financial_product/models/product_template.py:0
+#, python-format
+msgid "The Cat must be greater than 0"
+msgstr "El CAT debe ser mayor que 0"
+
+#. module: extenss_financial_product
+#: model:ir.model.constraint,message:extenss_financial_product.constraint_extenss_product_interest_rate_date_name_unique
+msgid "The Date must be unique"
+msgstr "La fecha debe ser única"
+
+#. module: extenss_financial_product
+#: model:ir.model.constraint,message:extenss_financial_product.constraint_extenss_product_cat_docs_name_unique
+#: model:ir.model.constraint,message:extenss_financial_product.constraint_extenss_product_rec_docs_name_unique
+#: model:ir.model.constraint,message:extenss_financial_product.constraint_extenss_product_recruitment_documents_name_unique
+#: model:ir.model.constraint,message:extenss_financial_product.constraint_extenss_product_type_docs_name_unique
+msgid "The Document name must be unique"
+msgstr "El nombre del documento debe ser único"
+
+#. module: extenss_financial_product
+#: code:addons/extenss_financial_product/models/product_template.py:0
+#, python-format
+msgid "The Interest Rate must be greater than 0"
+msgstr "La tasa de interés debe ser mayor que 0"
+
+#. module: extenss_financial_product
+#: code:addons/extenss_financial_product/models/product_template.py:0
+#, python-format
+msgid "The Max. Age is not valid"
+msgstr "La edad máxima no es válida"
+
+#. module: extenss_financial_product
+#: code:addons/extenss_financial_product/models/product_template.py:0
+#, python-format
+msgid "The Max. Age must be greater than 0"
+msgstr "La edad máxima debe ser mayor que 0"
+
+#. module: extenss_financial_product
+#: code:addons/extenss_financial_product/models/product_template.py:0
+#, python-format
+msgid "The Max. Amount must be greater than 0"
+msgstr "La cantidad máxima debe ser mayor que 0"
+
+#. module: extenss_financial_product
+#: code:addons/extenss_financial_product/models/product_template.py:0
+#, python-format
+msgid "The Min. Age is not valid"
+msgstr "La edad mínima no es válida"
+
+#. module: extenss_financial_product
+#: code:addons/extenss_financial_product/models/product_template.py:0
+#, python-format
+msgid "The Min. Age must be greater than 0"
+msgstr "La edad mínima debe ser mayor que 0"
+
+#. module: extenss_financial_product
+#: code:addons/extenss_financial_product/models/product_template.py:0
+#, python-format
+msgid "The Min. Age must be less than The Max. Age"
+msgstr "La edad mínima debe ser menor que la edad máxima"
+
+#. module: extenss_financial_product
+#: code:addons/extenss_financial_product/models/product_template.py:0
+#, python-format
+msgid "The Min. Amount must be greater than 0"
+msgstr "La cantidad mínima debe ser mayor que 0"
+
+#. module: extenss_financial_product
+#: code:addons/extenss_financial_product/models/product_template.py:0
+#, python-format
+msgid "The Min. Amount must be less than The Max. Amount"
+msgstr "La cantidad mínima debe ser menor que la cantidad máxima"
+
+#. module: extenss_financial_product
+#: code:addons/extenss_financial_product/models/product_template.py:0
+#, python-format
+msgid "The Point Base Interest Rate at must be greater than"
+msgstr "La tasa de interés base en puntos debe ser mayor que"
+
+#. module: extenss_financial_product
+#: code:addons/extenss_financial_product/models/product_template.py:0
+#, python-format
+msgid "The Term must be greater than 0"
+msgstr "El plazo debe ser mayor que 0"
+
+#. module: extenss_financial_product
+#: code:addons/extenss_financial_product/models/product_template.py:0
+#, python-format
+msgid "The attribute %s must have at least one value for the product %s"
+msgstr "El atributo %s debe tener al menos un valor para el producto %s"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,help:extenss_financial_product.field_extenss_product_attribute_value__attribute_id
+msgid "The attribute cannot be changed once the value is used on at least one product"
+msgstr "El atributo no puede modificarse una vez que el valor se utiliza en al menos un producto"
+
+#. module: extenss_financial_product
+#: code:addons/extenss_financial_product/models/product_template.py:0
+#, python-format
+msgid ""
+"The number of variants to generate is too high. You should either not generate variants for each combination "
+"or generate them on demand from the sales order. To do so, open the form view of attributes and change the "
+"mode of *Create Variants*."
+msgstr ""
+"El número de variantes a generar es demasiado alto. No debe crear variantes para cada combinación o crearlas "
+"a petición del pedido de cliente. Para ello, abra la vista formulario de atributos y modifique el modo de "
+"*Crear variantes*."
+
+#. module: extenss_financial_product
+#: code:addons/extenss_financial_product/models/product_template.py:0
+#, python-format
+msgid "The value %s is not defined for the attribute %s on the product %s"
+msgstr "El valor %s no está definido para el atributo %s en el producto %s"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,help:extenss_financial_product.field_extenss_product_product__cat_extra
+#: model:ir.model.fields,help:extenss_financial_product.field_extenss_product_product__frequency_extra
+#: model:ir.model.fields,help:extenss_financial_product.field_extenss_product_product__interest_rate_extra
+#: model:ir.model.fields,help:extenss_financial_product.field_extenss_product_product__term_extra
+msgid "This is the sum of the extra price of all attributes"
+msgstr "Ésta es la suma de los precios extra de todos los atributos"
+
+#. module: extenss_financial_product
+#: model_terms:ir.ui.view,arch_db:extenss_financial_product.extenss_product_template_search_view
+msgid "Today Activities"
+msgstr "Actividades de Hoy"
+
+#. module: extenss_financial_product
+#: model:ir.model,name:extenss_financial_product.model_extenss_product_type_docs
+msgid "Type Documents"
+msgstr "Tipo de documentos"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,help:extenss_financial_product.field_extenss_product_product__activity_exception_decoration
+#: model:ir.model.fields,help:extenss_financial_product.field_extenss_product_template__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Tipo de actividad de excepción registrada."
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__message_unread
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template__message_unread
+msgid "Unread Messages"
+msgstr "Mensajes sin leer"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__message_unread_counter
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Contador de mensajes sin leer"
+
+#. module: extenss_financial_product
+#: model:res.groups,name:extenss_financial_product.extenss_fin_product_group_user
+msgid "User"
+msgstr "Usuario"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__valid_product_template_attribute_line_ids
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template__valid_product_template_attribute_line_ids
+msgid "Valid Product Attribute Lines"
+msgstr "Líneas de Atributo de Producto Válidas"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_attribute_value__name
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template_attribute_value__name
+msgid "Value"
+msgstr "Valor"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_attribute__value_ids
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template_attribute_line__value_ids
+msgid "Values"
+msgstr "Valores"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__cat_extra
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__interest_rate_extra
+msgid "Variant Cat Extra"
+msgstr "Variante CAT Extra"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__frequency_extra
+msgid "Variant Fequency Extra"
+msgstr "Frecuencia Variante Extra"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__image_variant_1920
+msgid "Variant Image"
+msgstr "Imagen de la variante"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__image_variant_1024
+msgid "Variant Image 1024"
+msgstr "Imagen de variante 1024"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__image_variant_128
+msgid "Variant Image 128"
+msgstr "Imagen de variante 128"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__image_variant_256
+msgid "Variant Image 256"
+msgstr "Imagen de variante 256"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__image_variant_512
+msgid "Variant Image 512"
+msgstr "Imagen de variante 512"
+
+#. module: extenss_financial_product
+#: model_terms:ir.ui.view,arch_db:extenss_financial_product.extenss_product_variant_easy_edit_view
+msgid "Variant Information"
+msgstr "Información de la variante"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__term_extra
+msgid "Variant Term Extra"
+msgstr "Plazo variable adicional"
+
+#. module: extenss_financial_product
+#: model_terms:ir.ui.view,arch_db:extenss_financial_product.extenss_product_template_form_view
+#: model_terms:ir.ui.view,arch_db:extenss_financial_product.extenss_product_template_kanban_view
+msgid "Variants"
+msgstr "Variantes"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_attribute__create_variant
+msgid "Variants Creation Mode"
+msgstr "Modo de Creación de Variantes"
+
+#. module: extenss_financial_product
+#: model:ir.actions.act_window,name:extenss_financial_product.action_extenss_product_product
+#: model:ir.ui.menu,name:extenss_financial_product.menu_variants
+msgid "Variants Products"
+msgstr "Variantes productos"
+
+#. module: extenss_financial_product
+#: model_terms:ir.ui.view,arch_db:extenss_financial_product.extenss_product_template_search_view
+msgid "Warnings"
+msgstr "Avisos"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_product__website_message_ids
+#: model:ir.model.fields,field_description:extenss_financial_product.field_extenss_product_template__website_message_ids
+msgid "Website Messages"
+msgstr "Mensajes del sitio web"
+
+#. module: extenss_financial_product
+#: model:ir.model.fields,help:extenss_financial_product.field_extenss_product_product__website_message_ids
+#: model:ir.model.fields,help:extenss_financial_product.field_extenss_product_template__website_message_ids
+msgid "Website communication history"
+msgstr "Historial de comunicaciones del sitio web"
+
+#. module: extenss_financial_product
+#: code:addons/extenss_financial_product/models/product_template.py:0
+#, python-format
+msgid "You cannot change the product of the value %s set on product %s"
+msgstr "No puede cambiar el producto del valor %s establecido en el producto %s"
+
+#. module: extenss_financial_product
+#: code:addons/extenss_financial_product/models/product_template.py:0
+#, python-format
+msgid "You cannot change the value of the value %s set on product %s"
+msgstr "No se puede cambiar el valor del valor %s establecido en los productos %s"
+
+#. module: extenss_financial_product
+#: code:addons/extenss_financial_product/models/product_template.py:0
+#, python-format
+msgid "You cannot move the attribute %s from the product %s to the product %s"
+msgstr "No puede mover el atributo %s del producto %s al producto %s"
+
+#. module: extenss_financial_product
+#: code:addons/extenss_financial_product/models/product_template.py:0
+#, python-format
+msgid "You cannot update related variants from the values. Please update related values from the variants"
+msgstr ""
+"No puede actualizar variantes relacionadas a partir de los valores. Actualice los valores relacionados de "
+"las variantes"

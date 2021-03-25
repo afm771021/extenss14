@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="action_extenss_datamart" model="ir.actions.act_window">
+        <field name="name">Datamart</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">extenss.datamart</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_datamart" name="Datamart" sequence="0" web_icon="extenss_datamart,static/description/icon.png"/>
+    <menuitem id="menu_extenss_datamart"  name="Datamart" parent="menu_datamart" action="action_extenss_datamart"/>
+</odoo>

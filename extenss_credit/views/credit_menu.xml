@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="action_extenss_credit" model="ir.actions.act_window">
+        <field name="name">Credit</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">extenss.credit</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_credit" name="Credit" sequence="0" web_icon="extenss_credit,static/description/icon.png"/>
+    <!--<act_window id="action_extenss_credit" name="Extenss Credit" res_model="extenss.credit" view_mode="tree,form"/>-->
+    <menuitem id="menu_extenss_credit"  name="Credit" parent="menu_credit" action="action_extenss_credit"/>
+</odoo>

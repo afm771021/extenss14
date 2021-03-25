@@ -1,0 +1,516 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* extenss_af
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e-20200316\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-01-11 06:30+0000\n"
+"PO-Revision-Date: 2021-01-13 23:14-0600\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es_MX\n"
+"X-Generator: Poedit 2.4.2\n"
+
+#. module: extenss_af
+#: model:ir.actions.act_window,name:extenss_af.act_af_list
+#: model_terms:ir.ui.view,arch_db:extenss_af.dashboard_form_view
+msgid "AF"
+msgstr "AF"
+
+#. module: extenss_af
+#: model:ir.model.fields,field_description:extenss_af.field_extenss_credit__account_status_date
+msgid "Account Status Date"
+msgstr "Fecha de estado de cuenta"
+
+#. module: extenss_af
+#: model:ir.actions.act_window,name:extenss_af.action_accounting_portfolio
+#: model:ir.ui.menu,name:extenss_af.submenu_accounting_portfolio
+msgid "Accounting Portfolio"
+msgstr "Cartera contable"
+
+#. module: extenss_af
+#: model:ir.actions.act_window,name:extenss_af.action_adv_pay
+#: model:ir.ui.menu,name:extenss_af.submenu_adv_pay
+msgid "Advance payment and advance"
+msgstr "Pago anticipado y adelanto"
+
+#. module: extenss_af
+#: model:ir.model.fields,field_description:extenss_af.field_crm_lead__af_s
+#: model:ir.model.fields,field_description:extenss_af.field_extenss_credit__af
+#: model:ir.model.fields,field_description:extenss_af.field_sale_order__af
+msgid "Af"
+msgstr "Af"
+
+#. module: extenss_af
+#: model:ir.actions.act_window,name:extenss_af.action_amortization
+#: model:ir.ui.menu,name:extenss_af.submenu_amortization
+#: model_terms:ir.ui.view,arch_db:extenss_af.view_form_extenss_af
+#: model_terms:ir.ui.view,arch_db:extenss_af.view_form_extenss_af_acct_portfolio
+#: model_terms:ir.ui.view,arch_db:extenss_af.view_form_extenss_af_amortization
+#: model_terms:ir.ui.view,arch_db:extenss_af.view_form_extenss_af_pre_notice
+#: model_terms:ir.ui.view,arch_db:extenss_af.view_form_extenss_af_statement_account
+msgid "Amortization"
+msgstr "Amortización"
+
+#. module: extenss_af
+#: model:ir.model.fields,field_description:extenss_af.field_extenss_conciliation_initial_pay_lines__amount
+msgid "Amount"
+msgstr "Importe"
+
+#. module: extenss_af
+#: model_terms:ir.ui.view,arch_db:extenss_af.view_form_extenss_af_exp_notice
+#: model_terms:ir.ui.view,arch_db:extenss_af.view_form_extenss_af_initial_pay_req
+msgid "Apply Payment"
+msgstr "Aplicar pago"
+
+#. module: extenss_af
+#: model:ir.model.fields,field_description:extenss_af.field_extenss_credit__balance
+msgid "Balance"
+msgstr "Saldo"
+
+#. module: extenss_af
+#: model:ir.model.fields,field_description:extenss_af.field_extenss_credit__balance_income_deposit
+msgid "Balance Income on Deposit"
+msgstr "Balance de ingresos en depósito"
+
+#. module: extenss_af
+#: model:ir.model.fields,field_description:extenss_af.field_extenss_credit__balance_inicial
+msgid "Balance intial"
+msgstr "Saldo inicial"
+
+#. module: extenss_af
+#: model:ir.model.fields,field_description:extenss_af.field_extenss_credit__bill_id
+msgid "Bill"
+msgstr "Cuenta"
+
+#. module: extenss_af
+#: model:ir.model.fields,field_description:extenss_af.field_extenss_credit_conciliation_lines__conciliation_lines_id
+msgid "CRM id"
+msgstr ""
+
+#. module: extenss_af
+#: model_terms:ir.ui.view,arch_db:extenss_af.view_form_extenss_af
+#: model_terms:ir.ui.view,arch_db:extenss_af.view_form_extenss_af_acct_portfolio
+#: model_terms:ir.ui.view,arch_db:extenss_af.view_form_extenss_af_moras
+#: model_terms:ir.ui.view,arch_db:extenss_af.view_form_extenss_af_pre_notice
+#: model_terms:ir.ui.view,arch_db:extenss_af.view_form_extenss_af_statement_account
+msgid "Calculate Moras"
+msgstr "Calcular moras"
+
+#. module: extenss_af
+#: model_terms:ir.ui.view,arch_db:extenss_af.view_form_extenss_af_early_set
+msgid "Calculate Request"
+msgstr "Calcular solicitud"
+
+#. module: extenss_af
+#: model:ir.actions.act_window,name:extenss_af.act_calendar_af
+#: model_terms:ir.ui.view,arch_db:extenss_af.dashboard_form_view
+msgid "Calendar"
+msgstr "Calendario"
+
+#. module: extenss_af
+#: model:ir.model.fields,field_description:extenss_af.field_extenss_credit__capital_vat
+msgid "Capital VAT"
+msgstr "IVA de capital"
+
+#. module: extenss_af
+#: model:ir.model.fields,field_description:extenss_af.field_extenss_conciliation_initial_pay_lines__company_id
+#: model:ir.model.fields,field_description:extenss_af.field_extenss_credit__company_id
+#: model:ir.model.fields,field_description:extenss_af.field_sale_order__company_id
+msgid "Company"
+msgstr "Compañía"
+
+#. module: extenss_af
+#: model_terms:ir.ui.view,arch_db:extenss_af.view_form_extenss_af
+#: model_terms:ir.ui.view,arch_db:extenss_af.view_form_extenss_af_acct_portfolio
+#: model_terms:ir.ui.view,arch_db:extenss_af.view_form_extenss_af_adv_pay
+#: model_terms:ir.ui.view,arch_db:extenss_af.view_form_extenss_af_condonation
+#: model_terms:ir.ui.view,arch_db:extenss_af.view_form_extenss_af_early_set
+#: model_terms:ir.ui.view,arch_db:extenss_af.view_form_extenss_af_exp_notice
+#: model_terms:ir.ui.view,arch_db:extenss_af.view_form_extenss_af_moras
+#: model_terms:ir.ui.view,arch_db:extenss_af.view_form_extenss_af_payment_balance
+#: model_terms:ir.ui.view,arch_db:extenss_af.view_form_extenss_af_pre_notice
+#: model_terms:ir.ui.view,arch_db:extenss_af.view_form_extenss_af_statement_account
+msgid "Concepts Expiration Notices"
+msgstr "Conceptos de avisos de vencimiento"
+
+#. module: extenss_af
+#: model:ir.actions.act_window,name:extenss_af.action_conciliation
+#: model:ir.model.fields,field_description:extenss_af.field_extenss_credit_conciliation_lines__conciliation_id
+msgid "Conciliation"
+msgstr "Conciliación"
+
+#. module: extenss_af
+#: model:ir.model,name:extenss_af.model_extenss_conciliation_initial_pay
+#: model:ir.model,name:extenss_af.model_extenss_conciliation_initial_pay_lines
+msgid "Conciliation Initial Pay"
+msgstr "Pago inicial conciliación"
+
+#. module: extenss_af
+#: model:ir.model,name:extenss_af.model_extenss_credit_conciliation_lines
+msgid "Conciliation Lines"
+msgstr "Líneas de conciliación"
+
+#. module: extenss_af
+#: model:ir.actions.act_window,name:extenss_af.action_condonation
+#: model:ir.ui.menu,name:extenss_af.submenu_condonation
+#: model_terms:ir.ui.view,arch_db:extenss_af.view_form_extenss_af
+#: model_terms:ir.ui.view,arch_db:extenss_af.view_form_extenss_af_acct_portfolio
+#: model_terms:ir.ui.view,arch_db:extenss_af.view_form_extenss_af_condonation
+#: model_terms:ir.ui.view,arch_db:extenss_af.view_form_extenss_af_pre_notice
+#: model_terms:ir.ui.view,arch_db:extenss_af.view_form_extenss_af_statement_account
+msgid "Condonation"
+msgstr "Condonación"
+
+#. module: extenss_af
+#: model:ir.model.fields,field_description:extenss_af.field_extenss_conciliation_initial_pay__create_uid
+#: model:ir.model.fields,field_description:extenss_af.field_extenss_conciliation_initial_pay_lines__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: extenss_af
+#: model:ir.model.fields,field_description:extenss_af.field_extenss_conciliation_initial_pay__create_date
+#: model:ir.model.fields,field_description:extenss_af.field_extenss_conciliation_initial_pay_lines__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: extenss_af
+#: model:ir.module.category,name:extenss_af.module_extenss_af_category
+msgid "Credit AF"
+msgstr ""
+
+#. module: extenss_af
+#: model_terms:ir.ui.view,arch_db:extenss_af.extenss_af_calendar
+msgid "Credit Calendar"
+msgstr "Calendario de créditos"
+
+#. module: extenss_af
+#: model:ir.model,name:extenss_af.model_extenss_credit
+msgid "Credit Payroll Discount"
+msgstr "Crédito Descuento Nómina"
+
+#. module: extenss_af
+#: model:ir.model.fields,field_description:extenss_af.field_extenss_credit_conciliation_lines__conciliation_credit_id
+msgid "Credit_id"
+msgstr ""
+
+#. module: extenss_af
+#: model:ir.model.fields,field_description:extenss_af.field_extenss_conciliation_initial_pay_lines__company_currency
+#: model:ir.model.fields,field_description:extenss_af.field_extenss_credit__company_currency
+#: model:ir.model.fields,field_description:extenss_af.field_sale_order__company_currency
+msgid "Currency"
+msgstr "Moneda"
+
+#. module: extenss_af
+#: model:ir.actions.act_window,name:extenss_af.credit_dashboard
+#: model:ir.ui.menu,name:extenss_af.menu_dashboard
+#: model_terms:ir.ui.view,arch_db:extenss_af.dashboard_form_view
+msgid "Dashboard"
+msgstr "Tablero"
+
+#. module: extenss_af
+#: model:ir.model.fields,field_description:extenss_af.field_extenss_credit__days_interest
+msgid "Days of interest"
+msgstr "Días de interés"
+
+#. module: extenss_af
+#: model:ir.model.fields,field_description:extenss_af.field_extenss_conciliation_initial_pay__display_name
+#: model:ir.model.fields,field_description:extenss_af.field_extenss_conciliation_initial_pay_lines__display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: extenss_af
+#: model:ir.actions.act_window,name:extenss_af.action_early_set
+#: model:ir.ui.menu,name:extenss_af.submenu_early_set
+msgid "Early Settlement"
+msgstr "Liquidación anticipada"
+
+#. module: extenss_af
+#: model:ir.actions.act_window,name:extenss_af.action_exp_notice
+msgid "Expiry Notice"
+msgstr "Aviso de vencimiento"
+
+#. module: extenss_af
+#: model:ir.ui.menu,name:extenss_af.submenu_exp_notice
+msgid "Expiry notice"
+msgstr "Aviso de vencimiento"
+
+#. module: extenss_af
+#: model_terms:ir.ui.view,arch_db:extenss_af.view_form_extenss_af
+#: model_terms:ir.ui.view,arch_db:extenss_af.view_form_extenss_af_acct_portfolio
+#: model_terms:ir.ui.view,arch_db:extenss_af.view_form_extenss_af_adv_pay
+#: model_terms:ir.ui.view,arch_db:extenss_af.view_form_extenss_af_early_set
+#: model_terms:ir.ui.view,arch_db:extenss_af.view_form_extenss_af_exp_notice
+#: model_terms:ir.ui.view,arch_db:extenss_af.view_form_extenss_af_payment_balance
+#: model_terms:ir.ui.view,arch_db:extenss_af.view_form_extenss_af_pre_notice
+#: model_terms:ir.ui.view,arch_db:extenss_af.view_form_extenss_af_statement_account
+msgid "Expiry notices"
+msgstr "Avisos de vencimiento"
+
+#. module: extenss_af
+#: model:ir.actions.act_window,name:extenss_af.action_extenss_af
+#: model:ir.ui.menu,name:extenss_af.menu_af
+#: model:ir.ui.menu,name:extenss_af.menu_extenss_af
+msgid "Financial leasing"
+msgstr "Arrendamiento financiero"
+
+#. module: extenss_af
+#: model:ir.model.fields,field_description:extenss_af.field_extenss_conciliation_initial_pay__id
+#: model:ir.model.fields,field_description:extenss_af.field_extenss_conciliation_initial_pay_lines__id
+msgid "ID"
+msgstr ""
+
+#. module: extenss_af
+#: model:ir.model.fields,field_description:extenss_af.field_extenss_conciliation_initial_pay_lines__init_id
+msgid "Init Pay"
+msgstr "Pago inicial"
+
+#. module: extenss_af
+#: model:ir.model.fields,field_description:extenss_af.field_crm_lead__flag_initial_payment
+msgid "Inital Payment"
+msgstr "Pago inicial"
+
+#. module: extenss_af
+#: model:ir.actions.act_window,name:extenss_af.action_initial_pay_req
+#: model:ir.ui.menu,name:extenss_af.submenu_initial_pay
+msgid "Initial Pay"
+msgstr "Pago inicial"
+
+#. module: extenss_af
+#: model:ir.model.fields,field_description:extenss_af.field_extenss_credit__vat_interest_mora
+msgid "Interest moratoriums VAT"
+msgstr "IVA de intereses moratorios"
+
+#. module: extenss_af
+#: model:ir.model.fields,field_description:extenss_af.field_extenss_credit__interests
+msgid "Interests"
+msgstr "Intereses"
+
+#. module: extenss_af
+#: model:ir.model.fields,field_description:extenss_af.field_extenss_credit__interests_vat
+msgid "Interests VAT"
+msgstr "IVA Intereses"
+
+#. module: extenss_af
+#: model:ir.model.fields,field_description:extenss_af.field_extenss_credit__interests_moratoriums
+msgid "Interests moratoriums"
+msgstr "Intereses moratorios"
+
+#. module: extenss_af
+#: model:ir.model.fields,field_description:extenss_af.field_extenss_conciliation_initial_pay____last_update
+#: model:ir.model.fields,field_description:extenss_af.field_extenss_conciliation_initial_pay_lines____last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: extenss_af
+#: model:ir.model.fields,field_description:extenss_af.field_extenss_conciliation_initial_pay__write_uid
+#: model:ir.model.fields,field_description:extenss_af.field_extenss_conciliation_initial_pay_lines__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: extenss_af
+#: model:ir.model.fields,field_description:extenss_af.field_extenss_conciliation_initial_pay__write_date
+#: model:ir.model.fields,field_description:extenss_af.field_extenss_conciliation_initial_pay_lines__write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: extenss_af
+#: model:ir.model,name:extenss_af.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "Iniciativa/Oportunidad"
+
+#. module: extenss_af
+#: model:ir.model.fields,field_description:extenss_af.field_extenss_conciliation_initial_pay__lines_ids
+msgid "Lines"
+msgstr "Líneas"
+
+#. module: extenss_af
+#: model:res.groups,name:extenss_af.extenss_af_group_manager
+msgid "Manager"
+msgstr "Responsable"
+
+#. module: extenss_af
+#: model:ir.actions.act_window,name:extenss_af.action_moras
+#: model:ir.ui.menu,name:extenss_af.submenu_moras
+#: model_terms:ir.ui.view,arch_db:extenss_af.view_form_extenss_af
+#: model_terms:ir.ui.view,arch_db:extenss_af.view_form_extenss_af_acct_portfolio
+#: model_terms:ir.ui.view,arch_db:extenss_af.view_form_extenss_af_moras
+#: model_terms:ir.ui.view,arch_db:extenss_af.view_form_extenss_af_pre_notice
+#: model_terms:ir.ui.view,arch_db:extenss_af.view_form_extenss_af_statement_account
+msgid "Moras"
+msgstr "Moras"
+
+#. module: extenss_af
+#: model:ir.model.fields,field_description:extenss_af.field_extenss_conciliation_initial_pay__name
+#: model:ir.model.fields,field_description:extenss_af.field_extenss_conciliation_initial_pay_lines__name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: extenss_af
+#: code:addons/extenss_af/models/extenss_af.py:0
+#, python-format
+msgid "Not exist record in Configuration in Datamart"
+msgstr "No existe registro en Configuración en Datamart"
+
+#. module: extenss_af
+#: model:ir.model.fields,field_description:extenss_af.field_sale_order__opportunity_id
+msgid "Opportunity"
+msgstr "Oportunidad"
+
+#. module: extenss_af
+#: model:ir.model.fields,field_description:extenss_af.field_crm_lead__sale_order_ids
+msgid "Orders"
+msgstr "Pedidos"
+
+#. module: extenss_af
+#: model:ir.model.fields,field_description:extenss_af.field_extenss_credit__outstanding_balance
+msgid "Outstanding balance"
+msgstr "Saldo pendiente"
+
+#. module: extenss_af
+#: model:ir.model.fields,field_description:extenss_af.field_extenss_credit__overdue_balance
+msgid "Overdue Balance"
+msgstr "Saldo vencido"
+
+#. module: extenss_af
+#: model_terms:ir.ui.view,arch_db:extenss_af.view_form_extenss_af_adv_pay
+msgid "Pay Advance"
+msgstr "Pago adelantado"
+
+#. module: extenss_af
+#: model_terms:ir.ui.view,arch_db:extenss_af.view_form_extenss_af_early_set
+msgid "Pay Early Settlement"
+msgstr "Pagar liquidación anticipada"
+
+#. module: extenss_af
+#: model:ir.model.fields,field_description:extenss_af.field_crm_lead__conciliation_lines_ids
+#: model:ir.model.fields,field_description:extenss_af.field_extenss_credit__conciliation_credit_ids
+#: model_terms:ir.ui.view,arch_db:extenss_af.view_form_extenss_af_initial_pay_req
+msgid "Payment"
+msgstr "Pago"
+
+#. module: extenss_af
+#: model:ir.actions.act_window,name:extenss_af.action_payment_balance
+#: model:ir.ui.menu,name:extenss_af.submenu_payment_balance
+msgid "Payment balance in favor"
+msgstr "Pago de saldo a favor"
+
+#. module: extenss_af
+#: model_terms:ir.ui.view,arch_db:extenss_af.view_form_extenss_af
+#: model_terms:ir.ui.view,arch_db:extenss_af.view_form_extenss_af_acct_portfolio
+#: model_terms:ir.ui.view,arch_db:extenss_af.view_form_extenss_af_adv_pay
+#: model_terms:ir.ui.view,arch_db:extenss_af.view_form_extenss_af_condonation
+#: model_terms:ir.ui.view,arch_db:extenss_af.view_form_extenss_af_early_set
+#: model_terms:ir.ui.view,arch_db:extenss_af.view_form_extenss_af_exp_notice
+#: model_terms:ir.ui.view,arch_db:extenss_af.view_form_extenss_af_moras
+#: model_terms:ir.ui.view,arch_db:extenss_af.view_form_extenss_af_payment_balance
+#: model_terms:ir.ui.view,arch_db:extenss_af.view_form_extenss_af_pre_notice
+#: model_terms:ir.ui.view,arch_db:extenss_af.view_form_extenss_af_statement_account
+msgid "Payments"
+msgstr "Pagos"
+
+#. module: extenss_af
+#: model:ir.model.fields,field_description:extenss_af.field_extenss_credit__penalty
+msgid "Penalty"
+msgstr "Multa"
+
+#. module: extenss_af
+#: model:ir.model.fields,field_description:extenss_af.field_extenss_credit__penalty_amount
+msgid "Penalty Amount"
+msgstr "Monto de la multa"
+
+#. module: extenss_af
+#: model:ir.actions.act_window,name:extenss_af.action_pre_notice
+msgid "Pre Notice"
+msgstr "Pre-aviso de vencimiento"
+
+#. module: extenss_af
+#: model:ir.ui.menu,name:extenss_af.submenu_pre_notice
+msgid "Pre-notice"
+msgstr "Pre-aviso de vencimiento"
+
+#. module: extenss_af
+#: model:ir.model.fields,field_description:extenss_af.field_crm_lead__productid
+#: model:ir.model.fields,field_description:extenss_af.field_sale_order__product_id
+msgid "Product Name"
+msgstr "Nombre del producto"
+
+#. module: extenss_af
+#: model:ir.model.fields,field_description:extenss_af.field_extenss_credit__purchase_option
+msgid "Purchase option"
+msgstr "Opcion de compra"
+
+#. module: extenss_af
+#: model_terms:ir.ui.view,arch_db:extenss_af.view_form_extenss_af
+#: model_terms:ir.ui.view,arch_db:extenss_af.view_form_extenss_af_acct_portfolio
+#: model_terms:ir.ui.view,arch_db:extenss_af.view_form_extenss_af_pre_notice
+#: model_terms:ir.ui.view,arch_db:extenss_af.view_form_extenss_af_statement_account
+msgid "Request"
+msgstr "Solicitud"
+
+#. module: extenss_af
+#: model_terms:ir.ui.view,arch_db:extenss_af.view_form_extenss_af
+#: model_terms:ir.ui.view,arch_db:extenss_af.view_form_extenss_af_acct_portfolio
+#: model_terms:ir.ui.view,arch_db:extenss_af.view_form_extenss_af_pre_notice
+#: model_terms:ir.ui.view,arch_db:extenss_af.view_form_extenss_af_statement_account
+msgid "Restructure"
+msgstr "Reestructura"
+
+#. module: extenss_af
+#: model_terms:ir.ui.view,arch_db:extenss_af.view_form_extenss_af
+#: model_terms:ir.ui.view,arch_db:extenss_af.view_form_extenss_af_acct_portfolio
+#: model_terms:ir.ui.view,arch_db:extenss_af.view_form_extenss_af_pre_notice
+#: model_terms:ir.ui.view,arch_db:extenss_af.view_form_extenss_af_statement_account
+msgid "Restructuring"
+msgstr "Reestructuración"
+
+#. module: extenss_af
+#: model:ir.model,name:extenss_af.model_sale_order
+msgid "Sales Order"
+msgstr "Pedido de venta"
+
+#. module: extenss_af
+#: model:ir.model.fields,field_description:extenss_af.field_extenss_credit__security_deposit_balance
+msgid "Security Deposit Balance"
+msgstr "Saldo del depósito de seguridad"
+
+#. module: extenss_af
+#: model:ir.model.fields,field_description:extenss_af.field_extenss_credit__date_settlement
+msgid "Settlement date"
+msgstr "Fecha de liquidación"
+
+#. module: extenss_af
+#: model:ir.ui.menu,name:extenss_af.submenu_statement_account
+msgid "Statement Account"
+msgstr "Estado de cuenta"
+
+#. module: extenss_af
+#: model:ir.actions.act_window,name:extenss_af.action_statement_account
+msgid "Statement account"
+msgstr "Estado de cuenta"
+
+#. module: extenss_af
+#: model:ir.model.fields,field_description:extenss_af.field_sale_order__total_initial_payments
+msgid "Total Initial Payments"
+msgstr "Pagos iniciales totales"
+
+#. module: extenss_af
+#: model:ir.model.fields,field_description:extenss_af.field_extenss_credit__total_settle
+msgid "Total to Settle"
+msgstr "Total a liquidar"
+
+#. module: extenss_af
+#: model:res.groups,name:extenss_af.extenss_af_group_user
+msgid "User"
+msgstr "Usuario"
+
+#. module: extenss_af
+#: model:ir.model.fields,field_description:extenss_af.field_extenss_credit__vat_purchase_option
+msgid "VAT Purchase option"
+msgstr "IVA opción de compra"

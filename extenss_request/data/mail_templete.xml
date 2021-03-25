@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="extenss_request_email_template" model="mail.template">
+            <field name="name">Quotation: Send by email</field>
+            <field name="model_id" ref="sale.model_sale_order"/>
+            <field name="email_from">${(object.user_id.email_formatted or user.email_formatted) | safe}</field>
+            <field name="partner_to">${object.partner_id.id}</field>
+            <field name="subject">${object.company_id.name} ${object.state in ('draft', 'sent') and 'Quotation' or 'Order'} (Ref ${object.name or 'n/a' })</field>
+            <field name="body_html" type="html">
+                <div name="parte1">
+                    <div style="float: left">REGISTRO RECA CONDUSEF: 8578-439-030361/01-04698-0818</div>
+                    <div style="float: right;color:red;">SCR ${object.name}</div>
+                    <div style="margin: 0 auto; width: 100px;"><br></br> </div>
+                    <div style="float: right">No. Cliente: ___________</div>
+                    <div style="float: left"><img t-attf-src="/web/binary/company_logo?company={{ res_company.id }}" height="75px" width="290px"/></div>
+                    <div style="margin: 0 auto; width: 100px;color:red;">CÁRATULA DE CRÉDITO</div>
+                    <div style="float: right">Fecha: ${object.date_start}</div>
+                </div>
+                <br></br>
+                <br></br>
+                <table style="border:3px solid black;width:1000px;border-collapse: collapse;">
+                    <tr>
+                        <td colspan="4" style="border:2px solid black;padding: 10px;border-collapse: collapse;">
+                            Nombre comercial del Producto: ${object.product_id.name}/>
+                            <br></br>
+                            Tipo de Crédito: ${object.credit_type.name}
+                        </td>
+                    </tr>
+                    <tr> 
+                        <td style="text-align: center;border:2px solid black;padding: 10px;border-collapse: collapse;"> 
+                            CAT 
+                            <br></br>
+                            (Costo Anual Total)
+                        </td>
+                        <td style="text-align: center;border:2px solid black;padding: 10px;border-collapse: collapse;">
+                            TASA DE INTERÉS ANUAL
+                        </td>
+                        <td style="text-align: center;border:2px solid black;padding: 10px;border-collapse: collapse;"> 
+                            MONTO DEL CRÉDITO
+                        </td>
+                        <td style="text-align: center;border:2px solid black;padding: 10px;border-collapse: collapse;">
+                            MONTO TOTAL A PAGAR
+                        </td>
+                    </tr>
+                    <tr> 
+                        <td style="text-align: center;border:2px solid black;padding: 30px;border-collapse: collapse;"> 
+                            _________
+                            <br></br>
+                             sin IVA 
+                            <br></br>
+                            Para fines
+                           informativos
+                         y de comparación
+                        </td>
+                        <td style="text-align: center;border:2px solid black;padding: 30px;border-collapse: collapse;">
+                            Ordinaria:${object.interest_rate_value}% fijo
+                        </td>
+                        <td style="text-align: center;border:2px solid black;padding: 30px;border-collapse: collapse;"> 
+                            $   ${object.amount}
+                                     <br></br>
+                                pesos, M.N.
+                        </td>
+                        <td style="text-align: center;border:2px solid black;padding: 20px;border-collapse: collapse;">
+                            $   ${object.total_payment * object.term} 
+                                    <br></br>
+                                pesos, M.N.
+                                <br></br>
+                            (estimado según el contrato)
+                        </td>
+                    </tr>
+                    <tr> 
+                        <td colspan="2" style="text-align: center;border:2px solid black;padding: 20px;border-collapse: collapse;"> 
+                            PLAZO DEL CRÉDITO:
+                            <br></br>
+                            ${object.term} ${object.frequency_id.name}
+                        </td>
+                        <td colspan="2"  style="text-align: center;border:2px solid black;padding: 30px;border-collapse: collapse;"> 
+                            Fecha límite de pago: <t t-esc="object.date_limit_pay"/>
+                            <br></br>
+                            Fecha de corte: ______________________________________
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" style="border:2px solid #149448;text-align: center;background-color:#149448;color:white;border-collapse: collapse;">
+                            COMISIONES RELEVANTES
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" style="text-align: center;border-collapse: collapse;padding: 20px;">
+                            No se generará o cobrará comisión alguna.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" style="border:2px solid #EE1C25;background-color:#EE1C25;color:white;border-collapse: collapse;padding: 20px;text-align: center;">
+                            ADVERTENCIAS
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" style="border:2px solid #EE1C25;background-color:#EE1C25;color:white;border-collapse: collapse;padding: 20px;">
+                            “Incumplir tus obligaciones te puede generar comisiones”.
+                            <br></br>
+                            “Contratar créditos que excedan tu capacidad de pago afecta tu historial crediticio”.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" style="border:2px solid #149448;text-align: center;background-color:#149448;color:white;border-collapse: collapse;">
+                            SEGUROS
+                        </td>
+                    </tr>
+                    <tr>    
+                        <td colspan="2" style="text-align: center;border:2px solid black;padding: 10px;border-collapse: collapse;"> 
+                            Seguro: No aplica (opcional u obligatorio)
+                        </td>
+                        <td style="text-align: center;border:2px solid black;padding: 10px;border-collapse: collapse;"> 
+                            Aseguradora: No aplica.
+                        </td>
+                        <td style="text-align: center;border:2px solid black;padding: 10px;border-collapse: collapse;"> 
+                            Cláusula: No aplica.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" style="border:2px solid black;padding: 10px;border-collapse: collapse;">
+                            ESTADO DE CUENTA:
+                            <br></br>
+                            Enviar a: domicilio ______ Consulta: Vía Internet ______ Envío por correo electrónico ______
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" style="border:2px solid black;padding: 10px;border-collapse: collapse;">
+                            Aclaraciones y reclamaciones:
+                            <br></br>
+                            Unidad Especializada de Atención a Usuarios de TBY
+                            <br></br>
+                            Domicilio: Av. José María Morelos y Pavón número 707, Interior 18, Colonia la Merced, Toluca de Lerdo, Estado de México, Código Postal 50080.
+                            <br></br>
+                            Teléfono: 01800 509 7829 Correo electrónico: une@tby.com.mx
+                            <br></br>
+                            Página de internet: www.lanamovil.net
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" style="border:2px solid black;padding: 10px;border-collapse: collapse;">
+                            Registro Contrato de Adhesión Num: 8578-439-030361/01-04698-0818
+                            <br></br>
+                            Comisión Nacional para la Protección y Defensa de los Usuarios de Servicios Financieros (CONDUSEF):
+                            <br></br>
+                            Teléfono: 01 800 999 8080 y 53400999. Página de internet: www.condusef.gob.mx
+                            <br></br>
+                        </td>
+                    </tr>
+                </table>
+            </field>
+            <field name="report_template" ref="report_extenss_request_sale_order"/>
+            <field name="report_name">Quotation${object.name}${object.state == 'draft' and '_draft' or ''}</field>
+        </record>
+    </data>
+</odoo>

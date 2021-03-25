@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_extenss_ff,extenss_credit,model_extenss_credit,extenss_ff_group_user,1,0,0,0
+access_extenss_ff_manager,extenss_credit.manager,model_extenss_credit,extenss_ff_group_manager,1,1,1,1

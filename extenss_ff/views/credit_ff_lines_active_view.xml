@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="view_tree_extenss_ff_activation_line" model="ir.ui.view">
+        <field name="name">extenss.ff.tree.activation_line</field>
+        <field name="model">crm.lead</field>
+        <field name="arch" type="xml">
+            <tree create="false">
+                <field name="name"/>
+                <field name="partner_id"/>
+                <field name="stage_id"/>
+                <field name="init_date" readonly="1"/>
+                <field name="invoice_date" readonly="1"/>
+                <field name="current_rate" readonly="1"/>
+                <field name="amount_ff" readonly="1"/>
+                <field name="amount_out_vat" readonly="1"/>
+                <field name="amount_financed" readonly="1"/>
+                <field name="total_available" readonly="1"/>
+                <field name="total_willing" readonly="1"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_form_extenss_ff_activation_line" model="ir.ui.view">
+        <field name="name">extenss.ff.form.activation_line</field>
+        <field name="model">crm.lead</field>
+        <field name="arch" type="xml">
+            <form create="false">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" readonly="1"/>
+                            <field name="partner_id" options="{'no_open': True}" readonly="1"/>
+                            <field name="stage_id" options="{'no_open': True}" readonly="1"/>
+                            <field name="company_id" options="{'no_open': True}" readonly="1"/>
+                            <field name="team_id" options="{'no_open': True}" readonly="1"/>
+                        </group>
+                    </group>
+                    <group>
+                        <group>
+                            <field name="amount_ff" readonly="1"/>
+                            <field name="amount_out_vat" readonly="1"/>
+                            <field name="purpose" readonly="1"/>
+                            <field name="description_purpose"/>
+                            <field name="init_date" readonly="1"/>
+                            <field name="invoice_date" readonly="1"/>
+                            <field name="payment_method" readonly="1"/>
+                            <field name="capacity" readonly="1"/>
+                            <field name="amount_financed" readonly="1"/>
+                            <field name="commission_details" readonly="1"/>
+                            <field name="commissions" readonly="1"/>
+                            <field name="commission_vat" readonly="1"/>
+                        </group>
+                        <group>
+                            <field name="tax_rate" widget="many2many_tags" readonly="1"/>
+                            <field name="fixed" readonly="1"/>
+                            <field name="fixed_rate" readonly="1"/>
+                            <field name="base_rate" readonly="1"/>
+                            <field name="variance" readonly="1"/>
+                            <field name="current_rate" readonly="1"/>
+                            <field name="days" readonly="1"/>
+
+                            <field name="total_available"/>
+                            <field name="total_willing"/>
+                        </group>
+                    </group>
+                    <group>
+                        <notebook>
+                            <page name="provisions" string="Provisions">
+                                <form>
+                                    <header>
+                                        <button name="action_create_provision" string="Create Provision" type="object" class="oe_highlight"/>
+                                    </header>
+                                </form>
+                                <field name="lineff_ids" options="{'no_create': True}" domain="[('status', '=', 'pending'),('amount', '&lt;', 0)]">
+                                    <tree editable="bottom">
+                                        <field name="lineff_id" invisible="1"/>
+                                        <field name="name" options="{'no_open': False}"/>
+                                        <field name="partner_id" options="{'no_open': True}" readonly="1"/>
+                                        <field name="amount_delivered"/>
+                                        <field name="amount_financed"/>
+                                        <field name="stage_id" options="{'no_open': True}" readonly="1"/>
+                                        <field name="company_id" options="{'no_open': True}" readonly="1"/>
+                                    </tree>
+                                    <form>
+                                        <sheet>
+                                            <group>
+                                                <field name="name"/>
+                                                <field name="partner_id" options="{'no_open': True}" readonly="1"/>
+                                                <field name="amount_delivered"/>
+                                                <field name="stage_id" options="{'no_open': True}" readonly="1"/>
+                                                <field name="company_id" options="{'no_open': True}" readonly="1"/>
+                                                <field name="lineff_id" invisible="1"/>
+                                            </group>
+                                        </sheet>
+                                    </form>
+                                </field>
+                            </page>
+                        </notebook>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_lines_active_ff" model="ir.actions.act_window">
+        <field name="name">Active lines</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">crm.lead</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('stage_id', '=', 6),('product_name', '=', 'LFF')]</field>
+        <field name="view_ids"
+                eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('extenss_ff.view_tree_extenss_ff_activation_line')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('extenss_ff.view_form_extenss_ff_activation_line')})]"/>
+    </record>
+
+    <menuitem 
+        id="submenu_lines_active_ff"
+        name="Lines Active"
+        sequence="10"
+        parent="menu_ff"
+        action="action_lines_active_ff"/>
+</odoo>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record model="crm.stage" id="crm.stage_lead1">
+        <field name="name">Origination</field>
+        <field name="sequence">1</field>
+        <field name="is_won">False</field>
+    </record>
+    <record model="crm.stage" id="crm.stage_lead2">
+        <field name="name">Credit Analysis</field>
+        <field name="sequence">2</field>
+        <field name="is_won">False</field>
+    </record>
+    <record model="crm.stage" id = "crm.stage_lead3">
+        <field name="name">Juridical</field>
+        <field name="sequence">3</field>
+        <field name="is_won">False</field>
+    </record>
+    <record model="crm.stage" id="crm.stage_lead4">
+        <field name="name">Control desk</field>
+        <field name="sequence">4</field>
+        <field name="is_won">False</field>
+    </record>
+    <record model="crm.stage" id="stage_lead5">
+        <field name="name">Activation</field>
+        <field name="sequence">5</field>
+        <field name="is_won">False</field>
+    </record>
+    <record model="crm.stage" id="stage_lead6">
+        <field name="name">Hiring</field>
+        <field name="sequence">6</field>
+        <field name="is_won">True</field>
+    </record>
+</odoo>

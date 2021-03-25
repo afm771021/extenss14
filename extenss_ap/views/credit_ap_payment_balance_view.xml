@@ -1,0 +1,210 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="view_tree_extenss_ap_payment_balance" model="ir.ui.view">
+        <field name="name">extenss.ap.payment.balance.tree</field>
+        <field name="model">extenss.credit</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="credit_id"/>
+                <field name="customer_id"/>
+                <field name="request_id"/>
+                <field name="product_id"/>
+                <field name="salesperson_id"/>
+                <field name="office_id"/>
+                <field name="anchor_id"/>
+                <field name="bill_id"/>
+                <field name="customer_type"/>
+                <field name="amount_financed"/>
+                <field name="type_credit"/>
+                <field name="frequency"/>
+                <field name="interest_rate"/>
+                <field name="term"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_form_extenss_ap_payment_balance" model="ir.ui.view">
+        <field name="name">extenss.ap.payment.balance.form</field>
+        <field name="model">extenss.credit</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <div class="oe_title">
+                            <div class="oe_edit_only">
+                                <label for="credit_id"/>
+                            </div>
+                            <h1><field name="credit_id"/></h1>
+                        </div>
+                    </group>
+                    <group name="group_top">
+                        <group name="group_left">
+                            <field name="customer_id" readonly="1" options="{'no_open': True}"/>
+                            <field name="customer_type" readonly="1"/>
+                            <field name="request_id" readonly="1" options="{'no_open': True}"/>
+                            <field name="bill_id" readonly="1"/>
+                            <field name="reference_number" readonly="1"/>
+                            <field name="credit_status" readonly="1"/>
+                            <field name="account_status_date" readonly="1"/>
+                            <field name="product_id" readonly="1" options="{'no_open': True}"/>
+                            <field name="type_credit" readonly="1" options="{'no_open': True}"/>
+                            <field name="cs" invisible="1"/>
+                            <field name="af" invisible="1"/>
+                            <field name="ap" invisible="1"/>
+                            <field name="notice_date"/>
+                            <field name="payment_date"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="conciliation_credit_ids" options="{'no_create': True}" domain="[('status', '=', 'pending')]">
+                            <tree editable="bottom">
+                                <field name="check"/>
+                                <field name="reference" readonly="1"/>
+                                <field name="customer" options="{'no_open': True}" readonly="1"/>
+                                <field name="date" readonly="1"/>
+                                <field name="amount" readonly="1"/>
+                                <field name="status" readonly="1"/>
+                            </tree>
+                            <form>
+                                <sheet>
+                                    <group>
+                                        <field name="check"/>
+                                        <field name="reference"/>
+                                        <field name="customer"/>
+                                        <field name="date"/>
+                                        <field name="amount"/>
+                                        <field name="status"/>
+                                    </group>
+                                </sheet>
+                            </form>
+                        </field>
+                    </group>
+                    <notebook>
+                        <page string="Expiry notices" name="expiry_notices">
+                            <field name="credit_expiry_ids">
+                                <tree>
+                                    <field name="expiry_number"/>
+                                    <field name="payment_number"/>
+                                    <field name="due_not_date"/>
+                                    <field name="total_paid_moras"/>
+                                    <field name="amount_not"/>
+                                    <field name="total_paid_not"/>
+                                    <field name="total_to_pay"/>
+                                </tree>
+                                <form>
+                                    <sheet>
+                                        <group>
+                                            <group>
+                                                <field name="expiry_number"/>
+                                                <field name="payment_number"/>
+                                                <field name="due_not_date"/>
+                                                <field name="payment_date"/>
+                                            </group>
+                                            <group>
+                                                <field name="total_paid_moras"/>
+                                                <field name="amount_not"/>
+                                                <field name="total_paid_not"/>
+                                                <field name="total_to_pay"/>
+                                            </group>
+                                        </group>
+                                        <group>
+                                            <notebook>
+                                                <page name="concepts_expiration" string="Concepts Expiration Notices">
+                                                    <field name="expiry_notice_ids">
+                                                        <tree>
+                                                            <field name="concept"/>
+                                                            <field name="amount_concept"/>
+                                                            <field name="total_paid_concept"/>
+                                                            <field name="full_paid"/>
+                                                        </tree>
+                                                        <form>
+                                                            <group>
+                                                                <group>
+                                                                    <field name="concept" />
+                                                                    <field name="amount_concept"/>
+                                                                </group>
+                                                                <group>
+                                                                    <field name="total_paid_concept"/>
+                                                                    <field name="full_paid"/>
+                                                                </group>
+                                                            </group>
+                                                            <group>
+                                                                <field name="concept_pay_ids" string="Payments" options="{'no_create_edit': False},
+                                                                {'no_quick_create': False},
+                                                                {'no_open': False}">
+                                                                    <tree open="false">
+                                                                        <field name="expiry_number_en"/>
+                                                                        <field name="date_paid"/>
+                                                                        <field name="total_paid_cp"/>
+                                                                    </tree>
+                                                                    <form>
+                                                                        <group>
+                                                                            <group>
+                                                                                <field name="expiry_number_en"/>
+                                                                                <field name="date_paid"/>
+                                                                            </group>
+                                                                            <group>
+                                                                                <field name="total_paid_cp"/>
+                                                                            </group>
+                                                                        </group>
+                                                                    </form>
+                                                                </field>
+                                                            </group>
+                                                        </form>
+                                                    </field>
+                                                </page>
+                                            </notebook>
+                                        </group>
+                                    </sheet>
+                                </form>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_tree_extenss_ap_payment_balance_search" model="ir.ui.view">
+        <field name="name">extenss.ap.payment.balance.search</field>
+        <field name="model">extenss.credit</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="credit_id"/>
+                <field name="customer_id"/>
+                <field name="request_id"/>
+                <field name="product_id"/>
+                <field name="salesperson_id"/>
+                <field name="office_id"/>
+                <field name="anchor_id"/>
+                <field name="bill_id"/>
+                <field name="customer_type"/>
+                <field name="amount_financed"/>
+                <field name="type_credit"/>
+                <field name="frequency"/>
+                <field name="interest_rate"/>
+                <field name="term"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_payment_balance_ap" model="ir.actions.act_window">
+        <field name="name">Payment balance in favor</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">extenss.credit</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="view_tree_extenss_ap_payment_balance_search"/>
+        <field name="domain">[('ap', '=', True)]</field>
+        <field name="view_ids"
+                eval="[(5,0,0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('extenss_ap.view_tree_extenss_ap_payment_balance')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('extenss_ap.view_form_extenss_ap_payment_balance')})]"/>
+    </record>
+
+    <menuitem 
+        id="submenu_payment_balance_ap"
+        name="Payment balance in favor"
+        sequence="100"
+        parent="menu_ap"
+        action="action_payment_balance_ap"/>
+</odoo>

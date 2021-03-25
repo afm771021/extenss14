@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<template id="account_status">
+    <t t-call="web.html_container">
+        <t t-call="web.basic_layout">
+            <t t-foreach="docs" t-as="doc">
+                <div class="header">
+                    <table style="width:1000px;border-collapse: collapse;">
+                        <tr>
+                            <td style="padding: 5px; "><img t-attf-src="/web/binary/company_logo?company={{ res_company.id }}"/></td>
+                            <td colspan="2" style="padding: 5px; ">
+                                <t t-if="doc.type_credit.shortcut == 'CS'">
+                                    <h5>ESTADO DE CUENTA CREDITO SIMPLE</h5>
+                                </t>
+                                <t t-if="doc.type_credit.shortcut == 'AF'">
+                                    <h5>ESTADO DE CUENTA ARRENDAMIENTO FINANCIERO</h5>
+                                </t>
+                                <t t-if="doc.type_credit.shortcut == 'AP'">
+                                    <h5>ESTADO DE CUENTA ARRENDAMIENTO PURO</h5>
+                                </t>
+                                <t t-if="doc.type_credit.shortcut == 'DN'">
+                                    <h5>ESTADO DE CUENTA DESCUENTO EN NOMINA</h5>
+                                </t>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px;font-size: 10px;">
+                                <span t-field="res_company.partner_id"
+                                t-options='{"widget": "contact", "fields": ["address"], "no_marker": true}'/>
+                            </td>
+                            <td colspan="2" align="right" style="font-size: 10px;padding: 10px;">
+                                FECHA EDO CUENTA: <t t-esc="doc.account_status_date.strftime('%d-%m-%Y')"/>
+                                <!-- <t t-if="doc.type_credit.shortcut != 'CS' "> -->
+                                <t t-if="doc.type_credit.shortcut == 'AP' or doc.type_credit.shortcut == 'AF'">
+                                    <table style="border:1px solid black;">
+                                        <tr>
+                                            <td colspan="5" style="font-size: 10px;text-align: center;">
+                                                COMISION POR APERTURA
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="border:1px solid black;font-size: 10px;padding: 5px;">
+                                            FECHA:
+                                            </td>
+                                            <td style="border:1px solid black;font-size: 10px;padding: 5px;">
+                                            PORCENTAJE:
+                                            </td>
+                                            <td style="border:1px solid black;font-size: 10px;padding: 5px;">
+                                            COMISION:
+                                            </td>
+                                            <td style="border:1px solid black;font-size: 10px;padding: 5px;">
+                                            IVA:
+                                            </td>
+                                            <td style="border:1px solid black;font-size: 10px;padding: 5px;">
+                                            TOTAL:
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="border:1px solid black;font-size: 10px;padding: 5px;">
+                                                <span t-field="doc.hiring_date"/>
+                                            </td>
+                                            <td style="border:1px solid black;font-size: 10px;padding: 5px;">
+                                                <span t-field="doc.percentage_commission"/>   
+                                            </td>
+                                            <td style="border:1px solid black;font-size: 10px;padding: 5px;">
+                                                <span t-field="doc.commission_amount"/>   
+                                            </td>
+                                            <td style="border:1px solid black;font-size: 10px;padding: 5px;">
+                                            <span t-field="doc.commission_vat"/>   
+                                            </td>
+                                            <td style="border:1px solid black;font-size: 10px;padding: 5px;">
+                                            <span t-field="doc.total_commission"/>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </t>
+                                <t t-if="doc.type_credit.shortcut == 'CS' or doc.type_credit.shortcut == 'DN'">
+                                </t>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <br></br>
+                <div name="page">
+                    <table style="width:1000px;border-collapse: collapse;">
+                        <tr>
+                            <td style="font-size: 10px;">
+                                 <t t-if="doc.type_credit.shortcut == 'AP' or doc.type_credit.shortcut == 'AF'"> NOMBRE DEL ARRENDATARIO: <span t-field="doc.customer_id.name"/></t>
+                                 <t t-if="doc.type_credit.shortcut == 'CS' or doc.type_credit.shortcut == 'DN'"> NOMBRE DEL CLIENTE: <span t-field="doc.customer_id.name"/></t>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="font-size: 10px;">
+                                <t t-if="doc.type_credit.shortcut == 'AP' or doc.type_credit.shortcut == 'AF'">DIRECCION DEL ARRENDATARIO: <span t-field="doc.customer_id.street"/>, <span t-field="doc.customer_id.city"/>, <span t-field="doc.customer_id.state_id.name"/>, <span t-field="doc.customer_id.zip"/></t>
+                                <t t-if="doc.type_credit.shortcut == 'CS' or doc.type_credit.shortcut == 'DN'">DIRECCION DEL CLIENTE: <span t-field="doc.customer_id.street"/>, <span t-field="doc.customer_id.city"/>, <span t-field="doc.customer_id.state_id.name"/>, <span t-field="doc.customer_id.zip"/></t>
+                            </td>
+                        </tr>
+                    </table>
+                    <br></br>
+                    <table style="border:1px solid black;">
+                        <tr>
+                            <td style="border:1px solid black;font-size: 10px;padding: 10px;">
+                               <t t-if="doc.type_credit.shortcut == 'AP' or doc.type_credit.shortcut == 'AF'">DATOS DEL ARRENDAMIENTO</t>
+                               <t t-if="doc.type_credit.shortcut == 'CS' or doc.type_credit.shortcut == 'DN'">DATOS DEL CREDITO</t>
+                            </td>
+                        </tr>
+                        <t t-if="doc.type_credit.shortcut == 'AP' or doc.type_credit.shortcut == 'AF'">
+                            <tr>
+                                <td>
+                                    EQUIPO ARRENDADO: <span t-field="doc.leased_team"/>
+                                </td>
+                            </tr>
+                        </t>
+                        <tr>
+                            <td style="font-size: 10px;">
+                               <t t-if="doc.type_credit.shortcut == 'AP' or doc.type_credit.shortcut == 'AF'"> VALOR ACTUAL DEL BIEN: <span t-field="doc.amount_si"/> </t>
+                               <t t-if="doc.type_credit.shortcut == 'CS' or doc.type_credit.shortcut == 'DN'"> MONTO DEL CREDITO: <span t-field="doc.amount_financed"/> </t>
+                            </td>
+                        </tr>
+                        <t t-if="doc.type_credit.shortcut == 'AP' or doc.type_credit.shortcut == 'AF'">
+                            <tr>
+                                <td style="font-size: 10px;">
+                                    IVA INICIAL <span t-field="doc.tax_amount"/>
+                                </td>
+                            </tr>
+                        </t>
+                        <t t-if="doc.type_credit.shortcut == 'AP'">
+                            <tr>
+                                <td style="font-size: 10px;">
+                                    VALOR RESIDUAL <span t-field="doc.amount_residual_value"/>
+                                </td>
+                            </tr>
+                        </t>
+                        <tr>
+                            <td style="font-size: 10px;">
+                                TASA DE INTERES <span t-field="doc.interest_rate"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="font-size: 10px;">
+                                VENCIMIENTO <span t-field="doc.date_limit_pay"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="font-size: 10px;">
+                                <t t-if="doc.type_credit.shortcut == 'AP' or doc.type_credit.shortcut == 'AF'"> NUMERO DE RENTAS: <span t-field="doc.term"/></t>
+                                <t t-if="doc.type_credit.shortcut == 'CS' or doc.type_credit.shortcut == 'DN'"> NUMERO DE PAGOS: <span t-field="doc.term"/></t>
+                            </td>
+                        </tr>
+                        <t t-if="doc.type_credit.shortcut == 'AF'">
+                            <tr>
+                                <td style="font-size: 10px;">
+                                    DEPOSITO EN GARANTIA: <span t-field="doc.total_guarantee_deposit"/>
+                                </td>
+                            </tr>
+                        </t>
+                    </table>
+                    <br></br>
+                    <table style="border:1px solid black;width:1000px;border-collapse: collapse;">
+                        <tr>
+                            <td style="font-size: 12px;padding: 5px;">
+                                El ____________________________, de  profesión Contador Público Titulado, lo  cual  acredita con  
+                                Cédula Profesional  No. ________, expedida  en  la  Ciudad  de  México,  por  la  Dirección de 
+                                Profesiones, dependiente de la Secretaría de Educación Pública, como Contador Autorizado por la 
+                                "<strong t-field="res_company.partner_id.name"/> ", se  expide el  presente  Estado de  Cuenta  
+                                en términos de los artículos  57  y  58  de  la  Ley  de  Uniones  de  Crédito,  CERTIFICA  y  
+                                hace  constar   que   efectuado el  cálculo  de  los  intereses  ordinarios  y   moratorios   de   
+                                acuerdo  al   Contrato Marco de Arrendamiento  y _________________   que   celebran   por   una   
+                                parte   en   su  carácter de arrendador "<strong t-field="res_company.partner_id.name"/>  representada  
+                                por  el ______________________________,  y  por  la  otra parte  en  su  carácter  de  arrendatario 
+                                _<strong t-field="doc.customer_id.name"/>_  representada  por  el ______________________________, y  por  
+                                una  tercera  parte  los___________ en  su  carácter  de  _________________________________, suscrito  con  
+                                fecha  ________________________ ratificado ante la fe del Notario Público N° ______ del _________________, 
+                                el Lic. _____________________, contenido en la escritura numero ______  de fecha _______ por  la  cantidad  de  
+                                $  _<strong t-field="doc.amount_financed"/>_     ( _____________________  00/100  M.N.  )  conforme  al  siguiente:
+                            </td>
+                        </tr>
+                    </table>
+                    <br></br>
+                    <table style="width:1000px;border-collapse: collapse;">
+                        <tr>
+                            <td style="text-align: center;background-color:#7F7F7F;border-collapse: collapse;">
+                                DETALLE DE OPERACIONES
+                            </td>
+                        </tr>
+                    </table>
+                    <br></br>
+                    <table style="width:1000px;border-collapse: collapse;">
+                        <tr>
+                            <t t-if="doc.type_credit.shortcut == 'AP'"><th colspan="10" style="font-size: 10px;text-align: center;border:1px solid black;border-collapse: collapse;"></th></t>
+                            <t t-if="doc.type_credit.shortcut == 'CS' or doc.type_credit.shortcut == 'DN'"><th colspan="11" style="font-size: 10px;text-align: center;border:1px solid black;border-collapse: collapse;"></th></t>
+                            <t t-if="doc.type_credit.shortcut == 'AF'"><th colspan="12" style="font-size: 10px;text-align: center;border:1px solid black;border-collapse: collapse;"></th></t>
+                            <th colspan="7" style="font-size: 10px;text-align: center;border:1px solid black;border-collapse: collapse;">Intereses Moratorios</th>
+                            <th colspan="5" style="font-size: 10px;text-align: center;border:1px solid black;border-collapse: collapse;"></th>
+                        </tr>
+                        <tr>
+                            <th style="font-size: 10px;text-align: center;border:1px solid black;border-collapse: collapse;">No. Payment #</th>
+                            <th style="font-size: 10px;text-align: center;border:1px solid black;border-collapse: collapse;">End Date</th>
+                            <th style="font-size: 10px;text-align: center;border:1px solid black;border-collapse: collapse;">Initial Balance</th>
+                            <t t-if="doc.type_credit.shortcut != 'AP'"><th style="font-size: 10px;text-align: center;border:1px solid black;border-collapse: collapse;">Capital</th></t>
+                            <t t-if="doc.type_credit.shortcut == 'AF'"><th style="font-size: 10px;text-align: center;border:1px solid black;border-collapse: collapse;">Iva Capital</th></t>
+                            <t t-if="doc.type_credit.shortcut != 'AP'"><th style="font-size: 10px;text-align: center;border:1px solid black;border-collapse: collapse;">Interest</th></t>
+                            <t t-if="doc.type_credit.shortcut != 'AP'"><th style="font-size: 10px;text-align: center;border:1px solid black;border-collapse: collapse;">Iva Interest</th></t>
+                            <t t-if="doc.type_credit.shortcut == 'AP'"><th style="font-size: 10px;text-align: center;border:1px solid black;border-collapse: collapse;">Payment</th></t>
+                            <t t-if="doc.type_credit.shortcut == 'AP'"><th style="font-size: 10px;text-align: center;border:1px solid black;border-collapse: collapse;">Iva Payment</th></t>
+                            <th style="font-size: 10px;text-aling: center;border:1px solid black;border-collapse: collapse;">Monto Penalización</th>
+                            <th style="font-size: 10px;text-aling: center;border:1px solid black;border-collapse: collapse;">Opción de compra</th>
+                            <th style="font-size: 10px;text-aling: center;border:1px solid black;border-collapse: collapse;">IVA opción compra</th>
+                            <th style="font-size: 10px;text-aling: center;border:1px solid black;border-collapse: collapse;">Condonation</th>
+                            <t t-if="doc.type_credit.shortcut == 'CS' or doc.type_credit.shortcut == 'DN'"><th style="font-size: 10px;text-align: center;border:1px solid black;border-collapse: collapse;">Payment Total</th></t>
+                            <t t-if="doc.type_credit.shortcut == 'AP' or doc.type_credit.shortcut == 'AF'"><th style="font-size: 10px;text-align: center;border:1px solid black;border-collapse: collapse;">Total Rent</th></t>
+                            <th style="font-size: 10px;text-align: center;border:1px solid black;border-collapse: collapse;">Del</th>
+                            <th style="font-size: 10px;text-align: center;border:1px solid black;border-collapse: collapse;">Al</th>
+                            <th style="font-size: 10px;text-align: center;border:1px solid black;border-collapse: collapse;">Días</th>
+                            <th style="font-size: 10px;text-align: center;border:1px solid black;border-collapse: collapse;">Saldo Vencido</th>
+                            <th style="font-size: 10px;text-align: center;border:1px solid black;border-collapse: collapse;">Tasa</th>
+                            <th style="font-size: 10px;text-align: center;border:1px solid black;border-collapse: collapse;">Intereses</th>
+                            <th style="font-size: 10px;text-align: center;border:1px solid black;border-collapse: collapse;">Iva intereses</th>
+                            <th style="font-size: 10px;text-align: center;border:1px solid black;border-collapse: collapse;">Monto por pagar</th>
+                            <th style="font-size: 10px;text-align: center;border:1px solid black;border-collapse: collapse;">Monto pagado</th>
+                        </tr>
+                        <tr>
+                            <t t-foreach="doc.credit_expiry_ids" t-as="amort">
+                                <tr>
+                                    <td style="font-size: 10px;text-align: center;border:1px solid black;border-collapse: collapse;"><t t-esc="amort.payment_number"/></td>
+                                    <td style="font-size: 10px;text-align: center;border:1px solid black;border-collapse: collapse;"><t t-esc="amort.due_not_date.strftime('%d-%m-%Y')"/></td>
+                                    <td style="font-size: 10px;text-align: center;border:1px solid black;border-collapse: collapse;"><t t-esc="'{0:,.2f}'.format(round(float(amort.outstanding_balance), 2))"/></td>
+                                    <t t-foreach="amort.expiry_notice_ids" t-as="concepts">
+                                        <t t-if="doc.type_credit.shortcut != 'AP'">
+                                            <t t-if="concepts.concept == 'capital'">
+                                                <td style="font-size: 9px;text-align: center;border:1px solid black;border-collapse: collapse;"><t t-esc="'{0:,.2f}'.format(round(float(concepts.amount_concept), 2))"/></td>
+                                            </t>
+                                        </t>
+                                        <t t-if="doc.type_credit.shortcut == 'AP'">
+                                            <t t-if="concepts.concept == 'payment'">
+                                                <td style="font-size: 9px;text-align: center;border:1px solid black;border-collapse: collapse;"><t t-esc="'{0:,.2f}'.format(round(float(concepts.amount_concept), 2))"/></td>
+                                            </t>
+                                        </t>
+                                        <t t-if="doc.type_credit.shortcut == 'AP'">
+                                            <t t-if="concepts.concept == 'paymentvat'">
+                                                <td style="font-size: 9px;text-align: center;border:1px solid black;border-collapse: collapse;"><t t-esc="'{0:,.2f}'.format(round(float(concepts.amount_concept), 2))"/></td>
+                                            </t>
+                                        </t>
+                                        <t t-if="doc.type_credit.shortcut != 'AP'">
+                                            <t t-if="concepts.concept == 'interest'">
+                                                <td style="font-size: 9px;text-align: center;border:1px solid black;border-collapse: collapse;"><t t-esc="'{0:,.2f}'.format(round(float(concepts.amount_concept), 2))"/></td>
+                                            </t>
+                                        </t>
+                                        <t t-if="doc.type_credit.shortcut == 'AF'">
+                                            <t t-if="concepts.concept == 'capvat'">
+                                                <td style="font-size: 9px;text-align: center;border:1px solid black;border-collapse: collapse;"><t t-esc="'{0:,.2f}'.format(round(float(concepts.amount_concept), 2))"/></td>
+                                            </t>
+                                        </t>
+                                        <t t-if="doc.type_credit.shortcut != 'AP'">
+                                            <t t-if="concepts.concept == 'intvat'">
+                                                <td style="font-size: 9px;text-align: center;border:1px solid black;border-collapse: collapse;"><t t-esc="'{0:,.2f}'.format(round(float(concepts.amount_concept), 2))"/></td>
+                                            </t>
+                                        </t>
+                                    </t>
+                                    <td style="font-size: 9px;text-align: center;border:1px solid black;border-collapse: collapse;">
+                                        <t t-foreach="amort.expiry_notice_ids" t-as="con_amount">
+                                            <t t-if="con_amount.concept == 'penalty_amount'">
+                                                <!-- <t t-esc="'{0:,.2f}'.format(round(float(con_amount.amount_concept), 2))"/> -->
+                                                <span t-field="con_amount.amount_concept"/>
+                                            </t>
+                                        </t>
+                                    </td>
+                                    <td style="font-size: 9px;text-align: center;border:1px solid black;border-collapse: collapse;">
+                                        <t t-foreach="amort.expiry_notice_ids" t-as="con_option">
+                                            <t t-if="con_option.concept == 'purchase_option'">
+                                                <!-- <t t-esc="'{0:,.2f}'.format(round(float(con_option.amount_concept), 2))"/> -->
+                                                <span t-field="con_option.amount_concept"/>
+                                            </t>
+                                        </t>
+                                    </td>
+                                    <td style="font-size: 9px;text-align: center;border:1px solid black;border-collapse: collapse;">
+                                        <t t-foreach="amort.expiry_notice_ids" t-as="con_vat_op">
+                                            <t t-if="con_vat_op.concept == 'vat_option'">
+                                                <!-- <t t-esc="'{0:,.2f}'.format(round(float(con_vat_op.amount_concept), 2))"/>-->
+                                                <span t-field="con_vat_op.amount_concept"/>
+                                            </t>
+                                        </t>
+                                    </td>
+                                    <td style="font-size: 9px;text-align: center;border:1px solid black;border-collapse: collapse;">
+                                        <t t-foreach="amort.expiry_notice_ids" t-as="con_con">
+                                            <t t-if="con_con.concept == 'condonation'">
+                                                <!-- <t t-esc="'{0:,.2f}'.format(round(float(con_con.amount_concept), 2))"/>-->
+                                                <span t-field="con_con.amount_concept"/>
+                                            </t>
+                                        </t>
+                                    </td>
+                                    <td style="font-size: 10px;text-align: center;border:1px solid black;border-collapse: collapse;"><t t-esc="'{0:,.2f}'.format(round(float(amort.amount_not), 2))"/></td>
+                                    <td style="font-size: 10px;text-align: center;border:1px solid black;border-collapse: collapse;"><t t-esc="amort.due_not_date.strftime('%d-%m-%Y')"/></td>
+                                    <td style="font-size: 10px;text-align: center;border:1px solid black;border-collapse: collapse;"><t t-esc="amort.payment_date"/></td>
+                                    <td style="font-size: 10px;text-align: center;border:1px solid black;border-collapse: collapse;"><t t-esc="amort.days_mora"/></td>
+                                    <td style="font-size: 10px;text-align: center;border:1px solid black;border-collapse: collapse;"><t t-esc="amort.total_to_pay"/></td>
+                                    <td style="font-size: 10px;text-align: center;border:1px solid black;border-collapse: collapse;"><t t-esc="amort.rate_moratorium"/></td>
+                                    <td style="font-size: 10px;text-align: center;border:1px solid black;border-collapse: collapse;"><t t-esc="'{0:,.2f}'.format(round(float(amort.interest_moratoriums), 2))"/></td>
+                                    <td style="font-size: 10px;text-align: center;border:1px solid black;border-collapse: collapse;"><t t-esc="'{0:,.2f}'.format(round(float(amort.vat_interest_mora), 2))"/></td>
+                                    <td style="font-size: 10px;text-align: center;border:1px solid black;border-collapse: collapse;"><t t-esc="amort.to_pay"/></td>
+                                    <td style="font-size: 10px;text-align: center;border:1px solid black;border-collapse: collapse;"><t t-esc="amort.total_paid_not"/></td>
+                                </tr>
+                            </t>
+                        </tr>
+                    </table>
+                <br></br>
+                <table style="border:1px solid black;width:1000px;border-collapse: collapse;">
+                    <tr>
+                        <td style="font-size: 12px;padding: 5px;">
+                            Advertencias: 1.-Interés Moratorio.- Los Intereses Moratorios se calcularán sobre saldos insolutos del crédito de acuerdo al Contrato Específico de Arrendamiento Financiero desde que incurra el incumplimiento hasta su pago total.  2.- Contratar créditos por arriba de su capacidad de pago, puede afectar su historial crediticio. 3.- El Avalista, Obligado Solidario o Coacreditado, responderá como Obligado Prncipal frente a la "Entidad Financiera" 
+                        </td>
+                    </tr>
+                </table>
+                <br></br>
+                <table style="border:1px solid black;width:1000px;text-align: center;border-collapse: collapse;">
+                    <tr>
+                        <td style="font-size: 12px;padding: 5px;">
+                            SE EXTIENDE LA PRESENTE CERTIFICACION EN LOS TÉRMINOS DE LOS DOCUMENTOS BASE  DE LA ACCIÓN RELATIVA AL CÁLCULO DE  LOS  INTERESES ORDINARIOSY MORATORIOS SUSCRITO  POR  UNA  PARTE __<strong t-field="doc.customer_id.name"/>__  Y  POR  OTRA  PARTE "<strong t-field="res_company.partner_id.name"/>"
+                        </td>
+                    </tr>
+                </table>
+                <br></br>
+                <table style="width:1000px;border-collapse: collapse;">
+                    <tr>
+                        <td style="text-align: center;font-size: 10px;border-collapse: collapse;">
+                            L .C.  _______________________
+                        </td>
+                    </tr>
+                </table>
+                <br></br>
+                <table style="width:1000px;border-collapse: collapse;">
+                    <tr>
+                        <td style="text-align: center;font-size: 10px;border-collapse: collapse;">
+                            CEDULA PROFESIONAL ________________
+                        </td>
+                    </tr>
+                </table>
+                <br></br>
+                <table style="width:1000px;border-collapse: collapse;">
+                    <tr>
+                        <td style="text-align: center;font-size: 10px;border-collapse: collapse;">
+                            Río  Lerma No.  333, P. 2, Col. Cuauhtémoc,  Del.  Cuauhtémoc, México D.F., C.P. 06500  
+Tel. 3685 3920 Ext. 576   Horario de Atención: Lunes a Viernes 9:00 a 18:00 hrs.
+Responsable REUNE: Fridna Villarreal Murillo   Email: fridna.villarreal@credipyme.com.mx
+Página de Internet. www.condusef.gob.mx
+LUC. Art. 2 "El Gobierno Federal y las entidades de la administración pública praestatal no podrán responsabilizarse ni garantizar el resultado de las operaciones que realicen las uniones, así como tampoco asumir responsabilidad alguna de las obligaciones contraídas con sus socios o terceros"
+Quejas o reclamaciones validas dentro de los 30 días habiles  siguientes  a la expedición del  presente estado de cuenta. 
+Los intereses pueden variar conforme a la movilidad del índice referido consultado.
+                        </td>
+                    </tr>
+                </table>
+                <br></br>
+                <table style="width:1000px;border-collapse: collapse;">
+                    <tr>
+                        <td align="center" style="font-size: 10px;border-collapse: collapse;">
+                            <img src='/extenss_credit/static/src/img/condusef.png' style="max-height: 45px;"/>
+                        </td>
+                    </tr>
+                </table>
+                </div>
+            </t>
+        </t>
+    </t>
+</template>
+</odoo>

@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="portal_my_home_menu_extenss_ff" name="Portal layout : financial factoring menu entries" inherit_id="portal.portal_breadcrumbs" priority="40">
+      <xpath expr="//ol[hasclass('o_portal_submenu')]" position="inside">
+          <li t-if="page_name == 'extenss_ff'" t-attf-class="breadcrumb-item #{'active ' if not extenss_ff else ''}">
+              <a t-if="extenss_ff" t-attf-href="/my/extenss_ff?{{ keep_query() }}">Financial Factoring</a>
+              <t t-else="">Financial Factoring</t>
+          </li>
+          <li t-if="extenss_ff" class="breadcrumb-item active">
+              <t t-esc="extenss_ff.name" t-if="extenss_ff.name"/>
+              <t t-else=""><em>Financial Factoring</em></t>
+          </li>
+      </xpath>
+    </template>
+
+    <template id="portal_my_home_extenss_ff" name="Portal My Home : Financial Factoring" inherit_id="portal.portal_my_home" priority="40">
+        <xpath expr="//div[hasclass('o_portal_docs')]" position="inside">
+            <t t-if="extenss_ff_count" t-call="portal.portal_docs_entry">
+                <t t-set="title">Financial Factoring</t>
+                <t t-set="url" t-value="'/my/extenss_ff'"/>
+                <t t-set="count" t-value="extenss_ff_count"/>
+            </t>
+        </xpath>
+    </template>
+
+    <template id="portal_my_extenss_ffs" name="Portal: My Credits">
+      <t t-call="portal.portal_layout">
+        <t t-call="portal.portal_searchbar">
+          <t t-set="title">Financial Factoring</t>
+        </t>
+        <t t-if="extenss_ffs" t-call="portal.portal_table">
+          <thead>
+            <tr class="active">
+              <th>Request number</th>
+              <th>User</th>
+              <th>Start date</th>
+              <th>Amount delivered</th>
+              <th>Total available</th>
+              <th>Total willing</th>
+            </tr>
+          </thead>
+          <tbody>
+            <t t-foreach="extenss_ffs" t-as="extenss_ff">
+              <tr>
+                <td><a t-attf-href="/my/extenss_ff/#{extenss_ff.id}"><t t-esc="extenss_ff.name"/></a></td>
+                <td><span t-field="extenss_ff.user_id"/></td>
+                <td><span t-field="extenss_ff.create_date" t-options='{"format": "dd/MM/yyyy"}'/></td>
+                <td><span t-field="extenss_ff.amount_delivered"/></td>
+                <td><span t-field="extenss_ff.total_available"/></td>
+                <td><span t-field="extenss_ff.total_willing"/></td>
+                <!-- <td class="text-right"><span t-field="event.appointment_type_id.price" t-options='{"widget": "monetary", "display_currency": event.appointment_type_id.currency_id}'/></td> -->
+              </tr>
+            </t>
+          </tbody>
+        </t>
+      </t>
+      </template>
+
+      <template id="portal_extenss_ff_page" name="Financial Factoring Portal Template" inherit_id="portal.portal_sidebar" primary="True">
+        <xpath expr="//div[hasclass('o_portal_sidebar')]" position="inside">
+            <div class="oe_structure container mb128">
+              <h3 class="o_page_header">Financial Factoring: <span t-esc="extenss_ff.name"/></h3>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="col-md-4" style="float: right;">
+                      <label>Reference:</label>
+                      <span t-field="extenss_ff.ref_number"/>
+                  </div>
+                  <div class="row">
+                      <div class="col-md-3 text-right">
+                          <label>Customer:</label>
+                      </div>
+                      <div class="col-md-4">
+                          <span t-field="extenss_ff.partner_id"/>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="col-md-4" style="float: right;">
+                      <label>Company:</label>
+                      <span t-field="extenss_ff.company_id"/>
+                  </div>
+                  <div class="row">
+                      <div class="col-md-3 text-right">
+                          <label>Email:</label>
+                      </div>
+                      <div class="col-md-4">
+                          <span t-field="extenss_ff.email_from"/>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="col-md-4" style="float: right;">
+                      <label>Ejecutive:</label>
+                      <span t-field="extenss_ff.user_id"/>
+                  </div>
+                  <div class="row">
+                      <div class="col-md-3 text-right">
+                          <label>Phone:</label>
+                      </div>
+                      <div class="col-md-4">
+                          <span t-field="extenss_ff.phone"/>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="col-md-4" style="float: right;">
+                      <label>Tax rate:</label>
+                      <span t-field="extenss_ff.tax_rate"/>
+                  </div>
+                  <div class="row">
+                      <div class="col-md-3 text-right">
+                          <label>Amount:</label>
+                      </div>
+                      <div class="col-md-4">
+                          <span t-field="extenss_ff.amount_ff"/>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="col-md-4" style="float: right;">
+                      <label>Fixed:</label>
+                      <span t-field="extenss_ff.fixed"/>
+                  </div>
+                  <div class="row">
+                      <div class="col-md-3 text-right">
+                          <label>Amount without VAT:</label>
+                      </div>
+                      <div class="col-md-4">
+                          <span t-field="extenss_ff.amount_out_vat"/>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="col-md-4" style="float: right;">
+                      <label>Current rate:</label>
+                      <span t-field="extenss_ff.current_rate"/>
+                  </div>
+                  <div class="row">
+                      <div class="col-md-3 text-right">
+                          <label>Purpose:</label>
+                      </div>
+                      <div class="col-md-4">
+                          <span t-field="extenss_ff.purpose"/>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="col-md-4" style="float: right;">
+                      <label>Days:</label>
+                      <span t-field="extenss_ff.days"/>
+                  </div>
+                  <div class="row">
+                      <div class="col-md-3 text-right">
+                          <label>Description purpose:</label>
+                      </div>
+                      <div class="col-md-4">
+                          <span t-field="extenss_ff.description_purpose"/>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="col-md-4" style="float: right;">
+                      <label>Interest:</label>
+                      <span t-field="extenss_ff.interest"/>
+                  </div>
+                  <div class="row">
+                      <div class="col-md-3 text-right">
+                          <label>Init date:</label>
+                      </div>
+                      <div class="col-md-4">
+                          <span t-field="extenss_ff.init_date"/>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="col-md-4" style="float: right;">
+                      <label>Interest vat:</label>
+                      <span t-field="extenss_ff.interest_vat"/>
+                  </div>
+                  <div class="row">
+                      <div class="col-md-3 text-right">
+                          <label>Invoice date:</label>
+                      </div>
+                      <div class="col-md-4">
+                          <span t-field="extenss_ff.invoice_date"/>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="col-md-4" style="float: right;">
+                      <label>Total payment:</label>
+                      <span t-field="extenss_ff.total_payment"/>
+                  </div>
+                  <div class="row">
+                      <div class="col-md-3 text-right">
+                          <label>Payment method:</label>
+                      </div>
+                      <div class="col-md-4">
+                          <span t-field="extenss_ff.payment_method"/>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="col-md-4" style="float: right;">
+                      <label>Amount delivered:</label>
+                      <span t-field="extenss_ff.amount_delivered"/>
+                  </div>
+                  <div class="row">
+                      <div class="col-md-3 text-right">
+                          <label>Capacity:</label>
+                      </div>
+                      <div class="col-md-3">
+                          <span t-field="extenss_ff.capacity"/>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="col-md-4" style="float: right;">
+                      <label>Total available</label>
+                      <span t-field="extenss_ff.total_available"/>
+                  </div>
+                  <div class="row">
+                      <div class="col-md-3 text-right">
+                          <label>Amount financed:</label>
+                      </div>
+                      <div class="col-md-3">
+                          <span t-field="extenss_ff.amount_financed"/>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="col-md-4" style="float: right;">
+                      <label>Total willing</label>
+                      <span t-field="extenss_ff.total_willing"/>
+                  </div>
+                  <div class="row">
+                      <div class="col-md-3 text-right">
+                          <label>Commission details:</label>
+                      </div>
+                      <div class="col-md-4">
+                          <span t-field="extenss_ff.commission_details"/>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="col-md-4" style="float: right;">
+                      <label></label>
+                      <!-- <span t-field="extenss_ff."/> -->
+                  </div>
+                  <div class="row">
+                      <div class="col-md-3 text-right">
+                          <label>Commission:</label>
+                      </div>
+                      <div class="col-md-4">
+                          <span t-field="extenss_ff.commissions"/>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="col-md-4" style="float: right;">
+                      <label></label>
+                      <!-- <span t-field="extenss_ff."/> -->
+                  </div>
+                  <div class="row">
+                      <div class="col-md-3 text-right">
+                          <label>Commission vat:</label>
+                      </div>
+                      <div class="col-md-4">
+                          <span t-field="extenss_ff.commission_vat"/>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="col-md-4" style="float: right;">
+                      <label></label>
+                      <!-- <span t-field="extenss_ff."/> -->
+                  </div>
+                  <div class="row">
+                      <div class="col-md-3 text-right">
+                          <label>Total commission:</label>
+                      </div>
+                      <div class="col-md-4">
+                          <span t-field="extenss_ff.total_commission"/>
+                      </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <h3 class="o_page_header">Dispositions</h3>
+                <t t-call="portal.portal_table">
+                    <thead>
+                      <tr class="active">
+                        <th>Nombre</th>
+                        <th>Amount</th>
+                        <th>Init Date</th>
+                        <th>Invoice Date</th>
+                        <th>Amount Financed</th>
+                        <th>Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <t t-foreach="extenss_ff.lineff_ids" t-as="ext_ff">
+                        <tr>
+                          <td><span t-field="ext_ff.name"/></td>
+                          <td><span t-field="ext_ff.amount_ff"/></td>
+                          <td><span t-field="ext_ff.init_date"/></td>
+                          <td><span t-field="ext_ff.invoice_date"/></td>
+                          <td><span t-field="ext_ff.amount_financed"/></td>
+                          <td><span t-field="ext_ff.credit_status"/></td>
+                        </tr>
+                      </t>
+                    </tbody>
+                  </t>
+              </div>
+            </div>
+        </xpath>
+      </template>
+</odoo>

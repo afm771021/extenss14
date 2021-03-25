@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <report
+            id="report_extenss_request_sale_order"
+            string="Amortization Table"
+            model="sale.order"
+            report_type="qweb-pdf"
+            name="extenss_request.report_amortization"
+            file="extenss_request.report_amortization"
+            menu= "False"
+            print_report_name="'Quotation %s' % (object.name)"
+            />
+        <report
+            id="contrato_extenss_request_sale_order"
+            string="Contrato"
+            model="sale.order"
+            report_type="qweb-pdf"
+            name="extenss_request.contrato_amortization"
+            file="extenss_request.contrato_amortization"
+            print_report_name="'Contrato %s' % (object.name)"
+            />
+            
+        <report
+            id="pagare_extenss_request_sale_order"
+            string="Pagare"
+            model="sale.order"
+            report_type="qweb-pdf"
+            name="extenss_request.pagare_amortization"
+            file="extenss_request.pagare_amortization"
+            print_report_name="'Pagare %s' % (object.name)"
+            />
+
+        <report
+            id="contrato_extenss_request"
+            string="Contrato"
+            model="crm.lead"
+            report_type="qweb-pdf"
+            name="extenss_request.contrato_ff"
+            file="extenss_request.contrato_ff"
+            print_report_name="'Contrato %s' % (object.name)"
+            />
+        <report
+            id="pagare_extenss_request"
+            string="Pagare"
+            model="crm.lead"
+            report_type="qweb-pdf"
+            name="extenss_request.pagare_ff"
+            file="extenss_request.pagare_ff"
+            print_report_name="'Pagare %s' % (object.name)"
+            />
+</odoo>

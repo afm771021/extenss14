@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <report
+            id="report_extenss_credit_account_status"
+            string="Account Status"
+            model="extenss.credit"
+            report_type="qweb-pdf"
+            name="extenss_credit.account_status"
+            file="extenss_credit.account_status"
+            print_report_name="'Account Status %s' % (object.credit_id)"
+            />
+</odoo>

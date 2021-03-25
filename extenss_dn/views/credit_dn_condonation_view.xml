@@ -1,0 +1,200 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="view_tree_extenss_dn_condonation" model="ir.ui.view">
+        <field name="name">extenss.dn.condonation.tree</field>
+        <field name="model">extenss.credit</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="credit_id"/>
+                <field name="customer_id"/>
+                <field name="request_id"/>
+                <field name="product_id"/>
+                <field name="salesperson_id"/>
+                <field name="office_id"/>
+                <field name="anchor_id"/>
+                <field name="bill_id"/>
+                <field name="customer_type"/>
+                <field name="amount_financed"/>
+                <field name="type_credit"/>
+                <field name="frequency"/>
+                <field name="interest_rate"/>
+                <field name="term"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_form_extenss_dn_condonation" model="ir.ui.view">
+        <field name="name">extenss.dn.condonation.form</field>
+        <field name="model">extenss.credit</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <div class="oe_title">
+                            <div class="oe_edit_only">
+                                <label for="credit_id"/>
+                            </div>
+                            <h1><field name="credit_id"/></h1>
+                        </div>
+                    </group>
+                    <group name="group_top">
+                        <group name="group_left">
+                            <field name="customer_id" readonly="1" options="{'no_open': True}"/>
+                            <field name="customer_type" readonly="1"/>
+                            <field name="request_id" readonly="1" options="{'no_open': True}"/>
+                            <field name="bill_id" readonly="1"/>
+                            <field name="reference_number" readonly="1"/>
+                            <field name="credit_status" readonly="1"/>
+                            <field name="account_status_date" readonly="1"/>
+                            <field name="product_id" readonly="1" options="{'no_open': True}"/>
+                            <field name="type_credit" readonly="1" options="{'no_open': True}"/>
+                            <field name="cs" invisible="1"/>
+                            <field name="af" invisible="1"/>
+                            <field name="ap" invisible="1"/>
+                            <field name="notice_date"/>
+                            <field name="payment_date"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Condonation" name="condonation">
+                            <form>
+                                <header>
+                                    <button name="action_condonation" string="Condonation" type="object" class="oe_highlight"/>
+                                </header>
+                            </form>
+                            <field name="credit_condonation_ids" >
+                                <tree editable="bottom">
+                                    <field name="expiry_number" readonly="1"/>
+                                    <field name="payment_number" readonly="1"/>
+                                    <field name="due_not_date" readonly="1"/>
+                                    <field name="total_to_pay" invisible="1"/>
+                                    <field name="start_date_mora" readonly="1"/>
+                                    <field name="date_payment" readonly="1"/>
+                                    <field name="outstanding_balance" readonly="1"/>
+                                    <field name="rate_moratorium" readonly="1"/>
+                                    <field name="days_mora" readonly="1"/>
+                                    <field name="interest_moratoriums" readonly="1"/>
+                                    <field name="vat_interest_mora" readonly="1"/>
+                                    <field name="total_interest_mora" readonly="1"/>
+                                    <field name="balance_interest_mora" readonly="1"/>
+                                    <field name="amount_condonation" attrs="{'readonly' : [('total_to_pay', '=', 0)]}"/>
+                                </tree>
+                                <form>
+                                    <sheet>
+                                        <group>
+                                            <group>
+                                                <field name="expiry_number"/>
+                                                <field name="payment_number"/>
+                                                <field name="due_not_date"/>
+                                                <field name="payment_date"/>
+                                            </group>
+                                            <group>
+                                                <field name="amount_not"/>
+                                                <field name="total_paid_not"/>
+                                                <field name="total_to_pay"/>
+                                            </group>
+                                        </group>
+                                        <group>
+                                            <notebook>
+                                                <page name="concepts_expiration" string="Concepts Expiration Notices">
+                                                    <field name="expiry_notice_ids">
+                                                        <tree>
+                                                            <field name="concept"/>
+                                                            <field name="amount_concept"/>
+                                                            <field name="total_paid_concept"/>
+                                                            <field name="full_paid"/>
+                                                        </tree>
+                                                        <form>
+                                                            <group>
+                                                                <group>
+                                                                    <field name="concept" />
+                                                                    <field name="amount_concept"/>
+                                                                </group>
+                                                                <group>
+                                                                    <field name="total_paid_concept"/>
+                                                                    <field name="full_paid"/>
+                                                                </group>
+                                                            </group>
+                                                            <group>
+                                                                <field name="concept_pay_ids" string="Payments" options="{'no_create_edit': False},
+                                                                {'no_quick_create': False},
+                                                                {'no_open': False}">
+                                                                    <tree open="false">
+                                                                        <field name="expiry_number_en"/>
+                                                                        <field name="date_paid"/>
+                                                                        <field name="total_paid_cp"/>
+                                                                    </tree>
+                                                                    <form>
+                                                                        <group>
+                                                                            <group>
+                                                                                <field name="expiry_number_en"/>
+                                                                                <field name="date_paid"/>
+                                                                            </group>
+                                                                            <group>
+                                                                                <field name="total_paid_cp"/>
+                                                                            </group>
+                                                                        </group>
+                                                                    </form>
+                                                                </field>
+                                                            </group>
+                                                        </form>
+                                                    </field>
+                                                </page>
+                                            </notebook>
+                                        </group>
+                                    </sheet>
+                                </form>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_tree_extenss_dn_condonation_search" model="ir.ui.view">
+        <field name="name">extenss.dn.condonation.search</field>
+        <field name="model">extenss.credit</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="credit_id"/>
+                <field name="customer_id"/>
+                <field name="request_id"/>
+                <field name="product_id"/>
+                <field name="salesperson_id"/>
+                <field name="office_id"/>
+                <field name="anchor_id"/>
+                <field name="bill_id"/>
+                <field name="customer_type"/>
+                <field name="amount_financed"/>
+                <field name="type_credit"/>
+                <field name="frequency"/>
+                <field name="interest_rate"/>
+                <field name="term"/>
+                <!-- <filter string="1 Days" name="days_15"  domain="[('create_date', '>', 'account_status_date')]"/>
+                <filter string="2 Days" name="days_30"  domain="[('create_date', '>', 'account_status_date')]"/>
+                <filter string="3 Days" name="days_90"  domain="[('create_date', '>', 'account_status_date')]"/> -->
+            </search>
+        </field>
+    </record>
+
+    <record id="action_condonation_dn" model="ir.actions.act_window">
+        <field name="name">Condonation</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">extenss.credit</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="view_tree_extenss_dn_condonation_search"/>
+        <field name="domain">[('dn', '=', True)]</field>
+        <field name="view_ids"
+                eval="[(5,0,0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('extenss_dn.view_tree_extenss_dn_condonation')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('extenss_dn.view_form_extenss_dn_condonation')})]"/>
+    </record>
+
+    <menuitem 
+        id="submenu_condonation_dn"
+        name="Condonation"
+        sequence="110"
+        parent="menu_dn"
+        action="action_condonation_dn"/>
+</odoo>

@@ -1,0 +1,335 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="view_form_extenss_datamart" model="ir.ui.view">
+        <field name="name">extenss.datamart.form</field>
+        <field name="model">extenss.datamart</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_send_account" string="Send to accounting" type="object" class="oe_highlight"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="date" readonly="1"/>
+                            <field name="name" readonly="1"/>
+                            <!-- <field name="partner_id" readonly="1"/> -->
+                            <field name="ref" readonly="1"/>
+                        </group>
+                        <!-- <group>
+                            <field name="journal_id"/>
+                            <field name="company_id"/>
+                            <field name="amount_total_signed"/>
+                            <field name="state"/>
+                        </group> -->
+                    </group>
+                    <notebook>
+                        <page name="journal_items" string="Journal items">
+                            <field name="datamart_ids">
+                                <tree editable="bottom" delete="false">
+                                    <!-- <field name="account_id"/> -->
+                                    <field name="check" attrs="{'readonly': [('status', '=', 'sent')]}"/>
+                                    <field name="partner_id" options="{'no_open': True}}" readonly="1"/>
+                                    <field name="credit_id" options="{'no_open': True}}" readonly="1"/>
+                                    <field name="product_id" options="{'no_open': True}}" readonly="1"/>
+                                    <field name="description" readonly="1"/>
+                                    <field name="amount" readonly="1"/>
+                                    <field name="status" readonly="1"/>
+                                    <field name="name"/>
+                                    <!-- <field name="debit"/>
+                                    <field name="credit"/> -->
+                                </tree>
+                                <form>
+                                    <group>
+                                        <!-- <field name="account_id"/> -->
+                                        <field name="partner_id"/>
+                                        <field name="credit_id"/>
+                                        <field name="product_id"/>
+                                        <field name="name"/>
+                                        <field name="amount"/>
+                                        <!-- <field name="debit"/>
+                                        <field name="credit"/> -->
+                                    </group>
+                                </form>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_tree_extenss_datamart" model="ir.ui.view">
+        <field name="name">extenss.datamart.tree</field>
+        <field name="model">extenss.datamart</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="date"/>
+                <field name="name"/>
+                <!-- <field name="partner_id"/> -->
+                <field name="ref"/>
+                <!-- <field name="journal_id"/>
+                <field name="company_id"/>
+                <field name="amount_total_signed"/>
+                <field name="state"/> -->
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_tree_extenss_datamart_contable_event" model="ir.ui.view">
+        <field name="name">extenss.datamrt.contable.event.tree</field>
+        <field name="model">extenss.datamart.contable_events</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" attrs="{'readonly': [('active_event', '=', False)]}"/>
+                <field name="event_key" attrs="{'readonly': [('active_event', '=', False)]}"/>
+                <field name="active_event"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_form_extenss_datamart_contable_event" model="ir.ui.view">
+        <field name="name">extenss.datamart.contable.event.form</field>
+        <field name="model">extenss.datamart.contable_events</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group string="Configuration of accounts to register">
+                        <group>
+                            <field name="flag_active" invisible="1"/>
+                            <field name="event_key" attrs="{'readonly': ['|', ('active_event', '=', False),('flag_active', '=', True)]}"/>
+                        </group>
+                        <group>
+                            <field name="name" attrs="{'readonly': [('active_event', '=', False)]}"/>
+                            <field name="active_event"/>
+                            <field name="company_id" options="{'no_open': True}}"/>
+                            <field name="journal_id" options="{'no_open': True}}"/>
+                        </group>
+                    </group>
+                    <group string="Category">
+                        <group>
+                            <field name="policy_category" attrs="{'readonly': [('active_event', '=', False)]}"/>
+                        </group>
+                        <group>
+                            <field name="grouper" attrs="{'readonly': [('active_event', '=', False)]}"/>
+                        </group>
+                        <group>
+                            <field name="start_date" readonly="1"/>
+                        </group>
+                        <group>
+                            <field name="end_date" attrs="{'readonly': [('active_event', '=', False)]}"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page name="acc_entries" string="Accounting entries">
+                            <field name="con_event_ids" attrs="{'readonly': [('active_event', '=', False)]}">
+                                <tree editable="bottom">
+                                    <field name="line"/>
+                                    <field name="operative_unit"/>
+                                    <field name="product"/>
+                                    <field name="account_id"/>
+                                    <field name="rule"/>
+                                    <field name="cicle"/>
+                                    <field name="future_1"/>
+                                    <field name="future_2"/>
+                                    <field name="nature"/>
+                                    <field name="type_amount"/>
+                                    <field name="apply"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_tree_extenss_datamart_cat_rules" model="ir.ui.view">
+        <field name="name">extenss.datamart.cat_rules.tree</field>
+        <field name="model">extenss.datamart.cat_rules</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="description"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_form_extenss_datamart_cat_rules" model="ir.ui.view">
+        <field name="name">extenss.datamart.cat_rules.form</field>
+        <field name="model">extenss.datamart.cat_rules</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                    <group>
+                        <field name="description"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_tree_extenss_datamart_conciliation" model="ir.ui.view">
+        <field name="name">extenss.datamart.conciliation.tree</field>
+        <field name="model">extenss.datamart.conciliation</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="initial_balance"/>
+                <field name="final_balance"/>
+                <field name="status_bank"/>
+                <field name="processing_id"/>
+                <field name="type"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_form_extenss_datamart_conciliation" model="ir.ui.view">
+        <field name="name">extenss.datamart.conciliation.form</field>
+        <field name="model">extenss.datamart.conciliation</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="initial_balance"/>
+                        <field name="final_balance"/>
+                    </group>
+                    <group>
+                        <field name="status_bank"/>
+                        <field name="processing_id"/>
+                        <field name="type"/>
+                    </group>
+                    <notebook>
+                        <page name="concilation" string="Transactions">
+                            <field name="conciliation_ids">
+                                <tree editable="bottom">
+                                    <field name="check"/>
+                                    <field name="date"/>
+                                    <field name="description"/>
+                                    <field name="customer"/>
+                                    <field name="reference"/>
+                                    <field name="amount"/>
+                                    <field name="status"/>
+                                    <field name="display_type"/>
+                                    <field name="type_rec"/>
+                                    <field name="bill_id"/>
+                                    <field name="expiry_id"/>
+                                </tree>
+                                <form>
+                                    <group>
+                                        <group>
+                                            <field name="date"/>
+                                            <field name="description"/>
+                                            <field name="customer"/>
+                                            <field name="reference"/>
+                                            <field name="amount"/>
+                                        </group>
+                                        <group>
+                                            <field name="check"/>
+                                            <field name="status"/>
+                                            <field name="display_type"/>
+                                            <field name="type_rec"/>
+                                            <field name="bill_id"/>
+                                            <field name="expiry_id"/>
+                                        </group>
+                                    </group>
+                                </form>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_tree_extenss_datamart_configuration" model="ir.ui.view">
+        <field name="name">extenss.datamart.configuration.tree</field>
+        <field name="model">extenss.datamart.configuration</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="concept"/>
+                <field name="event_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_form_extenss_datamart_configuration" model="ir.ui.view">
+        <field name="name">extenss.datamart.configuration.form</field>
+        <field name="model">extenss.datamart.configuration</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="concept"/>
+                        <field name="event_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_menu_events" model="ir.actions.act_window">
+        <field name="name">Contable events</field>
+        <field name="res_model">extenss.datamart.contable_events</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="action_menu_rules" model="ir.actions.act_window">
+        <field name="name">Rules Catalog</field>
+        <field name="res_model">extenss.datamart.cat_rules</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="action_menu_conciliation" model="ir.actions.act_window">
+        <field name="name">Conciliation</field>
+        <field name="res_model">extenss.datamart.conciliation</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="action_menu_configuration" model="ir.actions.act_window">
+        <field name="name">Configuration</field>
+        <field name="res_model">extenss.datamart.configuration</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+        action="action_menu_events"
+        id="menu_events"
+        parent="extenss_datamart.menu_datamart"
+        name="Contable events"
+        sequence="20"/>
+
+    <menuitem
+        action="action_menu_rules"
+        id="menu_rules"
+        parent="extenss_datamart.menu_datamart"
+        name="Rules catalog"
+        sequence="30"/>
+    
+    <menuitem
+        action="action_menu_conciliation"
+        id="menu_conciliation"
+        parent="extenss_datamart.menu_datamart"
+        name="Conciliation"
+        sequence="40"/>
+
+    <menuitem 
+        action="action_menu_configuration"
+        id="menu_configuration"
+        parent="extenss_datamart.menu_datamart"
+        name="Configuration"
+        sequence="50"/>
+</odoo>
