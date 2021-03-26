@@ -14,7 +14,7 @@
         'data/ir_sequence_data.xml',
         'data/crm_stage_data.xml',
         'data/conciliation_request_cron.xml',
-        'data/website_simulator_crm_data.xml',
+        #'data/website_simulator_crm_data.xml',
         'security/extenss_request_security.xml',
         'security/ir.model.access.csv',
         'views/crm_lead_views.xml',
